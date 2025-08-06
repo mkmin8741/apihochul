@@ -1,47 +1,62 @@
-name: Update Movie Data
+name: Movie Update Fixed
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 */6 * * *'
-  workflow_dispatch:
 
 jobs:
-  update-movies:
+  update:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout repository
+    - name: Checkout
       uses: actions/checkout@v4
       
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x'
-    
-    - name: Install requests package
-      run: pip install requests
+        python-version: '3.9'
+        
+    - name: Create requirements.txt
+      run: |
+        echo "requests==2.31.0" > requirements.txt
+        cat requirements.txt
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip list
+        
+    - name: Verify requests installation
+      run: |
+        python -c "import requests; print('✅ requests 설치 성공:', requests.__version__)"
         
     - name: Update movie data
       env:
         KOBIS_KEY: ${{ secrets.KOBIS_API_KEY }}
       run: |
-        python << 'EOF'
+        python -c "
         import requests
         import json
         from datetime import datetime, timedelta
         import os
         
+        print('🎬 영화 데이터 업데이트 시작...')
+        
         try:
             api_key = os.environ['KOBIS_KEY']
             yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
             
-            url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"
+            url = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json'
             params = {
                 'key': api_key,
                 'targetDt': yesterday,
                 'itemPerPage': 10
             }
             
+            print(f'📡 KOBIS API 호출: {yesterday}')
             response = requests.get(url, params=params)
             response.raise_for_status()
             data = response.json()
@@ -55,10 +70,10 @@ jobs:
             with open('movies.json', 'w', encoding='utf-8') as f:
                 json.dump(movie_data, f, ensure_ascii=False, indent=2)
                 
-            print(f"✅ {len(movie_data['movies'])}개 영화 데이터 업데이트 완료")
+            print(f'✅ {len(movie_data[\"movies\"])}개 영화 데이터 업데이트 완료')
             
         except Exception as e:
-            print(f"❌ 오류 발생: {e}")
+            print(f'❌ 오류 발생: {e}')
             error_data = {
                 'updateTime': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                 'error': str(e),
@@ -66,12 +81,12 @@ jobs:
             }
             with open('movies.json', 'w', encoding='utf-8') as f:
                 json.dump(error_data, f, ensure_ascii=False, indent=2)
-        EOF
+        "
         
-    - name: Commit and push changes
+    - name: Commit changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add movies.json
-        git diff --staged --quiet || git commit -m "🎬 영화 순위 자동 업데이트 $(date +'%Y-%m-%d %H:%M')"
+        git add movies.json requirements.txt
+        git diff --staged --quiet || git commit -m "🎬 영화 데이터 자동 업데이트 $(date)"
         git push
