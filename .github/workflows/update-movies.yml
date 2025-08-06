@@ -1,53 +1,42 @@
-name: Update Movie Data
+name: Simple Movie Test
 
 on:
   workflow_dispatch:
 
 jobs:
-  update-movies:
-    runs-on: ubuntu-20.04
-    
+  test:
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-      
-    - uses: actions/setup-python@v3
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v4
       with:
         python-version: '3.9'
-        
-    - name: Install requests
-      run: |
-        python --version
-        pip --version
-        pip install requests
-        python -c "import requests; print('Success!')"
-        
-    - name: Update data
+    - name: Quick test
       env:
         KOBIS_KEY: ${{ secrets.KOBIS_API_KEY }}
       run: |
-        python << 'EOF'
+        pip install requests
+        python -c "
         import requests, json, os
         from datetime import datetime, timedelta
         
         api_key = os.environ['KOBIS_KEY']
         date = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
         
-        response = requests.get(
-            'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json',
-            params={'key': api_key, 'targetDt': date, 'itemPerPage': 10}
-        )
+        r = requests.get('http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json', 
+                        params={'key': api_key, 'targetDt': date, 'itemPerPage': 5})
+        
+        data = {'updateTime': datetime.now().isoformat(), 'movies': r.json()['boxOfficeResult']['dailyBoxOfficeList']}
         
         with open('movies.json', 'w', encoding='utf-8') as f:
-            json.dump({
-                'updateTime': datetime.now().isoformat(),
-                'movies': response.json()['boxOfficeResult']['dailyBoxOfficeList']
-            }, f, ensure_ascii=False, indent=2)
-        EOF
+            json.dump(data, f, ensure_ascii=False, indent=2)
         
+        print('✅ 성공! movies.json 생성 완료')
+        "
     - name: Commit
       run: |
         git config user.name "Bot"
         git config user.email "bot@example.com"
         git add movies.json
-        git commit -m "Update movies" || exit 0
+        git commit -m "영화 데이터 생성" || exit 0
         git push
