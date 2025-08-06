@@ -1,19 +1,23 @@
-name: update movies
+name: Movie Data Auto Update
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'  # 6시간마다 (0시, 6시, 12시, 18시)
+  workflow_dispatch:  # 수동 실행도 가능
 
 jobs:
-  test:
+  update-movies:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+        
     - uses: actions/setup-python@v4
       with:
         python-version: '3.9'
-    - name: Quick test
+        
+    - name: Update movie rankings
       env:
         KOBIS_KEY: ${{ secrets.KOBIS_API_KEY }}
       run: |
@@ -22,24 +26,55 @@ jobs:
         import requests, json, os
         from datetime import datetime, timedelta
         
+        print('🎬 영화 순위 업데이트 시작...')
+        
+        # API 설정 (수정 가능한 부분들)
         api_key = os.environ['KOBIS_KEY']
-        date = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
+        target_date = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')  # 어제 날짜
+        movie_count = 10  # 가져올 영화 개수 (1~10)
         
-        r = requests.get('http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json', 
-                        params={'key': api_key, 'targetDt': date, 'itemPerPage': 10})
+        print(f'📅 조회 날짜: {target_date}')
+        print(f'📊 영화 개수: {movie_count}개')
         
-        data = {'updateTime': datetime.now().isoformat(), 'movies': r.json()['boxOfficeResult']['dailyBoxOfficeList']}
+        # KOBIS API 호출
+        api_url = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json'
+        params = {
+            'key': api_key,
+            'targetDt': target_date,
+            'itemPerPage': movie_count,
+            # 'repNationCd': 'K',  # 한국영화만 원하면 주석 해제
+            # 'wideAreaCd': '01'   # 특정 지역만 원하면 주석 해제 (01=서울)
+        }
         
+        response = requests.get(api_url, params=params)
+        response.raise_for_status()
+        result = response.json()
+        
+        # 데이터 정리
+        movie_data = {
+            'updateTime': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            'targetDate': target_date,
+            'totalMovies': len(result['boxOfficeResult']['dailyBoxOfficeList']),
+            'movies': result['boxOfficeResult']['dailyBoxOfficeList']
+        }
+        
+        # JSON 파일 저장
         with open('movies.json', 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+            json.dump(movie_data, f, ensure_ascii=False, indent=2)
         
-        print('✅ 성공! movies.json 생성 완료 - Top 10 영화')
-        print(f'📊 총 {len(data[\"movies\"])}개 영화 데이터 수집됨')
+        print(f'✅ 성공! {movie_data[\"totalMovies\"]}개 영화 데이터 업데이트 완료')
+        print(f'🕐 업데이트 시간: {movie_data[\"updateTime\"]}')
         "
-    - name: Commit
+        
+    - name: Commit and push
       run: |
-        git config user.name "Bot"
-        git config user.email "bot@example.com"
+        git config user.name "Movie Bot"
+        git config user.email "moviebot@example.com"
         git add movies.json
-        git commit -m "🎬 Top 10 영화 순위 업데이트 $(date)" || exit 0
-        git push
+        if git diff --staged --quiet; then
+          echo "변경사항 없음"
+        else
+          git commit -m "🎬 영화 순위 자동 업데이트 $(date +'%Y-%m-%d %H:%M')"
+          git push
+          echo "✅ 업데이트 완료"
+        fi
