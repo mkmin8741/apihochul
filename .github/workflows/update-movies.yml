@@ -1,4 +1,4 @@
-name: Auto Crawling System
+name: Full Auto Crawler
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  auto-crawl:
+  full-auto:
     runs-on: ubuntu-latest
     
     steps:
@@ -22,9 +22,9 @@ jobs:
         
     - name: Install dependencies
       run: |
-        pip install requests beautifulsoup4 lxml selenium webdriver-manager
+        pip install requests beautifulsoup4 lxml
         
-    - name: Auto crawling all movie data
+    - name: Full auto crawling system
       env:
         KOBIS_KEY: ${{ secrets.KOBIS_API_KEY }}
       run: |
@@ -65,82 +65,93 @@ jobs:
                     return ""
                 
                 if 'pstatic.net' in image_url:
-                    # 50KB 내외가 되도록 크기와 품질 조정
-                    optimized = image_url.replace('&size=176x264', '&size=140x210&quality=65')
+                    # 50KB 내외 최적화
+                    if '&size=' in image_url:
+                        optimized = re.sub(r'&size=\d+x\d+', '&size=140x210', image_url)
+                        if '&quality=' not in optimized:
+                            optimized += '&quality=65'
+                    else:
+                        optimized = image_url + '&size=140x210&quality=65'
                     return optimized
                 
                 return image_url
             except:
                 return image_url
 
-        def crawl_naver_movie_auto(movie_title):
-            """네이버에서 완전 자동 크롤링"""
+        def crawl_naver_auto(movie_title):
+            """네이버에서 완전 자동 크롤링 - 사용자 제공 구조 활용"""
             try:
-                print(f"🔍 '{movie_title}' 자동 크롤링 시작...")
+                print(f"🕷️ '{movie_title}' 네이버 자동 크롤링...")
                 
-                # 네이버 영화 검색
+                # 네이버 영화 검색 (사용자 제공 방식)
                 search_url = "https://search.naver.com/search.naver"
                 params = {
                     'where': 'nexearch',
-                    'sm': 'tab_etc', 
+                    'sm': 'tab_etc',
+                    'mra': 'bkEw',
+                    'pkid': '68',
                     'query': f'영화 {movie_title} 정보'
                 }
                 
                 headers = {
                     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                    'Accept-Language': 'ko-KR,ko;q=0.8,en-US;q=0.5',
+                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                    'Accept-Language': 'ko-KR,ko;q=0.8,en-US;q=0.5,en;q=0.3',
                     'Accept-Encoding': 'gzip, deflate, br',
-                    'Connection': 'keep-alive'
+                    'Connection': 'keep-alive',
                 }
                 
                 response = requests.get(search_url, params=params, headers=headers, timeout=15)
+                response.raise_for_status()
                 soup = BeautifulSoup(response.text, 'html.parser')
                 
                 result = {
                     'poster_url': '',
                     'plot': '',
                     'genre': '',
-                    'director': '',
                     'runtime': '',
                     'grade': '',
                     'english_title': ''
                 }
                 
-                # 1. 포스터 이미지 크롤링
+                # 1. 포스터 이미지 크롤링 (사용자 제공 구조)
                 try:
-                    # 사용자가 보여준 실제 구조 기반
-                    poster_link = soup.find('a', class_='thumb')
-                    if not poster_link:
-                        poster_link = soup.find('a', {'class': lambda x: x and 'thumb' in x})
+                    # 사용자 제공: .thumb ._item img
+                    thumb_link = soup.find('a', class_='thumb')
+                    if not thumb_link:
+                        # 대안 셀렉터
+                        thumb_link = soup.select_one('a[class*="thumb"]')
                     
-                    if poster_link:
-                        img_tag = poster_link.find('img')
+                    if thumb_link:
+                        img_tag = thumb_link.find('img')
                         if img_tag and img_tag.get('src'):
                             poster_url = img_tag['src']
                             result['poster_url'] = optimize_image_50kb(poster_url)
-                            print(f"   ✅ 포스터 발견: {result['poster_url'][:50]}...")
+                            print(f"   ✅ 포스터: {result['poster_url'][:50]}...")
                     
-                    # 대안 방법
+                    # 추가 시도
                     if not result['poster_url']:
-                        for img in soup.find_all('img'):
+                        img_tags = soup.find_all('img')
+                        for img in img_tags:
                             src = img.get('src', '')
                             alt = img.get('alt', '')
-                            if 'pstatic.net' in src and (movie_title in alt or 'movie' in src):
+                            if ('pstatic.net' in src and 'movie' in src) or movie_title in alt:
                                 result['poster_url'] = optimize_image_50kb(src)
                                 print(f"   ✅ 대안 포스터 발견")
                                 break
+                        
                 except Exception as e:
                     print(f"   ❌ 포스터 크롤링 실패: {e}")
                 
-                # 2. 줄거리 크롤링 (실제 구조 기반)
+                # 2. 줄거리 크롤링 (사용자 제공 구조)
                 try:
-                    # 사용자 제공 구조: .intro_box._content .text._content_text
+                    # 사용자 제공: .intro_box._content .text._content_text
                     intro_box = soup.find('div', class_='intro_box')
                     if not intro_box:
-                        intro_box = soup.find('div', {'class': lambda x: x and 'intro' in x})
+                        intro_box = soup.select_one('div[class*="intro"]')
                     
                     if intro_box:
+                        # 사용자 제공: .text._content_text
                         plot_element = intro_box.find('p', class_='text')
                         if not plot_element:
                             plot_element = intro_box.find('p')
@@ -148,31 +159,24 @@ jobs:
                         if plot_element:
                             plot_text = plot_element.get_text().strip()
                             if plot_text and len(plot_text) > 20:
-                                result['plot'] = re.sub(r'\s+', ' ', plot_text)
-                                print(f"   ✅ 줄거리 발견: {result['plot'][:50]}...")
-                    
-                    # 대안 방법 - 페이지 전체에서 줄거리 패턴 찾기
-                    if not result['plot']:
-                        page_text = soup.get_text()
-                        sentences = re.split(r'[.!?]\s*', page_text)
-                        for sentence in sentences:
-                            if (len(sentence) > 50 and len(sentence) < 500 and
-                                (movie_title in sentence or '영화' in sentence) and
-                                ('줄거리' in sentence or '소개' in sentence or '이야기' in sentence)):
-                                result['plot'] = sentence.strip()
-                                print(f"   ✅ 대안 줄거리 발견")
-                                break
+                                # 텍스트 정리
+                                plot_clean = re.sub(r'\s+', ' ', plot_text).strip()
+                                if not any(skip_word in plot_clean for skip_word in ['로그인', '회원가입', '네이버', '검색']):
+                                    result['plot'] = plot_clean
+                                    print(f"   ✅ 줄거리: {result['plot'][:50]}...")
+                                
                 except Exception as e:
                     print(f"   ❌ 줄거리 크롤링 실패: {e}")
                 
-                # 3. 상세 정보 크롤링 (실제 구조 기반)
+                # 3. 상세 정보 크롤링 (사용자 제공 구조)
                 try:
-                    # 사용자 제공 구조: .info.txt_4 .info_group
+                    # 사용자 제공: .info.txt_4 .info_group
                     info_area = soup.find('dl', class_='info')
                     if not info_area:
-                        info_area = soup.find('dl', {'class': lambda x: x and 'info' in x})
+                        info_area = soup.select_one('dl[class*="info"]')
                     
                     if info_area:
+                        # 사용자 제공: .info_group
                         info_groups = info_area.find_all('div', class_='info_group')
                         if not info_groups:
                             info_groups = info_area.find_all('div')
@@ -182,102 +186,62 @@ jobs:
                                 dt = group.find('dt')
                                 dd = group.find('dd')
                                 if dt and dd:
-                                    label = dt.get_text().strip().replace('|', '').strip()
-                                    value = dd.get_text().strip()
+                                    label_text = dt.get_text().strip()
+                                    value_text = dd.get_text().strip()
                                     
-                                    if '장르' in label and value:
-                                        result['genre'] = value
-                                        print(f"   ✅ 장르: {value}")
-                                    elif '등급' in label and value:
-                                        result['grade'] = value  
-                                        print(f"   ✅ 등급: {value}")
-                                    elif '러닝타임' in label and value:
-                                        result['runtime'] = value
-                                        print(f"   ✅ 러닝타임: {value}")
-                            except:
+                                    # 정보 매핑
+                                    if '장르' in label_text and value_text:
+                                        result['genre'] = value_text
+                                        print(f"   ✅ 장르: {value_text}")
+                                    elif '등급' in label_text and value_text:
+                                        result['grade'] = value_text
+                                        print(f"   ✅ 등급: {value_text}")
+                                    elif '러닝타임' in label_text and value_text:
+                                        result['runtime'] = value_text
+                                        print(f"   ✅ 러닝타임: {value_text}")
+                                        
+                            except Exception as e:
+                                print(f"   상세정보 파싱 오류: {e}")
                                 continue
-                    
-                    # 대안 방법 - 텍스트 패턴 매칭
-                    if not any([result['genre'], result['grade'], result['runtime']]):
-                        page_text = soup.get_text()
-                        
-                        # 장르 패턴
-                        genre_match = re.search(r'장르[:\s]*([가-힣,\s]+(?:코미디|드라마|액션|스릴러|공포|로맨스|판타지|SF|애니메이션)[가-힣,\s]*)', page_text)
-                        if genre_match:
-                            result['genre'] = genre_match.group(1).strip()
-                        
-                        # 등급 패턴
-                        grade_match = re.search(r'(전체관람가|12세이상관람가|15세이상관람가|청소년관람불가)', page_text)
-                        if grade_match:
-                            result['grade'] = grade_match.group(1)
-                        
-                        # 러닝타임 패턴
-                        runtime_match = re.search(r'(\d+분)', page_text)
-                        if runtime_match:
-                            result['runtime'] = runtime_match.group(1)
-                
+                                
                 except Exception as e:
                     print(f"   ❌ 상세정보 크롤링 실패: {e}")
                 
                 # 4. 영어제목 크롤링
                 try:
-                    sub_title = soup.find('div', class_='sub_title')
-                    if sub_title:
-                        spans = sub_title.find_all('span', class_='txt')
+                    sub_title_area = soup.find('div', class_='sub_title')
+                    if sub_title_area:
+                        spans = sub_title_area.find_all('span', class_='txt')
                         for span in spans:
                             text = span.get_text().strip()
-                            if re.match(r'^[A-Za-z\s:\'\.]+$', text) and text not in ['영화', '2025']:
+                            # 영어 제목 패턴 확인
+                            if re.match(r'^[A-Za-z\s:\'\.\-]+$', text) and len(text) > 2 and text not in ['영화', '2025']:
                                 result['english_title'] = text
                                 print(f"   ✅ 영어제목: {text}")
                                 break
+                                
                 except Exception as e:
                     print(f"   ❌ 영어제목 크롤링 실패: {e}")
                 
-                # 5. 감독 정보 별도 검색
-                try:
-                    director_search_url = "https://search.naver.com/search.naver"
-                    director_params = {
-                        'query': f'{movie_title} 감독',
-                        'where': 'nexearch'
-                    }
-                    
-                    director_response = requests.get(director_search_url, params=director_params, headers=headers, timeout=10)
-                    director_soup = BeautifulSoup(director_response.text, 'html.parser')
-                    director_text = director_soup.get_text()
-                    
-                    director_match = re.search(r'감독[:\s]*([가-힣]{2,4})', director_text)
-                    if director_match:
-                        result['director'] = director_match.group(1)
-                        print(f"   ✅ 감독: {result['director']}")
-                    
-                except Exception as e:
-                    print(f"   ❌ 감독 크롤링 실패: {e}")
+                # 크롤링 결과 검증
+                success_count = sum(1 for v in result.values() if v)
+                print(f"✅ '{movie_title}' 자동 크롤링 완료 ({success_count}/6 항목 성공)")
                 
-                # 기본값 설정
-                for key, value in result.items():
-                    if not value:
-                        if key == 'plot':
-                            result[key] = '줄거리 정보를 수집 중입니다.'
-                        else:
-                            result[key] = '정보 수집 중'
-                
-                print(f"✅ '{movie_title}' 자동 크롤링 완료")
                 return result
                 
             except Exception as e:
-                print(f"❌ '{movie_title}' 자동 크롤링 실패: {e}")
+                print(f"❌ '{movie_title}' 전체 크롤링 실패: {e}")
                 return {
                     'poster_url': '',
                     'plot': '줄거리 정보를 수집 중입니다.',
                     'genre': '정보 수집 중',
-                    'director': '정보 수집 중', 
                     'runtime': '정보 수집 중',
                     'grade': '정보 수집 중',
                     'english_title': ''
                 }
 
         def main():
-            print('🕷️ 완전 자동 크롤링 시스템 시작...')
+            print('🤖 완전 자동화 크롤링 시스템 시작...')
             
             # KOBIS API 호출
             kobis_key = os.environ['KOBIS_KEY']
@@ -303,12 +267,12 @@ jobs:
             enhanced_movies = []
             
             for i, movie in enumerate(movies):
-                print(f'\n🕷️ {i+1}/{len(movies)} - {movie["movieNm"]} 완전 자동 크롤링...')
+                print(f'\n🎬 {i+1}/{len(movies)} - {movie["movieNm"]} 완전 자동 처리...')
                 
                 movie_title = movie['movieNm']
                 
-                # 완전 자동 크롤링
-                movie_details = crawl_naver_movie_auto(movie_title)
+                # 완전 자동 크롤링 (하드코딩 없음)
+                movie_details = crawl_naver_auto(movie_title)
                 time.sleep(3)  # 안전한 크롤링 간격
                 
                 # 개봉일 포맷팅
@@ -329,9 +293,9 @@ jobs:
                 'updateTime': datetime.now().strftime('%Y년 %m월 %d일 %H시 %M분'),
                 'targetDate': yesterday,
                 'totalMovies': len(enhanced_movies),
-                'dataSource': 'KOBIS + 완전자동크롤링 (하드코딩없음)',
+                'dataSource': 'KOBIS + 네이버 완전자동크롤링 (하드코딩 없음)',
                 'imageOptimized': '50KB 자동최적화',
-                'crawlingMethod': '실시간 자동 데이터 수집',
+                'crawlingMethod': '사용자제공 HTML구조 기반 자동크롤링',
                 'movies': enhanced_movies
             }
             
@@ -339,7 +303,7 @@ jobs:
             with open('movies.json', 'w', encoding='utf-8') as f:
                 json.dump(final_data, f, ensure_ascii=False, indent=2)
                 
-            print(f'\n🎉 완전 자동 크롤링 완료!')
+            print(f'\n🎉 완전 자동화 크롤링 완료!')
             print(f'📊 총 {len(enhanced_movies)}개 영화')
             print(f'🖼️ 포스터 자동수집: {sum(1 for m in enhanced_movies if m.get("poster_url"))}개')
             print(f'📝 줄거리 자동수집: {sum(1 for m in enhanced_movies if m.get("plot") and "수집 중" not in m["plot"])}개')
@@ -352,12 +316,12 @@ jobs:
     - name: Commit and push
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "Auto Crawler Bot"
+        git config --local user.name "Full Auto Crawler"
         git add movies.json
         if git diff --staged --quiet; then
           echo "변경사항 없음"
         else
-          git commit -m "🤖 완전자동크롤링 - 하드코딩없음 $(date +'%Y-%m-%d %H:%M')"
+          git commit -m "🤖 완전자동화크롤링 - 하드코딩없음 $(date +'%Y-%m-%d %H:%M')"
           git push
-          echo "✅ 완전 자동 크롤링 데이터 업로드"
+          echo "✅ 완전 자동화 데이터 업로드"
         fi
