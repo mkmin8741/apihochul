@@ -1,80 +1,399 @@
-name: Movie Data Auto Update
+name: Movie Data Crawler
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # 6시간마다 (0시, 6시, 12시, 18시)
-  workflow_dispatch:  # 수동 실행도 가능
+    - cron: '0 */6 * * *'  # 6시간마다
+  workflow_dispatch:  # 수동 실행 가능
 
 jobs:
-  update-movies:
+  crawl-movie-data:
     runs-on: ubuntu-latest
+    
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         
-    - uses: actions/setup-python@v4
+    - name: Setup Python
+      uses: actions/setup-python@v4
       with:
         python-version: '3.9'
         
-    - name: Update movie rankings
+    - name: Install dependencies
+      run: |
+        pip install requests beautifulsoup4 lxml selenium webdriver-manager
+        
+    - name: Crawl complete movie data
       env:
         KOBIS_KEY: ${{ secrets.KOBIS_API_KEY }}
       run: |
-        pip install requests
-        python -c "
-        import requests, json, os
+        python << 'EOF'
+        import requests
+        import json
         from datetime import datetime, timedelta
+        import os
+        import time
+        import re
+        from bs4 import BeautifulSoup
+        from urllib.parse import quote, urljoin
+        import urllib.parse
+
+        def clean_text(text):
+            """텍스트 정리"""
+            if not text:
+                return ""
+            return re.sub(r'\s+', ' ', text.strip())
+
+        def get_naver_movie_details(movie_title, open_year=None):
+            """네이버 영화에서 상세정보 크롤링"""
+            try:
+                print(f"🔍 네이버에서 '{movie_title}' 검색 중...")
+                
+                # 네이버 영화 검색
+                search_query = f"{movie_title} 영화"
+                search_url = "https://search.naver.com/search.naver"
+                params = {
+                    'sm': 'top_hty',
+                    'fbm': '0',
+                    'ie': 'utf8',
+                    'query': search_query
+                }
+                
+                headers = {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+                }
+                
+                # 검색 결과 페이지
+                response = requests.get(search_url, params=params, headers=headers, timeout=10)
+                soup = BeautifulSoup(response.text, 'html.parser')
+                
+                # 네이버 영화 링크 찾기
+                movie_link = None
+                for link in soup.find_all('a', href=True):
+                    href = link['href']
+                    if 'movie.naver.com/movie/bi/mi/basic.nhn' in href or 'movie.naver.com/movie/bi/mi/basic.naver' in href:
+                        movie_link = href
+                        break
+                
+                if not movie_link:
+                    print(f"❌ '{movie_title}' 네이버 영화 페이지를 찾을 수 없음")
+                    return get_default_movie_data()
+                
+                print(f"✅ 영화 페이지 발견: {movie_link}")
+                
+                # 영화 상세 페이지 크롤링
+                time.sleep(1)  # 요청 간격
+                detail_response = requests.get(movie_link, headers=headers, timeout=10)
+                detail_soup = BeautifulSoup(detail_response.text, 'html.parser')
+                
+                # 포스터 이미지
+                poster_url = ""
+                poster_img = detail_soup.find('div', class_='poster') 
+                if poster_img:
+                    img_tag = poster_img.find('img')
+                    if img_tag and img_tag.get('src'):
+                        poster_url = img_tag['src']
+                        # https 프로토콜로 변경
+                        if poster_url.startswith('//'):
+                            poster_url = 'https:' + poster_url
+                        elif poster_url.startswith('http://'):
+                            poster_url = poster_url.replace('http://', 'https://')
+                
+                # 줄거리
+                plot = ""
+                story_area = detail_soup.find('div', class_='story_area')
+                if story_area:
+                    story_p = story_area.find('p', class_='con_tx')
+                    if story_p:
+                        plot = clean_text(story_p.get_text())
+                
+                # 영화 정보
+                info_area = detail_soup.find('dl', class_='info_spec')
+                genre = ""
+                director = ""
+                runtime = ""
+                grade = ""
+                
+                if info_area:
+                    dts = info_area.find_all('dt')
+                    dds = info_area.find_all('dd')
+                    
+                    for i, dt in enumerate(dts):
+                        if i < len(dds):
+                            dt_text = clean_text(dt.get_text())
+                            dd_text = clean_text(dds[i].get_text())
+                            
+                            if '장르' in dt_text:
+                                genre = dd_text
+                            elif '감독' in dt_text:
+                                director = dd_text
+                            elif '등급' in dt_text or '관람가' in dt_text:
+                                grade = dd_text
+                
+                # 러닝타임 찾기
+                runtime_span = detail_soup.find('span', class_='running_time')
+                if runtime_span:
+                    runtime = clean_text(runtime_span.get_text())
+                
+                # 영어제목 찾기
+                english_title = ""
+                title_area = detail_soup.find('div', class_='mv_info_area')
+                if title_area:
+                    h3_tag = title_area.find('h3', class_='h_movie')
+                    if h3_tag:
+                        strong_tag = h3_tag.find('strong')
+                        if strong_tag:
+                            # 한국어 제목 다음의 영어제목 찾기
+                            next_text = strong_tag.next_sibling
+                            if next_text and isinstance(next_text, str):
+                                english_match = re.search(r'([A-Za-z\s:\']+)', next_text.strip())
+                                if english_match:
+                                    english_title = english_match.group(1).strip()
+                
+                result = {
+                    'poster_url': poster_url,
+                    'plot': plot or "줄거리 정보를 준비 중입니다.",
+                    'genre': genre or "정보 준비 중",
+                    'director': director or "정보 준비 중", 
+                    'runtime': runtime or "정보 준비 중",
+                    'grade': grade or "정보 준비 중",
+                    'english_title': english_title
+                }
+                
+                print(f"✅ '{movie_title}' 네이버 크롤링 완료")
+                print(f"   포스터: {'있음' if poster_url else '없음'}")
+                print(f"   줄거리: {'있음' if plot else '없음'}")
+                print(f"   장르: {genre}")
+                
+                return result
+                
+            except Exception as e:
+                print(f"❌ '{movie_title}' 네이버 크롤링 실패: {e}")
+                return get_default_movie_data()
+
+        def get_daum_movie_details(movie_title, open_year=None):
+            """다음 영화에서 상세정보 크롤링"""
+            try:
+                print(f"🔍 다음에서 '{movie_title}' 검색 중...")
+                
+                # 다음 영화 검색
+                search_query = f"{movie_title} 영화"
+                search_url = "https://search.daum.net/search"
+                params = {
+                    'w': 'tot',
+                    'q': search_query
+                }
+                
+                headers = {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+                }
+                
+                response = requests.get(search_url, params=params, headers=headers, timeout=10)
+                soup = BeautifulSoup(response.text, 'html.parser')
+                
+                # 다음 영화 링크 찾기
+                movie_link = None
+                for link in soup.find_all('a', href=True):
+                    href = link['href']
+                    if 'movie.daum.net/moviedb/main' in href:
+                        movie_link = href
+                        break
+                
+                if not movie_link:
+                    print(f"❌ '{movie_title}' 다음 영화 페이지를 찾을 수 없음")
+                    return get_default_movie_data()
+                
+                print(f"✅ 다음 영화 페이지 발견: {movie_link}")
+                
+                # 영화 상세 페이지 크롤링
+                time.sleep(1)
+                detail_response = requests.get(movie_link, headers=headers, timeout=10)
+                detail_soup = BeautifulSoup(detail_response.text, 'html.parser')
+                
+                # 포스터
+                poster_url = ""
+                poster_div = detail_soup.find('div', class_='poster_movie')
+                if poster_div:
+                    img_tag = poster_div.find('img')
+                    if img_tag and img_tag.get('src'):
+                        poster_url = img_tag['src']
+                        if poster_url.startswith('//'):
+                            poster_url = 'https:' + poster_url
+                
+                # 줄거리
+                plot = ""
+                story_div = detail_soup.find('div', class_='desc_movie')
+                if story_div:
+                    plot_p = story_div.find('p')
+                    if plot_p:
+                        plot = clean_text(plot_p.get_text())
+                
+                # 상세 정보
+                info_movie = detail_soup.find('div', class_='info_movie')
+                genre = ""
+                director = ""
+                runtime = ""
+                grade = ""
+                english_title = ""
+                
+                if info_movie:
+                    # 각종 정보 파싱
+                    dls = info_movie.find_all('dl')
+                    for dl in dls:
+                        dt = dl.find('dt')
+                        dd = dl.find('dd')
+                        if dt and dd:
+                            dt_text = clean_text(dt.get_text())
+                            dd_text = clean_text(dd.get_text())
+                            
+                            if '장르' in dt_text:
+                                genre = dd_text
+                            elif '감독' in dt_text:
+                                director = dd_text
+                            elif '러닝타임' in dt_text:
+                                runtime = dd_text
+                            elif '등급' in dt_text or '관람가' in dt_text:
+                                grade = dd_text
+                
+                # 영어제목 찾기
+                title_en = detail_soup.find('span', class_='txt_title_en')
+                if title_en:
+                    english_title = clean_text(title_en.get_text())
+                
+                result = {
+                    'poster_url': poster_url,
+                    'plot': plot or "줄거리 정보를 준비 중입니다.",
+                    'genre': genre or "정보 준비 중",
+                    'director': director or "정보 준비 중",
+                    'runtime': runtime or "정보 준비 중", 
+                    'grade': grade or "정보 준비 중",
+                    'english_title': english_title
+                }
+                
+                print(f"✅ '{movie_title}' 다음 크롤링 완료")
+                return result
+                
+            except Exception as e:
+                print(f"❌ '{movie_title}' 다음 크롤링 실패: {e}")
+                return get_default_movie_data()
+
+        def get_default_movie_data():
+            """기본 영화 데이터"""
+            return {
+                'poster_url': "",
+                'plot': "줄거리 정보를 준비 중입니다.",
+                'genre': "정보 준비 중",
+                'director': "정보 준비 중",
+                'runtime': "정보 준비 중",
+                'grade': "정보 준비 중",
+                'english_title': ""
+            }
+
+        def main():
+            print('🎬 완전 크롤링 자동화 시작...')
+            
+            # KOBIS API 호출
+            kobis_key = os.environ['KOBIS_KEY']
+            yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
+            
+            print(f'📅 조회 날짜: {yesterday}')
+            
+            kobis_url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"
+            kobis_params = {
+                'key': kobis_key,
+                'targetDt': yesterday,
+                'itemPerPage': 10
+            }
+            
+            kobis_response = requests.get(kobis_url, params=kobis_params, timeout=15)
+            kobis_response.raise_for_status()
+            kobis_data = kobis_response.json()
+            
+            movies = kobis_data['boxOfficeResult']['dailyBoxOfficeList']
+            print(f'📊 KOBIS에서 {len(movies)}개 영화 정보 수집 완료')
+            
+            # 각 영화에 대해 크롤링으로 상세 정보 수집
+            enhanced_movies = []
+            
+            for i, movie in enumerate(movies):
+                print(f'\n🕷️ {i+1}/{len(movies)} - {movie["movieNm"]} 크롤링 중...')
+                
+                movie_title = movie['movieNm']
+                open_year = None
+                
+                # 개봉년도 추출
+                if movie.get('openDt'):
+                    try:
+                        open_year = int(movie['openDt'][:4])
+                    except:
+                        pass
+                
+                # 네이버에서 먼저 시도
+                movie_details = get_naver_movie_details(movie_title, open_year)
+                time.sleep(2)  # 크롤링 간격
+                
+                # 네이버에서 정보가 부족하면 다음에서도 시도
+                if (not movie_details['poster_url'] or 
+                    movie_details['plot'] == "줄거리 정보를 준비 중입니다." or
+                    movie_details['genre'] == "정보 준비 중"):
+                    
+                    print(f"🔄 '{movie_title}' 다음에서도 크롤링 시도...")
+                    daum_details = get_daum_movie_details(movie_title, open_year)
+                    
+                    # 더 좋은 정보가 있으면 교체
+                    if daum_details['poster_url'] and not movie_details['poster_url']:
+                        movie_details['poster_url'] = daum_details['poster_url']
+                    if daum_details['plot'] != "줄거리 정보를 준비 중입니다." and movie_details['plot'] == "줄거리 정보를 준비 중입니다.":
+                        movie_details['plot'] = daum_details['plot'] 
+                    if daum_details['genre'] != "정보 준비 중" and movie_details['genre'] == "정보 준비 중":
+                        movie_details['genre'] = daum_details['genre']
+                    if daum_details['director'] != "정보 준비 중" and movie_details['director'] == "정보 준비 중":
+                        movie_details['director'] = daum_details['director']
+                    
+                    time.sleep(2)  # 크롤링 간격
+                
+                # 기존 KOBIS 데이터에 크롤링 정보 추가
+                enhanced_movie = {
+                    **movie,  # 기존 KOBIS 데이터 유지
+                    **movie_details  # 크롤링한 상세 정보 추가
+                }
+                
+                enhanced_movies.append(enhanced_movie)
+                print(f'✅ {movie_title} 완료 - 포스터: {"있음" if movie_details["poster_url"] else "없음"}')
+            
+            # 최종 데이터 생성
+            final_data = {
+                'updateTime': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                'targetDate': yesterday,
+                'totalMovies': len(enhanced_movies),
+                'dataSource': 'KOBIS + 네이버영화 + 다음영화 크롤링',
+                'movies': enhanced_movies
+            }
+            
+            # JSON 파일 저장
+            with open('movies.json', 'w', encoding='utf-8') as f:
+                json.dump(final_data, f, ensure_ascii=False, indent=2)
+                
+            print(f'\n🎉 완전 크롤링 자동화 완료!')
+            print(f'📊 총 {len(enhanced_movies)}개 영화')
+            print(f'🖼️ 포스터 수집: {sum(1 for m in enhanced_movies if m.get("poster_url"))}개')
+            print(f'📝 줄거리 수집: {sum(1 for m in enhanced_movies if m.get("plot") and "준비 중" not in m["plot"])}개')
+            print(f'🎭 장르 수집: {sum(1 for m in enhanced_movies if m.get("genre") and "준비 중" not in m["genre"])}개')
+            
+        if __name__ == "__main__":
+            main()
+        EOF
         
-        print('🎬 영화 순위 업데이트 시작...')
-        
-        # API 설정 (수정 가능한 부분들)
-        api_key = os.environ['KOBIS_KEY']
-        target_date = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')  # 어제 날짜
-        movie_count = 10  # 가져올 영화 개수 (1~10)
-        
-        print(f'📅 조회 날짜: {target_date}')
-        print(f'📊 영화 개수: {movie_count}개')
-        
-        # KOBIS API 호출
-        api_url = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json'
-        params = {
-            'key': api_key,
-            'targetDt': target_date,
-            'itemPerPage': movie_count,
-            # 'repNationCd': 'K',  # 한국영화만 원하면 주석 해제
-            # 'wideAreaCd': '01'   # 특정 지역만 원하면 주석 해제 (01=서울)
-        }
-        
-        response = requests.get(api_url, params=params)
-        response.raise_for_status()
-        result = response.json()
-        
-        # 데이터 정리
-        movie_data = {
-            'updateTime': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-            'targetDate': target_date,
-            'totalMovies': len(result['boxOfficeResult']['dailyBoxOfficeList']),
-            'movies': result['boxOfficeResult']['dailyBoxOfficeList']
-        }
-        
-        # JSON 파일 저장
-        with open('movies.json', 'w', encoding='utf-8') as f:
-            json.dump(movie_data, f, ensure_ascii=False, indent=2)
-        
-        print(f'✅ 성공! {movie_data[\"totalMovies\"]}개 영화 데이터 업데이트 완료')
-        print(f'🕐 업데이트 시간: {movie_data[\"updateTime\"]}')
-        "
-        
-    - name: Commit and push
+    - name: Commit and push changes
       run: |
-        git config user.name "Movie Bot"
-        git config user.email "moviebot@example.com"
+        git config --local user.email "action@github.com"
+        git config --local user.name "Movie Crawler Bot"
         git add movies.json
         if git diff --staged --quiet; then
           echo "변경사항 없음"
         else
-          git commit -m "🎬 영화 순위 자동 업데이트 $(date +'%Y-%m-%d %H:%M')"
+          git commit -m "🕷️ 영화 정보 자동 크롤링 업데이트 $(date +'%Y-%m-%d %H:%M')"
           git push
-          echo "✅ 업데이트 완료"
+          echo "✅ 크롤링 데이터 업로드 완료"
         fi
