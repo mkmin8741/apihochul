@@ -1,325 +1,278 @@
-name: Perfect Movie Crawler
-
-on:
-  schedule:
-    - cron: '0 */6 * * *'  # 6시간마다
-  workflow_dispatch:  # 수동 실행 가능
-
-jobs:
-  crawl-perfect-movie-data:
-    runs-on: ubuntu-latest
-    
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
-        
-    - name: Install dependencies
-      run: |
-        pip install requests beautifulsoup4 lxml urllib3
-        
-    - name: Perfect movie crawling
-      env:
-        KOBIS_KEY: ${{ secrets.KOBIS_API_KEY }}
-      run: |
-        python << 'EOF'
-        import requests
-        import json
-        from datetime import datetime, timedelta
-        import os
-        import time
-        import re
-        from bs4 import BeautifulSoup
-        from urllib.parse import quote, urljoin
-        import urllib.parse
-
-        def clean_text(text):
-            """텍스트 정리"""
-            if not text:
-                return ""
-            return re.sub(r'\s+', ' ', text.strip())
-
-        def get_naver_movie_perfect(movie_title, open_year=None):
-            """네이버 영화에서 완벽 크롤링"""
-            try:
-                print(f"🔍 네이버에서 '{movie_title}' 완벽 검색 중...")
-                
-                # 네이버 영화 검색 (실제 구조 기반)
-                search_query = f"영화 {movie_title} 정보"
-                search_url = "https://search.naver.com/search.naver"
-                params = {
-                    'where': 'nexearch',
-                    'sm': 'tab_etc',
-                    'mra': 'bkEw',
-                    'pkid': '68',
-                    'query': search_query
-                }
-                
-                headers = {
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-                    'Accept-Language': 'ko-KR,ko;q=0.8,en-US;q=0.5,en;q=0.3',
-                    'Accept-Encoding': 'gzip, deflate, br',
-                    'DNT': '1',
-                    'Connection': 'keep-alive',
-                    'Upgrade-Insecure-Requests': '1',
-                }
-                
-                # 검색 결과 페이지
-                response = requests.get(search_url, params=params, headers=headers, timeout=15)
-                response.raise_for_status()
-                soup = BeautifulSoup(response.text, 'html.parser')
-                
-                # 포스터 이미지 추출 (실제 구조: .thumb ._item img)
-                poster_url = ""
-                poster_link = soup.find('a', class_='thumb _item')
-                if poster_link:
-                    img_tag = poster_link.find('img', class_='_img')
-                    if img_tag and img_tag.get('src'):
-                        poster_url = img_tag['src']
-                        # 고화질 이미지로 변환
-                        if 'search.pstatic.net' in poster_url:
-                            poster_url = poster_url.replace('&size=176x264', '&size=300x450')
-                
-                # 줄거리 추출 (실제 구조: .intro_box ._content .text._content_text)
-                plot = ""
-                intro_box = soup.find('div', class_='intro_box _content')
-                if intro_box:
-                    plot_p = intro_box.find('p', class_='text _content_text')
-                    if plot_p:
-                        plot = clean_text(plot_p.get_text())
-                
-                # 영어제목 추출 (실제 구조: .sub_title)
-                english_title = ""
-                sub_title = soup.find('div', class_='sub_title')
-                if sub_title:
-                    spans = sub_title.find_all('span', class_='txt')
-                    for span in spans:
-                        text = clean_text(span.get_text())
-                        # 영어로 된 제목 찾기
-                        if re.match(r'^[A-Za-z\s:\'\.]+$', text) and text != '영화':
-                            english_title = text
-                            break
-                
-                # 상세 정보 추출 (실제 구조: .detail_info .info.txt_4)
-                info_area = soup.find('dl', class_='info txt_4')
-                genre = ""
-                runtime = ""
-                grade = ""
-                release_date = ""
-                country = ""
-                distributor = ""
-                
-                if info_area:
-                    info_groups = info_area.find_all('div', class_='info_group')
-                    for group in info_groups:
-                        dt = group.find('dt')
-                        dd = group.find('dd')
-                        if dt and dd:
-                            dt_text = clean_text(dt.get_text()).replace('|', '').strip()
-                            dd_text = clean_text(dd.get_text())
-                            
-                            if '개봉' in dt_text:
-                                release_date = dd_text
-                            elif '등급' in dt_text:
-                                grade = dd_text
-                            elif '장르' in dt_text:
-                                genre = dd_text
-                            elif '국가' in dt_text:
-                                country = dd_text
-                            elif '러닝타임' in dt_text:
-                                runtime = dd_text
-                            elif '배급' in dt_text:
-                                distributor = dd_text
-                
-                # 감독 정보는 출연/제작진 탭에서 가져와야 하므로 기본값
-                director = "정보 준비 중"
-                
-                result = {
-                    'poster_url': poster_url,
-                    'plot': plot or "줄거리 정보를 준비 중입니다.",
-                    'genre': genre or "정보 준비 중",
-                    'director': director,
-                    'runtime': runtime or "정보 준비 중",
-                    'grade': grade or "정보 준비 중",
-                    'english_title': english_title,
-                    'release_date': release_date,
-                    'country': country,
-                    'distributor': distributor
-                }
-                
-                print(f"✅ '{movie_title}' 네이버 완벽 크롤링 완료")
-                print(f"   포스터: {'있음' if poster_url else '없음'}")
-                print(f"   줄거리: {'있음' if plot else '없음'}")
-                print(f"   장르: {genre}")
-                print(f"   영어제목: {english_title}")
-                print(f"   개봉일: {release_date}")
-                print(f"   등급: {grade}")
-                print(f"   러닝타임: {runtime}")
-                
-                return result
-                
-            except Exception as e:
-                print(f"❌ '{movie_title}' 네이버 완벽 크롤링 실패: {e}")
-                return get_default_movie_data()
-
-        def get_director_info(movie_title):
-            """감독 정보 별도 수집"""
-            try:
-                # 감독 정보를 위한 별도 검색
-                search_query = f"{movie_title} 감독"
-                search_url = "https://search.naver.com/search.naver"
-                params = {
-                    'where': 'nexearch',
-                    'sm': 'top_hty',
-                    'fbm': '0',
-                    'ie': 'utf8',
-                    'query': search_query
-                }
-                
-                headers = {
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-                }
-                
-                response = requests.get(search_url, params=params, headers=headers, timeout=10)
-                soup = BeautifulSoup(response.text, 'html.parser')
-                
-                # 간단한 감독 정보 추출 시도
-                director = "정보 준비 중"
-                
-                # 검색 결과에서 감독 정보 찾기
-                for text_element in soup.find_all(string=True):
-                    text = clean_text(str(text_element))
-                    if '감독' in text and len(text) < 50:
-                        # 감독 이름 추출 패턴
-                        director_match = re.search(r'감독[:\s]*([가-힣]{2,4})', text)
-                        if director_match:
-                            director = director_match.group(1)
-                            break
-                
-                return director
-                
-            except Exception as e:
-                print(f"감독 정보 수집 실패: {e}")
-                return "정보 준비 중"
-
-        def get_default_movie_data():
-            """기본 영화 데이터"""
-            return {
-                'poster_url': "",
-                'plot': "줄거리 정보를 준비 중입니다.",
-                'genre': "정보 준비 중",
-                'director': "정보 준비 중",
-                'runtime': "정보 준비 중",
-                'grade': "정보 준비 중",
-                'english_title': "",
-                'release_date': "",
-                'country': "",
-                'distributor': ""
-            }
-
-        def main():
-            print('🎬 실제 네이버 구조 기반 완벽 크롤링 시작...')
-            
-            # KOBIS API 호출
-            kobis_key = os.environ['KOBIS_KEY']
-            yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
-            
-            print(f'📅 조회 날짜: {yesterday}')
-            
-            kobis_url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"
-            kobis_params = {
-                'key': kobis_key,
-                'targetDt': yesterday,
-                'itemPerPage': 10
-            }
-            
-            kobis_response = requests.get(kobis_url, params=kobis_params, timeout=15)
-            kobis_response.raise_for_status()
-            kobis_data = kobis_response.json()
-            
-            movies = kobis_data['boxOfficeResult']['dailyBoxOfficeList']
-            print(f'📊 KOBIS에서 {len(movies)}개 영화 정보 수집 완료')
-            
-            # 각 영화에 대해 완벽 크롤링
-            enhanced_movies = []
-            
-            for i, movie in enumerate(movies):
-                print(f'\n🕷️ {i+1}/{len(movies)} - {movie["movieNm"]} 완벽 크롤링 중...')
-                
-                movie_title = movie['movieNm']
-                
-                # 네이버에서 완벽 크롤링
-                movie_details = get_naver_movie_perfect(movie_title)
-                time.sleep(3)  # 크롤링 간격 (중요!)
-                
-                # 감독 정보 별도 수집
-                if movie_details['director'] == "정보 준비 중":
-                    director_info = get_director_info(movie_title)
-                    movie_details['director'] = director_info
-                    time.sleep(2)
-                
-                # 기존 KOBIS 데이터에 크롤링 정보 추가
-                enhanced_movie = {
-                    **movie,  # 기존 KOBIS 데이터 유지
-                    **movie_details  # 완벽 크롤링한 상세 정보 추가
-                }
-                
-                enhanced_movies.append(enhanced_movie)
-                print(f'✅ {movie_title} 완료')
-            
-            # 최종 데이터 생성
-            final_data = {
-                'updateTime': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-                'targetDate': yesterday,
-                'totalMovies': len(enhanced_movies),
-                'dataSource': 'KOBIS + 네이버영화 실제구조 완벽크롤링',
-                'crawlingMethod': '실제 네이버 영화 페이지 구조 분석 기반',
-                'movies': enhanced_movies
-            }
-            
-            # JSON 파일 저장
-            with open('movies.json', 'w', encoding='utf-8') as f:
-                json.dump(final_data, f, ensure_ascii=False, indent=2)
-                
-            print(f'\n🎉 실제 구조 기반 완벽 크롤링 완료!')
-            print(f'📊 총 {len(enhanced_movies)}개 영화')
-            print(f'🖼️ 포스터 수집: {sum(1 for m in enhanced_movies if m.get("poster_url"))}개')
-            print(f'📝 줄거리 수집: {sum(1 for m in enhanced_movies if m.get("plot") and "준비 중" not in m["plot"])}개')
-            print(f'🎭 장르 수집: {sum(1 for m in enhanced_movies if m.get("genre") and "준비 중" not in m["genre"])}개')
-            print(f'🎬 감독 수집: {sum(1 for m in enhanced_movies if m.get("director") and "준비 중" not in m["director"])}개')
-            
-            # 샘플 데이터 출력
-            if enhanced_movies:
-                sample = enhanced_movies[0]
-                print(f'\n📋 샘플 데이터 ({sample["movieNm"]}):')
-                print(f'   포스터: {sample.get("poster_url", "없음")[:80]}...')
-                print(f'   줄거리: {sample.get("plot", "없음")[:80]}...')
-                print(f'   장르: {sample.get("genre", "없음")}')
-                print(f'   감독: {sample.get("director", "없음")}')
-                print(f'   등급: {sample.get("grade", "없음")}')
-                print(f'   러닝타임: {sample.get("runtime", "없음")}')
-                print(f'   영어제목: {sample.get("english_title", "없음")}')
-            
-        if __name__ == "__main__":
-            main()
-        EOF
-        
-    - name: Commit and push changes
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "Perfect Movie Crawler"
-        git add movies.json
-        if git diff --staged --quiet; then
-          echo "변경사항 없음"
-        else
-          git commit -m "🕷️ 실제 네이버 구조 기반 완벽 크롤링 $(date +'%Y-%m-%d %H:%M')"
-          git push
-          echo "✅ 완벽 크롤링 데이터 업로드 완료"
-        fi
+{
+  "updateTime": "2025-08-06 07:56:00",
+  "targetDate": "20250805",
+  "totalMovies": 10,
+  "dataSource": "KOBIS + 네이버영화 + 다음영화 크롤링",
+  "movies": [
+    {
+      "rnum": "1",
+      "rank": "1",
+      "rankInten": "0",
+      "rankOldAndNew": "OLD",
+      "movieCd": "20241941",
+      "movieNm": "좀비딸",
+      "openDt": "2025-07-30",
+      "salesAmt": "1560216870",
+      "salesShare": "52.4",
+      "salesInten": "-189611890",
+      "salesChange": "-10.8",
+      "salesAcc": "20724753220",
+      "audiCnt": "167692",
+      "audiInten": "-17241",
+      "audiChange": "-9.3",
+      "audiAcc": "2223688",
+      "scrnCnt": "1421",
+      "showCnt": "6640",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
+    },
+    {
+      "rnum": "2",
+      "rank": "2",
+      "rankInten": "0",
+      "rankOldAndNew": "OLD",
+      "movieCd": "20254501",
+      "movieNm": "F1 더 무비",
+      "openDt": "2025-06-25",
+      "salesAmt": "607155370",
+      "salesShare": "20.4",
+      "salesInten": "-62571660",
+      "salesChange": "-9.3",
+      "salesAcc": "34347715230",
+      "audiCnt": "58833",
+      "audiInten": "-5948",
+      "audiChange": "-9.2",
+      "audiAcc": "3220962",
+      "scrnCnt": "886",
+      "showCnt": "2509",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
+    },
+    {
+      "rnum": "3",
+      "rank": "3",
+      "rankInten": "0",
+      "rankOldAndNew": "OLD",
+      "movieCd": "20254275",
+      "movieNm": "킹 오브 킹스",
+      "openDt": "2025-07-16",
+      "salesAmt": "151509600",
+      "salesShare": "5.1",
+      "salesInten": "-4903210",
+      "salesChange": "-3.1",
+      "salesAcc": "9879591166",
+      "audiCnt": "16646",
+      "audiInten": "30",
+      "audiChange": "0.2",
+      "audiAcc": "1048566",
+      "scrnCnt": "599",
+      "showCnt": "1103",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
+    },
+    {
+      "rnum": "4",
+      "rank": "4",
+      "rankInten": "0",
+      "rankOldAndNew": "OLD",
+      "movieCd": "20247460",
+      "movieNm": "배드 가이즈 2",
+      "openDt": "2025-07-30",
+      "salesAmt": "128229710",
+      "salesShare": "4.3",
+      "salesInten": "-11611090",
+      "salesChange": "-8.3",
+      "salesAcc": "2085754280",
+      "audiCnt": "14687",
+      "audiInten": "-996",
+      "audiChange": "-6.4",
+      "audiAcc": "231477",
+      "scrnCnt": "641",
+      "showCnt": "1180",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
+    },
+    {
+      "rnum": "5",
+      "rank": "5",
+      "rankInten": "0",
+      "rankOldAndNew": "OLD",
+      "movieCd": "20233227",
+      "movieNm": "전지적 독자 시점",
+      "openDt": "2025-07-23",
+      "salesAmt": "104978880",
+      "salesShare": "3.5",
+      "salesInten": "-7935720",
+      "salesChange": "-7",
+      "salesAcc": "9529328600",
+      "audiCnt": "13505",
+      "audiInten": "-694",
+      "audiChange": "-4.9",
+      "audiAcc": "1001685",
+      "scrnCnt": "723",
+      "showCnt": "1500",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
+    },
+    {
+      "rnum": "6",
+      "rank": "6",
+      "rankInten": "0",
+      "rankOldAndNew": "OLD",
+      "movieCd": "20252552",
+      "movieNm": "판타스틱 4: 새로운 출발",
+      "openDt": "2025-07-24",
+      "salesAmt": "93784630",
+      "salesShare": "3.2",
+      "salesInten": "-12212490",
+      "salesChange": "-11.5",
+      "salesAcc": "6085176510",
+      "audiCnt": "8697",
+      "audiInten": "-1123",
+      "audiChange": "-11.4",
+      "audiAcc": "560274",
+      "scrnCnt": "637",
+      "showCnt": "1095",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
+    },
+    {
+      "rnum": "7",
+      "rank": "7",
+      "rankInten": "0",
+      "rankOldAndNew": "OLD",
+      "movieCd": "20254824",
+      "movieNm": "명탐정 코난: 척안의 잔상",
+      "openDt": "2025-07-16",
+      "salesAmt": "76899900",
+      "salesShare": "2.6",
+      "salesInten": "222300",
+      "salesChange": "0.3",
+      "salesAcc": "6541399190",
+      "audiCnt": "7844",
+      "audiInten": "136",
+      "audiChange": "1.8",
+      "audiAcc": "666945",
+      "scrnCnt": "479",
+      "showCnt": "691",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
+    },
+    {
+      "rnum": "8",
+      "rank": "8",
+      "rankInten": "0",
+      "rankOldAndNew": "OLD",
+      "movieCd": "20254603",
+      "movieNm": "베베핀 극장판: 사라진 베베핀과 핑크퐁 대모험",
+      "openDt": "2025-07-24",
+      "salesAmt": "46541200",
+      "salesShare": "1.6",
+      "salesInten": "-4623660",
+      "salesChange": "-9",
+      "salesAcc": "1557141080",
+      "audiCnt": "5250",
+      "audiInten": "-370",
+      "audiChange": "-6.6",
+      "audiAcc": "166718",
+      "scrnCnt": "396",
+      "showCnt": "485",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
+    },
+    {
+      "rnum": "9",
+      "rank": "9",
+      "rankInten": "1",
+      "rankOldAndNew": "OLD",
+      "movieCd": "20233220",
+      "movieNm": "노이즈",
+      "openDt": "2025-06-25",
+      "salesAmt": "25648700",
+      "salesShare": "0.9",
+      "salesInten": "830600",
+      "salesChange": "3.3",
+      "salesAcc": "16681519710",
+      "audiCnt": "2553",
+      "audiInten": "99",
+      "audiChange": "4",
+      "audiAcc": "1699886",
+      "scrnCnt": "186",
+      "showCnt": "249",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
+    },
+    {
+      "rnum": "10",
+      "rank": "10",
+      "rankInten": "-1",
+      "rankOldAndNew": "OLD",
+      "movieCd": "20256033",
+      "movieNm": "고고다이노 극장판: 게코도마뱀의 꿈",
+      "openDt": "2025-07-30",
+      "salesAmt": "22455100",
+      "salesShare": "0.8",
+      "salesInten": "-5140500",
+      "salesChange": "-18.6",
+      "salesAcc": "355232900",
+      "audiCnt": "2489",
+      "audiInten": "-542",
+      "audiChange": "-17.9",
+      "audiAcc": "39221",
+      "scrnCnt": "179",
+      "showCnt": "254",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
+    }
+  ]
+}
