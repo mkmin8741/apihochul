@@ -1,5 +1,7 @@
 {
-  "updateTime": "2025-08-06T06:59:15.877580",
+  "updateTime": "2025-08-06 07:02:37",
+  "targetDate": "20250805",
+  "totalMovies": 10,
   "movies": [
     {
       "rnum": "1",
@@ -93,11 +95,11 @@
       "salesShare": "3.5",
       "salesInten": "-7935720",
       "salesChange": "-7",
-      "salesAcc": "9529345100",
+      "salesAcc": "9529338100",
       "audiCnt": "13505",
       "audiInten": "-694",
       "audiChange": "-4.9",
-      "audiAcc": "1001688",
+      "audiAcc": "1001687",
       "scrnCnt": "723",
       "showCnt": "1500"
     },
