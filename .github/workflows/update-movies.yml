@@ -1,4 +1,4 @@
-name: Simple Movie Test
+name: update movies
 
 on:
   workflow_dispatch:
@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
     - uses: actions/setup-python@v4
       with:
         python-version: '3.9'
@@ -24,19 +26,20 @@ jobs:
         date = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
         
         r = requests.get('http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json', 
-                        params={'key': api_key, 'targetDt': date, 'itemPerPage': 5})
+                        params={'key': api_key, 'targetDt': date, 'itemPerPage': 10})
         
         data = {'updateTime': datetime.now().isoformat(), 'movies': r.json()['boxOfficeResult']['dailyBoxOfficeList']}
         
         with open('movies.json', 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
         
-        print('✅ 성공! movies.json 생성 완료')
+        print('✅ 성공! movies.json 생성 완료 - Top 10 영화')
+        print(f'📊 총 {len(data[\"movies\"])}개 영화 데이터 수집됨')
         "
     - name: Commit
       run: |
         git config user.name "Bot"
         git config user.email "bot@example.com"
         git add movies.json
-        git commit -m "영화 데이터 생성" || exit 0
+        git commit -m "🎬 Top 10 영화 순위 업데이트 $(date)" || exit 0
         git push
