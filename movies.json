@@ -1,7 +1,8 @@
 {
-  "updateTime": "2025-08-06 07:02:37",
+  "updateTime": "2025-08-06 07:44:33",
   "targetDate": "20250805",
   "totalMovies": 10,
+  "dataSource": "KOBIS + 네이버영화 + 다음영화 크롤링",
   "movies": [
     {
       "rnum": "1",
@@ -15,13 +16,20 @@
       "salesShare": "52.4",
       "salesInten": "-189611890",
       "salesChange": "-10.8",
-      "salesAcc": "20724767220",
+      "salesAcc": "20724753220",
       "audiCnt": "167692",
       "audiInten": "-17241",
       "audiChange": "-9.3",
-      "audiAcc": "2223690",
+      "audiAcc": "2223688",
       "scrnCnt": "1421",
-      "showCnt": "6640"
+      "showCnt": "6640",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
     },
     {
       "rnum": "2",
@@ -35,13 +43,20 @@
       "salesShare": "20.4",
       "salesInten": "-62571660",
       "salesChange": "-9.3",
-      "salesAcc": "34347729230",
+      "salesAcc": "34347715230",
       "audiCnt": "58833",
       "audiInten": "-5948",
       "audiChange": "-9.2",
-      "audiAcc": "3220964",
+      "audiAcc": "3220962",
       "scrnCnt": "886",
-      "showCnt": "2509"
+      "showCnt": "2509",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
     },
     {
       "rnum": "3",
@@ -61,7 +76,14 @@
       "audiChange": "0.2",
       "audiAcc": "1048566",
       "scrnCnt": "599",
-      "showCnt": "1103"
+      "showCnt": "1103",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
     },
     {
       "rnum": "4",
@@ -75,13 +97,20 @@
       "salesShare": "4.3",
       "salesInten": "-11611090",
       "salesChange": "-8.3",
-      "salesAcc": "2085776780",
+      "salesAcc": "2085754280",
       "audiCnt": "14687",
       "audiInten": "-996",
       "audiChange": "-6.4",
-      "audiAcc": "231480",
+      "audiAcc": "231477",
       "scrnCnt": "641",
-      "showCnt": "1180"
+      "showCnt": "1180",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
     },
     {
       "rnum": "5",
@@ -95,13 +124,20 @@
       "salesShare": "3.5",
       "salesInten": "-7935720",
       "salesChange": "-7",
-      "salesAcc": "9529338100",
+      "salesAcc": "9529328600",
       "audiCnt": "13505",
       "audiInten": "-694",
       "audiChange": "-4.9",
-      "audiAcc": "1001687",
+      "audiAcc": "1001685",
       "scrnCnt": "723",
-      "showCnt": "1500"
+      "showCnt": "1500",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
     },
     {
       "rnum": "6",
@@ -121,7 +157,14 @@
       "audiChange": "-11.4",
       "audiAcc": "560274",
       "scrnCnt": "637",
-      "showCnt": "1095"
+      "showCnt": "1095",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
     },
     {
       "rnum": "7",
@@ -135,13 +178,20 @@
       "salesShare": "2.6",
       "salesInten": "222300",
       "salesChange": "0.3",
-      "salesAcc": "6541414190",
+      "salesAcc": "6541399190",
       "audiCnt": "7844",
       "audiInten": "136",
       "audiChange": "1.8",
-      "audiAcc": "666946",
+      "audiAcc": "666945",
       "scrnCnt": "479",
-      "showCnt": "691"
+      "showCnt": "691",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
     },
     {
       "rnum": "8",
@@ -161,7 +211,14 @@
       "audiChange": "-6.6",
       "audiAcc": "166718",
       "scrnCnt": "396",
-      "showCnt": "485"
+      "showCnt": "485",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
     },
     {
       "rnum": "9",
@@ -181,7 +238,14 @@
       "audiChange": "4",
       "audiAcc": "1699886",
       "scrnCnt": "186",
-      "showCnt": "249"
+      "showCnt": "249",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
     },
     {
       "rnum": "10",
@@ -201,7 +265,14 @@
       "audiChange": "-17.9",
       "audiAcc": "39221",
       "scrnCnt": "179",
-      "showCnt": "254"
+      "showCnt": "254",
+      "poster_url": "",
+      "plot": "줄거리 정보를 준비 중입니다.",
+      "genre": "정보 준비 중",
+      "director": "정보 준비 중",
+      "runtime": "정보 준비 중",
+      "grade": "정보 준비 중",
+      "english_title": ""
     }
   ]
 }
