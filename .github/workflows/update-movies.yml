@@ -1,0 +1,74 @@
+name: Update Movie Data
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # 6시간마다
+  workflow_dispatch:  # 수동 실행 가능
+
+jobs:
+  update-movies:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+        
+    - name: Update movie data
+      env:
+        KOBIS_KEY: ${{ secrets.KOBIS_API_KEY }}
+      run: |
+        python << 'EOF'
+        import requests
+        import json
+        from datetime import datetime, timedelta
+        import os
+        
+        try:
+            api_key = os.environ['KOBIS_KEY']
+            yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
+            
+            url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"
+            params = {
+                'key': api_key,
+                'targetDt': yesterday,
+                'itemPerPage': 10
+            }
+            
+            response = requests.get(url, params=params)
+            response.raise_for_status()
+            data = response.json()
+            
+            movie_data = {
+                'updateTime': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                'targetDate': yesterday,
+                'movies': data['boxOfficeResult']['dailyBoxOfficeList']
+            }
+            
+            with open('movies.json', 'w', encoding='utf-8') as f:
+                json.dump(movie_data, f, ensure_ascii=False, indent=2)
+                
+            print(f"✅ {len(movie_data['movies'])}개 영화 데이터 업데이트 완료")
+            
+        except Exception as e:
+            print(f"❌ 오류 발생: {e}")
+            error_data = {
+                'updateTime': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                'error': str(e),
+                'movies': []
+            }
+            with open('movies.json', 'w', encoding='utf-8') as f:
+                json.dump(error_data, f, ensure_ascii=False, indent=2)
+        EOF
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add movies.json
+        git diff --staged --quiet || git commit -m "🎬 영화 순위 자동 업데이트 $(date +'%Y-%m-%d %H:%M')"
+        git push
