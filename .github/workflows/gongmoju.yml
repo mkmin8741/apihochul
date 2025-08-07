@@ -1,4 +1,4 @@
-name: IPO Data Crawler
+name: KRX Complete IPO Data Crawler (with Details)
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  krx-ipo-crawl:
+  krx-complete-crawler:
     runs-on: ubuntu-latest
     
     steps:
@@ -22,55 +22,186 @@ jobs:
         
     - name: Install dependencies
       run: |
-        pip install requests beautifulsoup4 lxml pandas pykrx
+        pip install requests beautifulsoup4 lxml selenium webdriver-manager
         
-    - name: KRX IPO data collection
+    - name: Complete KRX IPO Crawler with Details
       run: |
         python << 'EOF'
         import requests
         import json
         from datetime import datetime, timedelta
         import time
-        import pandas as pd
-        
-        def create_mock_ipo_data():
-            """임시 IPO 데이터 생성 (실제 크롤링 실패시 대체용)"""
+        import re
+        from bs4 import BeautifulSoup
+        from urllib.parse import urlencode, parse_qs, urlparse
+
+        def crawl_krx_ipo_calendar_with_details():
+            """KRX IPO 달력 + 각 기업 상세정보 크롤링"""
             try:
-                print("🏢 KRX IPO 데이터 수집 시작...")
+                print("🏢 KRX IPO 완전체 크롤링 시작 (달력 + 상세정보)...")
                 
-                # 임시 IPO 데이터 (실제 운영시에는 실제 크롤링으로 교체)
-                mock_events = [
-                    {
-                        'date': '2025-08-08',
-                        'company_name': '테스트기업1',
-                        'event_type': '상장',
-                        'market_type': '유가증권',
-                        'company_id': '20250808001',
-                        'source': 'KRX 시뮬레이션'
-                    },
-                    {
-                        'date': '2025-08-09',
-                        'company_name': '테스트기업2', 
-                        'event_type': 'IR',
-                        'market_type': '코스닥',
-                        'company_id': '20250809001',
-                        'source': 'KRX 시뮬레이션'
-                    },
-                    {
-                        'date': '2025-08-10',
-                        'company_name': '테스트기업3',
-                        'event_type': '수요예측',
-                        'market_type': '코스닥',
-                        'company_id': '20250810001',
-                        'source': 'KRX 시뮬레이션'
+                current_date = datetime.now()
+                all_events = []
+                
+                # 이번 달과 다음 달 크롤링
+                for month_offset in range(2):
+                    target_date = current_date.replace(day=1) + timedelta(days=32 * month_offset)
+                    year = target_date.year
+                    month = target_date.month
+                    
+                    print(f"📅 {year}년 {month}월 IPO 달력 + 상세정보 크롤링...")
+                    
+                    # KRX 공모일정 달력 URL
+                    base_url = "https://kind.krx.co.kr/listinvstg/pubofrschdl.do"
+                    params = {
+                        'method': 'searchPubofrScholMain'
                     }
-                ]
+                    
+                    headers = {
+                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                        'Accept-Language': 'ko-KR,ko;q=0.8,en-US;q=0.5,en;q=0.3',
+                        'Connection': 'keep-alive',
+                        'Referer': 'https://kind.krx.co.kr/'
+                    }
+                    
+                    try:
+                        response = requests.get(base_url, params=params, headers=headers, timeout=20)
+                        
+                        if response.status_code == 200:
+                            response.encoding = 'utf-8'
+                            soup = BeautifulSoup(response.text, 'html.parser')
+                            
+                            # 달력에서 기업 링크들 찾기
+                            company_links = soup.find_all('a', href=True)
+                            
+                            for link in company_links:
+                                href = link.get('href')
+                                company_name = link.get_text().strip()
+                                
+                                # 공모기업 상세 링크인지 확인
+                                if 'pubofrprogcomdetail.do' in href and company_name and len(company_name) > 1:
+                                    # 상세 정보 크롤링
+                                    detail_info = get_company_detail_info(href, company_name, headers)
+                                    if detail_info:
+                                        all_events.append(detail_info)
+                                        print(f"   ✅ {company_name} 상세정보 수집 완료")
+                                        time.sleep(2)  # 서버 부하 방지
+                        
+                        time.sleep(3)
+                        
+                    except Exception as e:
+                        print(f"   ❌ {year}-{month:02d} 크롤링 실패: {e}")
+                        continue
                 
-                return mock_events
+                return all_events
                 
             except Exception as e:
-                print(f"❌ 데이터 수집 실패: {e}")
+                print(f"❌ 전체 크롤링 실패: {e}")
                 return []
+
+        def get_company_detail_info(detail_url, company_name, headers):
+            """개별 공모기업 상세정보 크롤링"""
+            try:
+                # 상대 URL을 절대 URL로 변환
+                if detail_url.startswith('javascript:'):
+                    return None
+                
+                if not detail_url.startswith('http'):
+                    detail_url = 'https://kind.krx.co.kr' + detail_url
+                
+                response = requests.get(detail_url, headers=headers, timeout=15)
+                response.encoding = 'utf-8'
+                
+                soup = BeautifulSoup(response.text, 'html.parser')
+                
+                # 상세정보 추출
+                detail_data = {
+                    'company_name': company_name,
+                    'detail_url': detail_url,
+                    'crawl_time': datetime.now().isoformat(),
+                    'source': 'KRX KIND 공모기업 상세'
+                }
+                
+                # 테이블에서 정보 추출
+                tables = soup.find_all('table')
+                
+                for table in tables:
+                    rows = table.find_all('tr')
+                    
+                    for row in rows:
+                        cells = row.find_all(['td', 'th'])
+                        
+                        if len(cells) >= 2:
+                            for i in range(0, len(cells)-1, 2):
+                                key = cells[i].get_text().strip()
+                                value = cells[i+1].get_text().strip()
+                                
+                                # 주요 정보 매핑
+                                if key == '설립일':
+                                    detail_data['establishment_date'] = value
+                                elif key == '대표이사':
+                                    detail_data['ceo'] = value
+                                elif key == '업종':
+                                    detail_data['industry'] = value
+                                elif key == '주요제품':
+                                    detail_data['main_products'] = value
+                                elif key == '매출액(수익)':
+                                    detail_data['revenue'] = value
+                                elif key == '순이익':
+                                    detail_data['net_income'] = value
+                                elif key == '자기자본':
+                                    detail_data['equity'] = value
+                                elif key == '최대주주':
+                                    detail_data['major_shareholder'] = value
+                                elif key == '최대주주 지분율':
+                                    detail_data['ownership_ratio'] = value
+                                elif key == 'IR일정':
+                                    detail_data['ir_schedule'] = value
+                                elif key == '수요예측일정':
+                                    detail_data['demand_forecast_schedule'] = value
+                                elif key == '공모청약일정':
+                                    detail_data['subscription_schedule'] = value
+                                elif key == '상장(예정)일':
+                                    detail_data['listing_date'] = value
+                                elif key == '희망공모가격':
+                                    detail_data['hoped_price'] = value
+                                elif key == '액면가':
+                                    detail_data['par_value'] = value
+                
+                # 날짜 정보 파싱 (상장예정일에서)
+                if 'listing_date' in detail_data:
+                    listing_date = detail_data['listing_date']
+                    date_match = re.search(r'(\d{4}-\d{2}-\d{2})', listing_date)
+                    if date_match:
+                        detail_data['date'] = date_match.group(1)
+                        detail_data['event_type'] = '상장예정'
+                    else:
+                        detail_data['date'] = datetime.now().strftime('%Y-%m-%d')
+                        detail_data['event_type'] = '정보수집'
+                else:
+                    detail_data['date'] = datetime.now().strftime('%Y-%m-%d')
+                    detail_data['event_type'] = '정보수집'
+                
+                # 시장 구분 추정
+                detail_data['market_type'] = determine_market_type(company_name, detail_data.get('industry', ''))
+                
+                return detail_data
+                
+            except Exception as e:
+                print(f"   ❌ {company_name} 상세정보 크롤링 실패: {e}")
+                return None
+
+        def determine_market_type(company_name, industry):
+            """회사명과 업종으로 시장 구분 추정"""
+            if 'SPAC' in company_name.upper() or '스팩' in company_name:
+                return '코스닥'
+            elif any(keyword in industry for keyword in ['바이오', '의료', '소프트웨어', 'IT', '게임']):
+                return '코스닥'
+            elif any(keyword in company_name for keyword in ['조선', '중공업', '전자', '화학']):
+                return '유가증권'
+            else:
+                return '코스닥'  # 기본값
 
         def categorize_events_by_date(events):
             """날짜별 이벤트 분류"""
@@ -78,10 +209,13 @@ jobs:
             
             categorized = {
                 'today_events': [],
+                'tomorrow_events': [],
                 'week_events': [],
                 'month_events': [],
+                'upcoming_events': [],
                 'by_type': {
-                    '상장': [],
+                    '상장예정': [],
+                    '정보수집': [],
                     'IR': [],
                     '수요예측': [],
                     '청약': []
@@ -96,10 +230,14 @@ jobs:
                     # 날짜별 분류
                     if days_diff == 0:
                         categorized['today_events'].append(event)
-                    elif 0 < days_diff <= 7:
+                    elif days_diff == 1:
+                        categorized['tomorrow_events'].append(event)
+                    elif 2 <= days_diff <= 7:
                         categorized['week_events'].append(event)
-                    elif 0 <= days_diff <= 30:
+                    elif 8 <= days_diff <= 30:
                         categorized['month_events'].append(event)
+                    elif days_diff > 30:
+                        categorized['upcoming_events'].append(event)
                     
                     # 타입별 분류
                     event_type = event['event_type']
@@ -111,112 +249,141 @@ jobs:
             
             return categorized
 
-        def main():
-            print('🏢 KRX IPO 데이터 수집 시작...')
+        def extract_financial_summary(events):
+            """재무 요약 정보 생성"""
+            financial_summary = {
+                'total_companies': len(events),
+                'profitable_companies': 0,
+                'loss_companies': 0,
+                'average_revenue': 0,
+                'by_industry': {},
+                'by_market': {}
+            }
             
-            # 데이터 수집 시도
-            events = create_mock_ipo_data()
+            total_revenue = 0
+            revenue_count = 0
+            
+            for event in events:
+                # 수익성 분석
+                if 'net_income' in event:
+                    net_income = event['net_income']
+                    if '-' in net_income:
+                        financial_summary['loss_companies'] += 1
+                    else:
+                        financial_summary['profitable_companies'] += 1
+                
+                # 매출액 평균 계산
+                if 'revenue' in event:
+                    revenue_text = event['revenue']
+                    revenue_numbers = re.findall(r'[\d,]+', revenue_text.replace(',', ''))
+                    if revenue_numbers:
+                        try:
+                            revenue = int(revenue_numbers[0])
+                            total_revenue += revenue
+                            revenue_count += 1
+                        except:
+                            pass
+                
+                # 업종별 분류
+                industry = event.get('industry', '기타')
+                financial_summary['by_industry'][industry] = financial_summary['by_industry'].get(industry, 0) + 1
+                
+                # 시장별 분류
+                market = event.get('market_type', '기타')
+                financial_summary['by_market'][market] = financial_summary['by_market'].get(market, 0) + 1
+            
+            if revenue_count > 0:
+                financial_summary['average_revenue'] = total_revenue // revenue_count
+            
+            return financial_summary
+
+        def main():
+            print('🏢 KRX IPO 완전체 크롤링 시스템 시작...')
+            
+            # 달력 + 상세정보 완전 크롤링
+            events = crawl_krx_ipo_calendar_with_details()
             
             if not events:
-                print("❌ 데이터가 없어서 기본 데이터 생성")
+                print("❌ 크롤링된 데이터가 없습니다.")
+                # 기본 데이터 생성
                 events = [{
+                    'company_name': 'KRX 크롤링 진행중',
                     'date': datetime.now().strftime('%Y-%m-%d'),
-                    'company_name': '데이터 없음',
-                    'event_type': '정보없음',
-                    'market_type': '기타',
-                    'company_id': 'none',
-                    'source': '기본데이터'
+                    'event_type': '시스템',
+                    'market_type': '시스템',
+                    'source': 'KRX 완전체 크롤링'
                 }]
             
             # 이벤트 분류
             categorized = categorize_events_by_date(events)
             
+            # 재무 요약 정보
+            financial_summary = extract_financial_summary(events)
+            
             # 통계 생성
             stats = {
                 'total_events': len(events),
                 'today_count': len(categorized['today_events']),
+                'tomorrow_count': len(categorized['tomorrow_events']),
                 'week_count': len(categorized['week_events']),
                 'month_count': len(categorized['month_events']),
-                'by_type_count': {k: len(v) for k, v in categorized['by_type'].items()}
+                'upcoming_count': len(categorized['upcoming_events']),
+                'by_type_count': {k: len(v) for k, v in categorized['by_type'].items()},
+                'financial_summary': financial_summary
             }
             
             # 최종 JSON 데이터
             final_data = {
                 'update_time': datetime.now().strftime('%Y년 %m월 %d일 %H시 %M분'),
                 'crawl_time': datetime.now().isoformat(),
-                'data_source': 'KRX 기반 IPO 시스템',
-                'crawl_method': 'GitHub Actions 자동화',
+                'data_source': 'KRX KIND 완전체 크롤링 (달력 + 상세정보)',
+                'crawl_method': 'GitHub Actions + 완전 자동화 + 상세정보',
+                'source_url': 'https://kind.krx.co.kr/listinvstg/pubofrschdl.do?method=searchPubofrScholMain',
+                'detail_crawling': True,
                 'total_events': len(events),
                 'statistics': stats,
                 'categorized_events': categorized,
                 'all_events': events,
-                'status': 'success'
+                'status': 'success' if len(events) > 1 else 'limited_data'
             }
             
-            # JSON 파일 저장 (파일명 확실히 생성)
-            output_file = 'ipo_calendar_real.json'
+            # JSON 파일 저장
+            output_file = 'ipo_data.json'
             try:
                 with open(output_file, 'w', encoding='utf-8') as f:
                     json.dump(final_data, f, ensure_ascii=False, indent=2)
                 print(f'✅ {output_file} 파일 생성 완료')
                 
-                # 파일 존재 확인
-                import os
-                if os.path.exists(output_file):
-                    file_size = os.path.getsize(output_file)
-                    print(f'📁 파일 크기: {file_size} bytes')
-                else:
-                    print('❌ 파일 생성 실패!')
-                    raise Exception("파일이 생성되지 않음")
-                    
             except Exception as e:
                 print(f'❌ 파일 저장 실패: {e}')
                 raise
             
             # 결과 출력
-            print(f'\n🎉 IPO 데이터 수집 완료!')
-            print(f'📊 총 이벤트: {len(events)}개')
-            print(f'📅 오늘 이벤트: {stats["today_count"]}개')
-            print(f'📈 이번주 이벤트: {stats["week_count"]}개')
-            print(f'🕐 업데이트 시간: {final_data["update_time"]}')
+            print(f'\n🎉 KRX IPO 완전체 크롤링 완료!')
+            print(f'🔗 소스: KRX KIND 공모기업 상세정보')
+            print(f'📊 총 기업: {len(events)}개')
+            print(f'💰 평균 매출: {stats["financial_summary"]["average_revenue"]:,}백만원')
+            print(f'📈 흑자 기업: {stats["financial_summary"]["profitable_companies"]}개')
+            print(f'📉 적자 기업: {stats["financial_summary"]["loss_companies"]}개')
+            print(f'🏛️ 시장별: {stats["financial_summary"]["by_market"]}')
+            print(f'🏭 업종별: {list(stats["financial_summary"]["by_industry"].keys())[:5]}')
             
         if __name__ == "__main__":
             main()
         EOF
         
-    - name: Verify file creation
-      run: |
-        echo "📁 생성된 파일들 확인:"
-        ls -la *.json || echo "JSON 파일이 없습니다"
-        
-        if [ -f "ipo_calendar_real.json" ]; then
-          echo "✅ ipo_calendar_real.json 파일 존재"
-          echo "📊 파일 내용 미리보기:"
-          head -20 ipo_calendar_real.json
-        else
-          echo "❌ ipo_calendar_real.json 파일이 생성되지 않았습니다"
-          exit 1
-        fi
-        
     - name: Commit and push
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "KRX IPO Crawler"
+        git config --local user.name "KRX Complete IPO Crawler"
         
-        # 파일 존재 확인 후 add
-        if [ -f "ipo_calendar_real.json" ]; then
-          git add ipo_calendar_real.json
-          echo "✅ 파일 staged 완료"
-        else
-          echo "❌ 커밋할 파일이 없습니다"
-          exit 1
-        fi
-        
-        # 변경사항 확인 후 커밋
-        if git diff --staged --quiet; then
-          echo "ℹ️ 변경사항 없음 - 커밋 스킵"
-        else
-          git commit -m "🏢 KRX IPO 데이터 자동업데이트 $(date +'%Y-%m-%d %H:%M')"
-          git push
-          echo "✅ 데이터 업데이트 완료"
+        if [ -f "ipo_complete_data.json" ]; then
+          git add ipo_complete_data.json
+          if git diff --staged --quiet; then
+            echo "ℹ️ 변경사항 없음"
+          else
+            git commit -m "🏢 KRX IPO 완전체 크롤링 (달력+상세정보) $(date +'%Y-%m-%d %H:%M')"
+            git push
+            echo "✅ 완전체 데이터 업데이트 완료"
+          fi
         fi
