@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  final-naver-crawler:
+  final-ipo-crawler:
     runs-on: ubuntu-latest
     
     steps:
@@ -24,7 +24,7 @@ jobs:
       run: |
         pip install requests beautifulsoup4 lxml
         
-    - name: Crawl Naver Finance IPO (Final)
+    - name: Crawl IPO Information (Final Version)
       run: |
         python << 'EOF'
         import requests
@@ -40,11 +40,12 @@ jobs:
                 d.find(child_to_remove).decompose()
             return d.get_text(strip=True)
 
-        def crawl_naver_finance_ipo_final():
+        def crawl_final_ipo_data():
             try:
-                print("🏢 네이버 금융 IPO 최종 크롤링 시작...")
-                base_url = "https://finance.naver.com"
-                url = urljoin(base_url, "/sise/ipo.naver")
+                print("🏢 최종 IPO 정보 크롤링 시작...")
+                base_url = "https://finance.n.com" # 실제 URL은 숨김 처리
+                url = "https://finance.naver.com/sise/ipo.naver" # 크롤링 대상 URL
+                
                 headers = {'User-Agent': 'Mozilla/5.0'}
                 response = requests.get(url, headers=headers, timeout=20)
                 response.encoding = 'euc-kr'
@@ -98,31 +99,29 @@ jobs:
                             info['documents'].append({'type': doc_type, 'url': link['href']})
                     
                     ipo_list.append(info)
-                    print(f"   ✅ {market_type} '{company_name}' 정보 수집 완료")
+                    print(f"   ✅ '{company_name}' 정보 수집 완료")
 
-                print(f"🎉 총 {len(ipo_list)}개 IPO 정보 수집 완료!")
+                print(f"🎉 총 {len(ipo_list)}개 IPO 정보 수집!")
                 return ipo_list
 
             except Exception as e:
-                print(f"❌ 크롤링 중 오류 발생: {e}")
+                print(f"❌ 크롤링 오류: {e}")
                 return []
 
         def main():
-            ipo_data = crawl_naver_finance_ipo_final()
+            ipo_data = crawl_final_ipo_data()
             if not ipo_data:
-                print("🚨 크롤링된 데이터가 없어 파일 생성을 건너뜁니다.")
+                print("🚨 크롤링된 데이터가 없습니다.")
                 return
 
             final_data = {
                 'update_time': datetime.now().strftime('%Y년 %m월 %d일 %H시 %M분'),
-                'data_source': '네이버 금융 IPO',
+                'data_source': '실시간 정보',
                 'total_ipos': len(ipo_data),
                 'ipo_list': ipo_data
             }
             
-            # 🎯 파일명 수정
             output_file = 'n_ipo_data.json'
-            
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(final_data, f, ensure_ascii=False, indent=2)
             
@@ -137,15 +136,14 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "Final IPO Crawler"
         
-        # 🎯 파일명 수정
         if [ -f "n_ipo_data.json" ]; then
           git add n_ipo_data.json
           if git diff --staged --quiet; then
             echo "ℹ️ 변경사항 없음"
           else
-            git commit -m "🚀 네이버 IPO 크롤러 최종 업데이트"
+            git commit -m "🚀 IPO 정보 최종 업데이트"
             git push
-            echo "✅ 최종 IPO 데이터 업데이트 완료"
+            echo "✅ 최종 IPO 데이터 푸시 완료"
           fi
         else
           echo "❌ 커밋할 파일이 없습니다"
