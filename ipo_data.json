@@ -1,0 +1,13 @@
+{
+  "updateTime": "2025년 08월 07일 04시 56분",
+  "crawlTime": "2025-08-07T04:56:54.442621",
+  "totalIPOs": 0,
+  "dataSource": "38커뮤니케이션 자동크롤링",
+  "status": {
+    "today_subscription": [],
+    "upcoming_subscription": [],
+    "today_listing": [],
+    "upcoming_listing": []
+  },
+  "ipos": []
+}
