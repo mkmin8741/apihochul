@@ -1,0 +1,235 @@
+name: IPO Auto Crawler
+
+on:
+  schedule:
+    - cron: '0 */2 * * *'  # 2시간마다 실행
+  workflow_dispatch:
+
+jobs:
+  ipo-crawl:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        pip install requests beautifulsoup4 lxml pandas
+        
+    - name: IPO data crawling
+      run: |
+        python << 'EOF'
+        import requests
+        import json
+        from datetime import datetime, timedelta
+        import time
+        import re
+        from bs4 import BeautifulSoup
+
+        def format_money_ipo(amount_str):
+            """공모금액 포맷팅"""
+            try:
+                if not amount_str:
+                    return "미정"
+                
+                # 억원 단위 처리
+                if '억' in amount_str:
+                    return amount_str
+                
+                # 숫자만 추출해서 억원으로 변환
+                numbers = re.findall(r'\d+', amount_str.replace(',', ''))
+                if numbers:
+                    amount = int(numbers[0])
+                    if amount >= 100:
+                        return f"{amount // 100}억원"
+                    else:
+                        return f"{amount}억원"
+                
+                return amount_str
+            except:
+                return "미정"
+
+        def crawl_38_communication():
+            """38커뮤니케이션에서 공모주 정보 크롤링"""
+            try:
+                print("🏢 38커뮤니케이션 크롤링 시작...")
+                
+                # 공모청약일정 페이지
+                url = "http://www.38.co.kr/html/fund/?o=k"
+                headers = {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                }
+                
+                response = requests.get(url, headers=headers, timeout=15)
+                response.raise_for_status()
+                soup = BeautifulSoup(response.text, 'html.parser')
+                
+                ipo_list = []
+                
+                # 테이블에서 공모주 정보 추출
+                table = soup.find('table', class_='tb_st01')
+                if table:
+                    rows = table.find_all('tr')[1:]  # 헤더 제외
+                    
+                    for row in rows:
+                        cols = row.find_all('td')
+                        if len(cols) >= 6:
+                            try:
+                                company_name = cols[0].get_text().strip()
+                                schedule = cols[1].get_text().strip()
+                                confirmed_price = cols[2].get_text().strip()
+                                hoped_price = cols[3].get_text().strip()
+                                competition_ratio = cols[4].get_text().strip()
+                                underwriter = cols[5].get_text().strip()
+                                
+                                if company_name and company_name != '종목명':
+                                    ipo_info = {
+                                        'company_name': company_name,
+                                        'schedule': schedule,
+                                        'confirmed_price': confirmed_price if confirmed_price != '-' else '미정',
+                                        'hoped_price': hoped_price,
+                                        'competition_ratio': competition_ratio if competition_ratio != '-' else '미정',
+                                        'underwriter': underwriter,
+                                        'source': '38커뮤니케이션'
+                                    }
+                                    ipo_list.append(ipo_info)
+                                    print(f"   ✅ {company_name} 정보 수집")
+                                    
+                            except Exception as e:
+                                print(f"   ❌ 행 파싱 오류: {e}")
+                                continue
+                
+                print(f"✅ 38커뮤니케이션에서 {len(ipo_list)}개 공모주 정보 수집 완료")
+                return ipo_list
+                
+            except Exception as e:
+                print(f"❌ 38커뮤니케이션 크롤링 실패: {e}")
+                return []
+
+        def crawl_additional_ipo_info():
+            """추가 공모주 정보 크롤링 (수요예측 결과 등)"""
+            try:
+                print("📊 추가 공모주 정보 크롤링...")
+                
+                url = "http://www.38.co.kr/html/fund/?o=r1"
+                headers = {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                }
+                
+                response = requests.get(url, headers=headers, timeout=15)
+                response.raise_for_status()
+                soup = BeautifulSoup(response.text, 'html.parser')
+                
+                additional_info = {}
+                
+                # 수요예측 결과 테이블 파싱
+                table = soup.find('table', class_='tb_st01')
+                if table:
+                    rows = table.find_all('tr')[1:]
+                    
+                    for row in rows:
+                        cols = row.find_all('td')
+                        if len(cols) >= 4:
+                            try:
+                                company_name = cols[0].get_text().strip()
+                                prediction_date = cols[1].get_text().strip()
+                                price_range = cols[2].get_text().strip()
+                                final_price = cols[3].get_text().strip()
+                                
+                                if company_name:
+                                    additional_info[company_name] = {
+                                        'prediction_date': prediction_date,
+                                        'price_range': price_range,
+                                        'final_price': final_price
+                                    }
+                                    
+                            except Exception as e:
+                                continue
+                
+                return additional_info
+                
+            except Exception as e:
+                print(f"❌ 추가 정보 크롤링 실패: {e}")
+                return {}
+
+        def get_current_ipo_status():
+            """현재 진행 중인 공모주 상태 분석"""
+            try:
+                today = datetime.now()
+                
+                # 오늘 날짜 기준으로 상태 분류
+                status_info = {
+                    'today_subscription': [],      # 오늘 청약
+                    'upcoming_subscription': [],   # 곧 청약 예정
+                    'today_listing': [],          # 오늘 상장
+                    'upcoming_listing': []        # 곧 상장 예정
+                }
+                
+                return status_info
+                
+            except Exception as e:
+                print(f"❌ 상태 분석 실패: {e}")
+                return {}
+
+        def main():
+            print('🏢 공모주 정보 자동 크롤링 시작...')
+            
+            # 메인 공모주 정보 크롤링
+            ipo_data = crawl_38_communication()
+            time.sleep(2)
+            
+            # 추가 정보 크롤링
+            additional_info = crawl_additional_ipo_info()
+            time.sleep(2)
+            
+            # 현재 상태 분석
+            status_info = get_current_ipo_status()
+            
+            # 메인 데이터에 추가 정보 병합
+            for ipo in ipo_data:
+                company_name = ipo['company_name']
+                if company_name in additional_info:
+                    ipo.update(additional_info[company_name])
+            
+            # 최종 JSON 생성
+            final_data = {
+                'updateTime': datetime.now().strftime('%Y년 %m월 %d일 %H시 %M분'),
+                'crawlTime': datetime.now().isoformat(),
+                'totalIPOs': len(ipo_data),
+                'dataSource': '38커뮤니케이션 자동크롤링',
+                'status': status_info,
+                'ipos': ipo_data
+            }
+            
+            # JSON 저장
+            with open('ipo_data.json', 'w', encoding='utf-8') as f:
+                json.dump(final_data, f, ensure_ascii=False, indent=2)
+                
+            print(f'\n🎉 공모주 크롤링 완료!')
+            print(f'📊 총 {len(ipo_data)}개 공모주 정보 수집')
+            print(f'🕐 업데이트 시간: {final_data["updateTime"]}')
+            
+        if __name__ == "__main__":
+            main()
+        EOF
+        
+    - name: Commit and push
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "IPO Auto Crawler"
+        git add ipo_data.json
+        if git diff --staged --quiet; then
+          echo "변경사항 없음"
+        else
+          git commit -m "🏢 공모주 정보 자동업데이트 $(date +'%Y-%m-%d %H:%M')"
+          git push
+          echo "✅ 공모주 데이터 업로드 완료"
+        fi
