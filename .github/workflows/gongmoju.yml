@@ -1,4 +1,4 @@
-name: IPO Calendar Crawler (Real Structure)
+name: IPO Real Structure Crawler
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  ipo-crawl:
+  ipo-real-crawl:
     runs-on: ubuntu-latest
     
     steps:
@@ -24,7 +24,7 @@ jobs:
       run: |
         pip install requests beautifulsoup4 lxml selenium webdriver-manager
         
-    - name: Real structure crawling
+    - name: Real structure based crawling
       run: |
         python << 'EOF'
         import requests
@@ -33,9 +33,10 @@ jobs:
         import time
         import re
         from bs4 import BeautifulSoup
+        from urllib.parse import quote
 
-        def parse_company_id(onclick_text):
-            """fnDetailView에서 회사 ID 추출"""
+        def extract_company_id(onclick_text):
+            """fnDetailView('20250109000190') 패턴에서 회사 ID 추출"""
             try:
                 if 'fnDetailView' in onclick_text:
                     match = re.search(r"fnDetailView\('([^']+)'\)", onclick_text)
@@ -46,7 +47,9 @@ jobs:
                 return None
 
         def get_market_type(img_src):
-            """시장 구분 파악"""
+            """이미지 경로로 시장 구분 판별"""
+            if not img_src:
+                return '기타'
             if 'icn_t_yu.gif' in img_src:
                 return '유가증권'
             elif 'icn_t_ko.gif' in img_src:
@@ -54,27 +57,29 @@ jobs:
             else:
                 return '기타'
 
-        def crawl_38_calendar():
-            """38커뮤니케이션 달력 페이지 크롤링 (실제 구조 기반)"""
+        def crawl_38_calendar_real():
+            """38커뮤니케이션 실제 구조 기반 달력 크롤링"""
             try:
-                print("🏢 38커뮤니케이션 달력 크롤링 시작...")
+                print("🏢 38커뮤니케이션 실제 구조 기반 크롤링 시작...")
                 
                 # 현재 월과 다음 월 크롤링
                 current_date = datetime.now()
-                urls = []
-                
-                # 이번 달, 다음 달 URL 생성
-                for i in range(2):
-                    target_date = current_date + timedelta(days=30*i)
-                    year = target_date.year
-                    month = target_date.month
-                    url = f"http://www.38.co.kr/html/fund/index.html?o=k&year={year}&month={month:02d}"
-                    urls.append((url, f"{year}-{month:02d}"))
-                
                 all_events = []
                 
-                for url, date_str in urls:
-                    print(f"📅 {date_str} 달력 크롤링...")
+                for month_offset in range(2):  # 이번 달, 다음 달
+                    target_date = current_date.replace(day=1) + timedelta(days=32 * month_offset)
+                    year = target_date.year
+                    month = target_date.month
+                    
+                    print(f"📅 {year}년 {month}월 크롤링 중...")
+                    
+                    # 38커뮤니케이션 달력 URL (실제 경로에 맞게 조정)
+                    url = f"http://www.38.co.kr/html/fund/index.html"
+                    params = {
+                        'o': 'k',
+                        'year': year,
+                        'month': f"{month:02d}"
+                    }
                     
                     headers = {
                         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -82,59 +87,58 @@ jobs:
                         'Accept-Language': 'ko-KR,ko;q=0.8,en-US;q=0.5,en;q=0.3',
                         'Accept-Encoding': 'gzip, deflate',
                         'Connection': 'keep-alive',
-                        'Upgrade-Insecure-Requests': '1',
+                        'Referer': 'http://www.38.co.kr/'
                     }
                     
                     try:
-                        response = requests.get(url, headers=headers, timeout=15)
-                        response.raise_for_status()
-                        response.encoding = 'euc-kr'  # 한글 깨짐 방지
-                        
-                        soup = BeautifulSoup(response.text, 'html.parser')
-                        
-                        # calBig2 테이블 찾기
-                        calendar_div = soup.find('div', {'id': 'calBig2'})
-                        if not calendar_div:
-                            print(f"   ❌ {date_str} 달력을 찾을 수 없습니다")
-                            continue
-                        
-                        # 테이블 내의 모든 날짜 셀 처리
-                        table = calendar_div.find('table')
-                        if table:
-                            cells = table.find_all('td')
+                        response = requests.get(url, params=params, headers=headers, timeout=20)
+                        if response.status_code == 200:
+                            response.encoding = 'euc-kr'  # 한글 인코딩 처리
+                            soup = BeautifulSoup(response.text, 'html.parser')
                             
-                            for cell in cells:
-                                # 날짜 추출
-                                day_text = cell.get_text().strip()
-                                if not day_text or not day_text.isdigit():
+                            # 달력 테이블 찾기
+                            calendar_table = soup.find('table')
+                            if not calendar_table:
+                                print(f"   ❌ {year}-{month:02d} 달력 테이블을 찾을 수 없음")
+                                continue
+                            
+                            # 모든 td (날짜 셀) 처리
+                            date_cells = calendar_table.find_all('td')
+                            
+                            for cell in date_cells:
+                                # 날짜 추출 (숫자만)
+                                cell_text = cell.get_text().strip()
+                                day_match = re.search(r'(\d+)', cell_text)
+                                if not day_match:
                                     continue
                                 
-                                day = int(day_text)
-                                full_date = f"{date_str}-{day:02d}"
+                                day = int(day_match.group(1))
+                                date_str = f"{year}-{month:02d}-{day:02d}"
                                 
-                                # 해당 날짜의 이벤트 리스트 찾기
+                                # 해당 날짜의 이벤트 리스트 (ul 태그)
                                 ul = cell.find('ul')
                                 if not ul:
                                     continue
                                 
-                                # 이벤트 타입과 회사 정보 파싱
+                                # 모든 li 요소 처리
                                 li_elements = ul.find_all('li')
                                 current_event_type = None
                                 
                                 for li in li_elements:
-                                    # 이벤트 타입인지 확인 (배경색이 있는 경우)
+                                    # 이벤트 타입 체크 (배경색이 있는 strong 태그)
                                     style = li.get('style', '')
-                                    if 'background:#EBF6F8' in style:
+                                    if 'background:#EBF6F8' in style or 'background: #EBF6F8' in style:
                                         strong = li.find('strong')
                                         if strong:
                                             current_event_type = strong.get_text().strip()
+                                            print(f"   📋 {date_str} 이벤트 타입: {current_event_type}")
                                             continue
                                     
-                                    # 회사 링크인지 확인
+                                    # 회사 링크 체크
                                     link = li.find('a')
                                     if link and current_event_type:
                                         onclick = link.get('onclick', '')
-                                        company_id = parse_company_id(onclick)
+                                        company_id = extract_company_id(onclick)
                                         
                                         if company_id:
                                             # 회사명 추출
@@ -142,80 +146,61 @@ jobs:
                                             
                                             # 시장 구분 추출
                                             img = link.find('img')
-                                            market_type = get_market_type(img.get('src', '')) if img else '기타'
+                                            market_type = '기타'
+                                            if img:
+                                                img_src = img.get('src', '')
+                                                market_type = get_market_type(img_src)
                                             
+                                            # 이벤트 데이터 생성
                                             event_data = {
-                                                'date': full_date,
+                                                'date': date_str,
                                                 'day': day,
                                                 'event_type': current_event_type,
                                                 'company_name': company_name,
                                                 'company_id': company_id,
                                                 'market_type': market_type,
-                                                'source_url': url,
-                                                'crawl_time': datetime.now().isoformat()
+                                                'month': f"{year}-{month:02d}",
+                                                'crawl_time': datetime.now().isoformat(),
+                                                'source': '38커뮤니케이션'
                                             }
                                             
                                             all_events.append(event_data)
-                                            print(f"   ✅ {full_date} {current_event_type}: {company_name} ({market_type})")
-                        
-                        time.sleep(2)  # 서버 부하 방지
+                                            print(f"   ✅ {date_str} {current_event_type}: {company_name} ({market_type})")
+                            
+                            print(f"✅ {year}-{month:02d} 완료: {len([e for e in all_events if e['month'] == f'{year}-{month:02d}'])}개 이벤트")
+                            
+                        else:
+                            print(f"   ❌ {year}-{month:02d} HTTP 오류: {response.status_code}")
+                            
+                        time.sleep(3)  # 서버 부하 방지
                         
                     except Exception as e:
-                        print(f"   ❌ {date_str} 크롤링 실패: {e}")
+                        print(f"   ❌ {year}-{month:02d} 크롤링 실패: {e}")
                         continue
                 
                 return all_events
                 
             except Exception as e:
-                print(f"❌ 달력 크롤링 전체 실패: {e}")
+                print(f"❌ 전체 크롤링 실패: {e}")
                 return []
 
-        def get_detailed_info(company_id):
-            """회사 상세 정보 수집"""
-            try:
-                detail_url = f"http://www.38.co.kr/html/fund/index.html?o=k&no={company_id}"
-                
-                headers = {
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                    'Referer': 'http://www.38.co.kr/'
-                }
-                
-                response = requests.get(detail_url, headers=headers, timeout=10)
-                response.encoding = 'euc-kr'
-                
-                soup = BeautifulSoup(response.text, 'html.parser')
-                
-                # 상세 정보 파싱 (실제 페이지 구조에 따라 조정)
-                detail_info = {
-                    'price_range': '',
-                    'confirmed_price': '',
-                    'subscription_date': '',
-                    'listing_date': '',
-                    'underwriter': '',
-                    'business_type': ''
-                }
-                
-                # 여기서 실제 상세 페이지 구조에 맞춰 정보 추출
-                # (페이지 구조를 보고 추가 개발 필요)
-                
-                return detail_info
-                
-            except:
-                return {}
-
-        def categorize_events(events):
-            """이벤트 카테고리별 분류"""
-            categorized = {
-                '오늘_이벤트': [],
-                '이번주_이벤트': [],
-                '다음주_이벤트': [],
-                '상장_예정': [],
-                'IR_일정': [],
-                '수요예측': [],
-                '기타': []
-            }
-            
+        def categorize_events_by_date(events):
+            """날짜별 이벤트 분류"""
             today = datetime.now().date()
+            
+            categorized = {
+                'today_events': [],      # 오늘
+                'week_events': [],       # 이번주 (7일)
+                'month_events': [],      # 이번달
+                'upcoming_events': [],   # 예정
+                'by_type': {
+                    '상장': [],
+                    'IR': [],
+                    '수요예측': [],
+                    '청약': [],
+                    '기타': []
+                }
+            }
             
             for event in events:
                 try:
@@ -224,87 +209,110 @@ jobs:
                     
                     # 날짜별 분류
                     if days_diff == 0:
-                        categorized['오늘_이벤트'].append(event)
+                        categorized['today_events'].append(event)
                     elif 0 < days_diff <= 7:
-                        categorized['이번주_이벤트'].append(event)
-                    elif 7 < days_diff <= 14:
-                        categorized['다음주_이벤트'].append(event)
+                        categorized['week_events'].append(event)
+                    elif 0 <= days_diff <= 30:
+                        categorized['month_events'].append(event)
+                    elif days_diff > 0:
+                        categorized['upcoming_events'].append(event)
                     
-                    # 이벤트 타입별 분류
+                    # 타입별 분류
                     event_type = event['event_type']
-                    if '상장' in event_type:
-                        categorized['상장_예정'].append(event)
-                    elif 'IR' in event_type:
-                        categorized['IR_일정'].append(event)
-                    elif '수요예측' in event_type:
-                        categorized['수요예측'].append(event)
+                    if event_type in categorized['by_type']:
+                        categorized['by_type'][event_type].append(event)
                     else:
-                        categorized['기타'].append(event)
+                        categorized['by_type']['기타'].append(event)
                         
-                except:
-                    categorized['기타'].append(event)
+                except Exception as e:
+                    print(f"   ❌ 이벤트 분류 실패: {e}")
+                    categorized['by_type']['기타'].append(event)
             
             return categorized
+
+        def get_detailed_company_info(company_id):
+            """회사 상세 정보 수집 (제한적)"""
+            try:
+                # 상세 정보는 나중에 추가 개발
+                return {
+                    'description': '',
+                    'price_info': '',
+                    'schedule_detail': ''
+                }
+            except:
+                return {}
 
         def main():
             print('🏢 38커뮤니케이션 실제 구조 기반 크롤링 시작...')
             
-            # 달력에서 이벤트 수집
-            events = crawl_38_calendar()
-            print(f"📊 총 {len(events)}개 이벤트 수집")
+            # 메인 크롤링
+            events = crawl_38_calendar_real()
+            print(f"📊 총 {len(events)}개 이벤트 수집 완료")
             
-            # 상세 정보 수집 (주요 이벤트만)
-            important_events = [e for e in events if e['event_type'] in ['상장', '수요예측']]
-            for event in important_events[:5]:  # 처리량 제한
-                detail_info = get_detailed_info(event['company_id'])
-                event.update(detail_info)
-                time.sleep(1)
+            if not events:
+                print("❌ 수집된 이벤트가 없습니다.")
+                return
             
             # 이벤트 분류
-            categorized_events = categorize_events(events)
+            categorized = categorize_events_by_date(events)
             
-            # 최종 JSON 생성
+            # 통계 생성
+            stats = {
+                'total_events': len(events),
+                'today_count': len(categorized['today_events']),
+                'week_count': len(categorized['week_events']),
+                'month_count': len(categorized['month_events']),
+                'by_type_count': {k: len(v) for k, v in categorized['by_type'].items()},
+                'markets': {}
+            }
+            
+            # 시장별 통계
+            for event in events:
+                market = event['market_type']
+                stats['markets'][market] = stats['markets'].get(market, 0) + 1
+            
+            # 최종 JSON 데이터
             final_data = {
-                'updateTime': datetime.now().strftime('%Y년 %m월 %d일 %H시 %M분'),
-                'crawlTime': datetime.now().isoformat(),
-                'totalEvents': len(events),
-                'dataSource': '38커뮤니케이션 달력 (실제구조기반)',
-                'crawlingMethod': 'HTML달력파싱 + 상세정보수집',
-                'summary': {
-                    '오늘_이벤트_수': len(categorized_events['오늘_이벤트']),
-                    '이번주_이벤트_수': len(categorized_events['이번주_이벤트']),
-                    '상장_예정_수': len(categorized_events['상장_예정']),
-                    'IR_일정_수': len(categorized_events['IR_일정']),
-                    '수요예측_수': len(categorized_events['수요예측'])
-                },
-                'categorized_events': categorized_events,
+                'update_time': datetime.now().strftime('%Y년 %m월 %d일 %H시 %M분'),
+                'crawl_time': datetime.now().isoformat(),
+                'data_source': '38커뮤니케이션 실제구조 크롤링',
+                'crawl_method': 'HTML달력 직접파싱',
+                'total_events': len(events),
+                'statistics': stats,
+                'categorized_events': categorized,
                 'all_events': events
             }
             
-            # JSON 저장
-            with open('ipo_calendar.json', 'w', encoding='utf-8') as f:
+            # JSON 파일 저장
+            with open('ipo_calendar_real.json', 'w', encoding='utf-8') as f:
                 json.dump(final_data, f, ensure_ascii=False, indent=2)
-                
+            
+            # 결과 출력
             print(f'\n🎉 실제 구조 기반 크롤링 완료!')
-            print(f'📊 총 {len(events)}개 이벤트')
-            print(f'📅 오늘 이벤트: {len(categorized_events["오늘_이벤트"])}개')
-            print(f'📈 상장 예정: {len(categorized_events["상장_예정"])}개')
-            print(f'🏢 IR 일정: {len(categorized_events["IR_일정"])}개')
-            print(f'📊 수요예측: {len(categorized_events["수요예측"])}개')
+            print(f'📊 총 이벤트: {len(events)}개')
+            print(f'📅 오늘 이벤트: {stats["today_count"]}개')
+            print(f'📈 이번주 이벤트: {stats["week_count"]}개')
+            print(f'🏢 이번달 이벤트: {stats["month_count"]}개')
+            print(f'📋 타입별 통계:')
+            for event_type, count in stats['by_type_count'].items():
+                print(f'   - {event_type}: {count}개')
+            print(f'🏛️ 시장별 통계:')
+            for market, count in stats['markets'].items():
+                print(f'   - {market}: {count}개')
             
         if __name__ == "__main__":
             main()
         EOF
         
-    - name: Commit and push
+    - name: Commit and push results
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "IPO Calendar Crawler"
-        git add ipo_calendar.json
+        git config --local user.name "IPO Real Structure Crawler"
+        git add ipo_calendar_real.json
         if git diff --staged --quiet; then
           echo "변경사항 없음"
         else
           git commit -m "🏢 실제구조 기반 공모주 달력 크롤링 $(date +'%Y-%m-%d %H:%M')"
           git push
-          echo "✅ 실제 구조 기반 데이터 업로드"
+          echo "✅ 실제 구조 기반 데이터 업데이트 완료"
         fi
