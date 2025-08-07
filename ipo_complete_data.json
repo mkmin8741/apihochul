@@ -1,0 +1,68 @@
+{
+  "update_time": "2025년 08월 07일 05시 32분",
+  "crawl_time": "2025-08-07T05:32:36.173185",
+  "data_source": "KRX KIND 완전체 크롤링 (달력 + 상세정보)",
+  "crawl_method": "GitHub Actions + 완전 자동화 + 상세정보",
+  "source_url": "https://kind.krx.co.kr/listinvstg/pubofrschdl.do?method=searchPubofrScholMain",
+  "detail_crawling": true,
+  "total_events": 1,
+  "statistics": {
+    "total_events": 1,
+    "today_count": 1,
+    "tomorrow_count": 0,
+    "week_count": 0,
+    "month_count": 0,
+    "upcoming_count": 0,
+    "by_type_count": {
+      "상장예정": 0,
+      "정보수집": 0,
+      "IR": 0,
+      "수요예측": 0,
+      "청약": 0
+    },
+    "financial_summary": {
+      "total_companies": 1,
+      "profitable_companies": 0,
+      "loss_companies": 0,
+      "average_revenue": 0,
+      "by_industry": {
+        "기타": 1
+      },
+      "by_market": {
+        "시스템": 1
+      }
+    }
+  },
+  "categorized_events": {
+    "today_events": [
+      {
+        "company_name": "KRX 크롤링 진행중",
+        "date": "2025-08-07",
+        "event_type": "시스템",
+        "market_type": "시스템",
+        "source": "KRX 완전체 크롤링"
+      }
+    ],
+    "tomorrow_events": [],
+    "week_events": [],
+    "month_events": [],
+    "upcoming_events": [],
+    "by_type": {
+      "상장예정": [],
+      "정보수집": [],
+      "IR": [],
+      "수요예측": [],
+      "청약": []
+    }
+  },
+  "all_events": [
+    {
+      "company_name": "KRX 크롤링 진행중",
+      "date": "2025-08-07",
+      "event_type": "시스템",
+      "market_type": "시스템",
+      "source": "KRX 완전체 크롤링"
+    }
+  ],
+  "status": "limited_data"
+}
