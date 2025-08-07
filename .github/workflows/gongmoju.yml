@@ -1,12 +1,12 @@
-name: KRX Complete IPO Data Crawler (with Details)
+name: n IPO Crawler
 
 on:
   schedule:
-    - cron: '0 */3 * * *'  # 3시간마다 실행
+    - cron: '0 */2 * * *'  # 2시간마다 실행
   workflow_dispatch:
 
 jobs:
-  krx-complete-crawler:
+  n-finance-crawler:
     runs-on: ubuntu-latest
     
     steps:
@@ -22,368 +22,139 @@ jobs:
         
     - name: Install dependencies
       run: |
-        pip install requests beautifulsoup4 lxml selenium webdriver-manager
+        pip install requests beautifulsoup4 lxml pandas
         
-    - name: Complete KRX IPO Crawler with Details
+    - name: Crawl n Finance IPO Page
       run: |
         python << 'EOF'
         import requests
         import json
-        from datetime import datetime, timedelta
+        from datetime import datetime
         import time
-        import re
         from bs4 import BeautifulSoup
-        from urllib.parse import urlencode, parse_qs, urlparse
+        from urllib.parse import urljoin
 
-        def crawl_krx_ipo_calendar_with_details():
-            """KRX IPO 달력 + 각 기업 상세정보 크롤링"""
+        def crawl_n_finance_ipo():
+            """n 금융 IPO 페이지를 정확하게 크롤링"""
             try:
-                print("🏢 KRX IPO 완전체 크롤링 시작 (달력 + 상세정보)...")
+                print("🏢 n 금융 IPO 페이지 실제 크롤링 시작...")
                 
-                current_date = datetime.now()
-                all_events = []
+                base_url = "https://finance.naver.com"
+                url = urljoin(base_url, "/sise/ipo.naver")
                 
-                # 이번 달과 다음 달 크롤링
-                for month_offset in range(2):
-                    target_date = current_date.replace(day=1) + timedelta(days=32 * month_offset)
-                    year = target_date.year
-                    month = target_date.month
-                    
-                    print(f"📅 {year}년 {month}월 IPO 달력 + 상세정보 크롤링...")
-                    
-                    # KRX 공모일정 달력 URL
-                    base_url = "https://kind.krx.co.kr/listinvstg/pubofrschdl.do"
-                    params = {
-                        'method': 'searchPubofrScholMain'
-                    }
-                    
-                    headers = {
-                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-                        'Accept-Language': 'ko-KR,ko;q=0.8,en-US;q=0.5,en;q=0.3',
-                        'Connection': 'keep-alive',
-                        'Referer': 'https://kind.krx.co.kr/'
-                    }
-                    
-                    try:
-                        response = requests.get(base_url, params=params, headers=headers, timeout=20)
-                        
-                        if response.status_code == 200:
-                            response.encoding = 'utf-8'
-                            soup = BeautifulSoup(response.text, 'html.parser')
-                            
-                            # 달력에서 기업 링크들 찾기
-                            company_links = soup.find_all('a', href=True)
-                            
-                            for link in company_links:
-                                href = link.get('href')
-                                company_name = link.get_text().strip()
-                                
-                                # 공모기업 상세 링크인지 확인
-                                if 'pubofrprogcomdetail.do' in href and company_name and len(company_name) > 1:
-                                    # 상세 정보 크롤링
-                                    detail_info = get_company_detail_info(href, company_name, headers)
-                                    if detail_info:
-                                        all_events.append(detail_info)
-                                        print(f"   ✅ {company_name} 상세정보 수집 완료")
-                                        time.sleep(2)  # 서버 부하 방지
-                        
-                        time.sleep(3)
-                        
-                    except Exception as e:
-                        print(f"   ❌ {year}-{month:02d} 크롤링 실패: {e}")
+                headers = {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                    'Referer': 'https://finance.naver.com/'
+                }
+                
+                response = requests.get(url, headers=headers, timeout=20)
+                response.encoding = 'euc-kr'
+                
+                if response.status_code != 200:
+                    print(f"❌ HTTP 오류: {response.status_code}")
+                    return []
+
+                soup = BeautifulSoup(response.text, 'lxml')
+                ipo_list = []
+                
+                # IPO 정보가 담긴 테이블의 모든 행(tr)을 찾음
+                rows = soup.select('table.type_7 tr')
+
+                for row in rows:
+                    item_area = row.find('div', class_='item_area')
+                    if not item_area:
                         continue
-                
-                return all_events
-                
+
+                    # 기본 정보 추출
+                    company_name_tag = item_area.find('h4', class_='item_name')
+                    company_name = company_name_tag.find('a').get_text(strip=True)
+                    market_type = company_name_tag.find('span', class_='type').get_text(strip=True)
+                    detail_page_url = urljoin(base_url, company_name_tag.find('a')['href'])
+                    
+                    info = {'company_name': company_name, 'market_type': market_type, 'detail_page_url': detail_page_url}
+
+                    # 상세 정보 리스트(ul)에서 데이터 추출
+                    info_list = item_area.find('ul', class_='lst_info')
+                    if info_list:
+                        items = info_list.find_all('li', recursive=False)
+                        for item in items:
+                            key = item.find('em', class_='tit').get_text(strip=True)
+                            value_tag = item.find('span', class_='num')
+                            value = value_tag.get_text(strip=True) if value_tag else item.get_text(strip=True).replace(key, '').strip()
+                            
+                            info_map = {
+                                '공모가': 'offer_price',
+                                '업종': 'industry',
+                                '주관사': 'underwriters',
+                                '개인청약경쟁률': 'competition_rate',
+                                '진행상태': 'status',
+                                '개인청약': 'subscription_period',
+                                '상장일': 'listing_date'
+                            }
+                            if key in info_map:
+                                info[info_map[key]] = value.replace('~', ' ~ ')
+                    
+                    # PDF 링크 추출
+                    pdf_links_cell = row.find('td', class_=None)
+                    if pdf_links_cell:
+                        links = pdf_links_cell.find_all('a', class_='lst')
+                        info['documents'] = []
+                        for link in links:
+                            link_text = link.get_text(strip=True)
+                            link_href = link['href']
+                            doc_type = '기업개요' if '기업개요' in link_text else 'IR BOOK' if 'IR BOOK' in link_text else '기타'
+                            info['documents'].append({'type': doc_type, 'url': link_href})
+
+                    ipo_list.append(info)
+                    print(f"   ✅ {market_type} '{company_name}' 정보 수집 완료 (상태: {info.get('status', 'N/A')})")
+
+                print(f"🎉 총 {len(ipo_list)}개 IPO 정보 수집 완료!")
+                return ipo_list
+
             except Exception as e:
-                print(f"❌ 전체 크롤링 실패: {e}")
+                print(f"❌ 크롤링 중 심각한 오류 발생: {e}")
                 return []
 
-        def get_company_detail_info(detail_url, company_name, headers):
-            """개별 공모기업 상세정보 크롤링"""
-            try:
-                # 상대 URL을 절대 URL로 변환
-                if detail_url.startswith('javascript:'):
-                    return None
-                
-                if not detail_url.startswith('http'):
-                    detail_url = 'https://kind.krx.co.kr' + detail_url
-                
-                response = requests.get(detail_url, headers=headers, timeout=15)
-                response.encoding = 'utf-8'
-                
-                soup = BeautifulSoup(response.text, 'html.parser')
-                
-                # 상세정보 추출
-                detail_data = {
-                    'company_name': company_name,
-                    'detail_url': detail_url,
-                    'crawl_time': datetime.now().isoformat(),
-                    'source': 'KRX KIND 공모기업 상세'
-                }
-                
-                # 테이블에서 정보 추출
-                tables = soup.find_all('table')
-                
-                for table in tables:
-                    rows = table.find_all('tr')
-                    
-                    for row in rows:
-                        cells = row.find_all(['td', 'th'])
-                        
-                        if len(cells) >= 2:
-                            for i in range(0, len(cells)-1, 2):
-                                key = cells[i].get_text().strip()
-                                value = cells[i+1].get_text().strip()
-                                
-                                # 주요 정보 매핑
-                                if key == '설립일':
-                                    detail_data['establishment_date'] = value
-                                elif key == '대표이사':
-                                    detail_data['ceo'] = value
-                                elif key == '업종':
-                                    detail_data['industry'] = value
-                                elif key == '주요제품':
-                                    detail_data['main_products'] = value
-                                elif key == '매출액(수익)':
-                                    detail_data['revenue'] = value
-                                elif key == '순이익':
-                                    detail_data['net_income'] = value
-                                elif key == '자기자본':
-                                    detail_data['equity'] = value
-                                elif key == '최대주주':
-                                    detail_data['major_shareholder'] = value
-                                elif key == '최대주주 지분율':
-                                    detail_data['ownership_ratio'] = value
-                                elif key == 'IR일정':
-                                    detail_data['ir_schedule'] = value
-                                elif key == '수요예측일정':
-                                    detail_data['demand_forecast_schedule'] = value
-                                elif key == '공모청약일정':
-                                    detail_data['subscription_schedule'] = value
-                                elif key == '상장(예정)일':
-                                    detail_data['listing_date'] = value
-                                elif key == '희망공모가격':
-                                    detail_data['hoped_price'] = value
-                                elif key == '액면가':
-                                    detail_data['par_value'] = value
-                
-                # 날짜 정보 파싱 (상장예정일에서)
-                if 'listing_date' in detail_data:
-                    listing_date = detail_data['listing_date']
-                    date_match = re.search(r'(\d{4}-\d{2}-\d{2})', listing_date)
-                    if date_match:
-                        detail_data['date'] = date_match.group(1)
-                        detail_data['event_type'] = '상장예정'
-                    else:
-                        detail_data['date'] = datetime.now().strftime('%Y-%m-%d')
-                        detail_data['event_type'] = '정보수집'
-                else:
-                    detail_data['date'] = datetime.now().strftime('%Y-%m-%d')
-                    detail_data['event_type'] = '정보수집'
-                
-                # 시장 구분 추정
-                detail_data['market_type'] = determine_market_type(company_name, detail_data.get('industry', ''))
-                
-                return detail_data
-                
-            except Exception as e:
-                print(f"   ❌ {company_name} 상세정보 크롤링 실패: {e}")
-                return None
-
-        def determine_market_type(company_name, industry):
-            """회사명과 업종으로 시장 구분 추정"""
-            if 'SPAC' in company_name.upper() or '스팩' in company_name:
-                return '코스닥'
-            elif any(keyword in industry for keyword in ['바이오', '의료', '소프트웨어', 'IT', '게임']):
-                return '코스닥'
-            elif any(keyword in company_name for keyword in ['조선', '중공업', '전자', '화학']):
-                return '유가증권'
-            else:
-                return '코스닥'  # 기본값
-
-        def categorize_events_by_date(events):
-            """날짜별 이벤트 분류"""
-            today = datetime.now().date()
-            
-            categorized = {
-                'today_events': [],
-                'tomorrow_events': [],
-                'week_events': [],
-                'month_events': [],
-                'upcoming_events': [],
-                'by_type': {
-                    '상장예정': [],
-                    '정보수집': [],
-                    'IR': [],
-                    '수요예측': [],
-                    '청약': []
-                }
-            }
-            
-            for event in events:
-                try:
-                    event_date = datetime.strptime(event['date'], '%Y-%m-%d').date()
-                    days_diff = (event_date - today).days
-                    
-                    # 날짜별 분류
-                    if days_diff == 0:
-                        categorized['today_events'].append(event)
-                    elif days_diff == 1:
-                        categorized['tomorrow_events'].append(event)
-                    elif 2 <= days_diff <= 7:
-                        categorized['week_events'].append(event)
-                    elif 8 <= days_diff <= 30:
-                        categorized['month_events'].append(event)
-                    elif days_diff > 30:
-                        categorized['upcoming_events'].append(event)
-                    
-                    # 타입별 분류
-                    event_type = event['event_type']
-                    if event_type in categorized['by_type']:
-                        categorized['by_type'][event_type].append(event)
-                        
-                except Exception as e:
-                    print(f"   ❌ 이벤트 분류 실패: {e}")
-            
-            return categorized
-
-        def extract_financial_summary(events):
-            """재무 요약 정보 생성"""
-            financial_summary = {
-                'total_companies': len(events),
-                'profitable_companies': 0,
-                'loss_companies': 0,
-                'average_revenue': 0,
-                'by_industry': {},
-                'by_market': {}
-            }
-            
-            total_revenue = 0
-            revenue_count = 0
-            
-            for event in events:
-                # 수익성 분석
-                if 'net_income' in event:
-                    net_income = event['net_income']
-                    if '-' in net_income:
-                        financial_summary['loss_companies'] += 1
-                    else:
-                        financial_summary['profitable_companies'] += 1
-                
-                # 매출액 평균 계산
-                if 'revenue' in event:
-                    revenue_text = event['revenue']
-                    revenue_numbers = re.findall(r'[\d,]+', revenue_text.replace(',', ''))
-                    if revenue_numbers:
-                        try:
-                            revenue = int(revenue_numbers[0])
-                            total_revenue += revenue
-                            revenue_count += 1
-                        except:
-                            pass
-                
-                # 업종별 분류
-                industry = event.get('industry', '기타')
-                financial_summary['by_industry'][industry] = financial_summary['by_industry'].get(industry, 0) + 1
-                
-                # 시장별 분류
-                market = event.get('market_type', '기타')
-                financial_summary['by_market'][market] = financial_summary['by_market'].get(market, 0) + 1
-            
-            if revenue_count > 0:
-                financial_summary['average_revenue'] = total_revenue // revenue_count
-            
-            return financial_summary
-
         def main():
-            print('🏢 KRX IPO 완전체 크롤링 시스템 시작...')
+            ipo_data = crawl_n_finance_ipo()
             
-            # 달력 + 상세정보 완전 크롤링
-            events = crawl_krx_ipo_calendar_with_details()
-            
-            if not events:
-                print("❌ 크롤링된 데이터가 없습니다.")
-                # 기본 데이터 생성
-                events = [{
-                    'company_name': 'KRX 크롤링 진행중',
-                    'date': datetime.now().strftime('%Y-%m-%d'),
-                    'event_type': '시스템',
-                    'market_type': '시스템',
-                    'source': 'KRX 완전체 크롤링'
-                }]
-            
-            # 이벤트 분류
-            categorized = categorize_events_by_date(events)
-            
-            # 재무 요약 정보
-            financial_summary = extract_financial_summary(events)
-            
-            # 통계 생성
-            stats = {
-                'total_events': len(events),
-                'today_count': len(categorized['today_events']),
-                'tomorrow_count': len(categorized['tomorrow_events']),
-                'week_count': len(categorized['week_events']),
-                'month_count': len(categorized['month_events']),
-                'upcoming_count': len(categorized['upcoming_events']),
-                'by_type_count': {k: len(v) for k, v in categorized['by_type'].items()},
-                'financial_summary': financial_summary
-            }
-            
-            # 최종 JSON 데이터
+            if not ipo_data:
+                print("🚨 크롤링된 데이터가 없어 파일을 생성하지 않습니다.")
+                return
+
             final_data = {
                 'update_time': datetime.now().strftime('%Y년 %m월 %d일 %H시 %M분'),
                 'crawl_time': datetime.now().isoformat(),
-                'data_source': 'KRX KIND 완전체 크롤링 (달력 + 상세정보)',
-                'crawl_method': 'GitHub Actions + 완전 자동화 + 상세정보',
-                'source_url': 'https://kind.krx.co.kr/listinvstg/pubofrschdl.do?method=searchPubofrScholMain',
-                'detail_crawling': True,
-                'total_events': len(events),
-                'statistics': stats,
-                'categorized_events': categorized,
-                'all_events': events,
-                'status': 'success' if len(events) > 1 else 'limited_data'
+                'data_source': 'n 금융 IPO 실시간 크롤링',
+                'source_url': 'https://finance.naver.com/sise/ipo.nhn',
+                'total_ipos': len(ipo_data),
+                'ipo_list': ipo_data
             }
+
+            output_file = 'n_ipo_data.json'
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(final_data, f, ensure_ascii=False, indent=2)
             
-            # JSON 파일 저장
-            output_file = 'ipo_complete_data.json'
-            try:
-                with open(output_file, 'w', encoding='utf-8') as f:
-                    json.dump(final_data, f, ensure_ascii=False, indent=2)
-                print(f'✅ {output_file} 파일 생성 완료')
-                
-            except Exception as e:
-                print(f'❌ 파일 저장 실패: {e}')
-                raise
-            
-            # 결과 출력
-            print(f'\n🎉 KRX IPO 완전체 크롤링 완료!')
-            print(f'🔗 소스: KRX KIND 공모기업 상세정보')
-            print(f'📊 총 기업: {len(events)}개')
-            print(f'💰 평균 매출: {stats["financial_summary"]["average_revenue"]:,}백만원')
-            print(f'📈 흑자 기업: {stats["financial_summary"]["profitable_companies"]}개')
-            print(f'📉 적자 기업: {stats["financial_summary"]["loss_companies"]}개')
-            print(f'🏛️ 시장별: {stats["financial_summary"]["by_market"]}')
-            print(f'🏭 업종별: {list(stats["financial_summary"]["by_industry"].keys())[:5]}')
-            
+            print(f"✅ '{output_file}' 파일 저장 완료!")
+
         if __name__ == "__main__":
             main()
         EOF
         
-    - name: Commit and push
+    - name: Commit and push results
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "KRX Complete IPO Crawler"
+        git config --local user.name "n IPO Crawler"
         
-        if [ -f "ipo_complete_data.json" ]; then
-          git add ipo_complete_data.json
+        if [ -f "n_ipo_data.json" ]; then
+          git add n_ipo_data.json
           if git diff --staged --quiet; then
             echo "ℹ️ 변경사항 없음"
           else
-            git commit -m "🏢 KRX IPO 완전체 크롤링 (달력+상세정보) $(date +'%Y-%m-%d %H:%M')"
+            git commit -m "🏢 n 금융 IPO 실시간 크롤링 $(date +'%Y-%m-%d %H:%M')"
             git push
-            echo "✅ 완전체 데이터 업데이트 완료"
+            echo "✅ n IPO 데이터 업데이트 완료"
           fi
+        else
+          echo "❌ 커밋할 파일이 없습니다"
         fi
