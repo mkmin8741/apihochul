@@ -1,12 +1,12 @@
-name: n IPO Crawler
+name: IPO Crawler
 
 on:
   schedule:
-    - cron: '0 */2 * * *'  # 2시간마다 실행
+    - cron: '0 */2 * * *'
   workflow_dispatch:
 
 jobs:
-  n-finance-crawler:
+  final-naver-crawler:
     runs-on: ubuntu-latest
     
     steps:
@@ -22,116 +22,107 @@ jobs:
         
     - name: Install dependencies
       run: |
-        pip install requests beautifulsoup4 lxml pandas
+        pip install requests beautifulsoup4 lxml
         
-    - name: Crawl n Finance IPO Page
+    - name: Crawl Naver Finance IPO (Final)
       run: |
         python << 'EOF'
         import requests
         import json
         from datetime import datetime
-        import time
         from bs4 import BeautifulSoup
         from urllib.parse import urljoin
+        import copy
 
-        def crawl_n_finance_ipo():
-            """n 금융 IPO 페이지를 정확하게 크롤링"""
+        def get_text_without_children(tag, child_to_remove):
+            d = copy.copy(tag)
+            if d.find(child_to_remove):
+                d.find(child_to_remove).decompose()
+            return d.get_text(strip=True)
+
+        def crawl_naver_finance_ipo_final():
             try:
-                print("🏢 n 금융 IPO 페이지 실제 크롤링 시작...")
-                
+                print("🏢 네이버 금융 IPO 최종 크롤링 시작...")
                 base_url = "https://finance.naver.com"
                 url = urljoin(base_url, "/sise/ipo.naver")
-                
-                headers = {
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                    'Referer': 'https://finance.naver.com/'
-                }
-                
+                headers = {'User-Agent': 'Mozilla/5.0'}
                 response = requests.get(url, headers=headers, timeout=20)
                 response.encoding = 'euc-kr'
-                
+
                 if response.status_code != 200:
-                    print(f"❌ HTTP 오류: {response.status_code}")
+                    print(f"❌ HTTP Error: {response.status_code}")
                     return []
 
                 soup = BeautifulSoup(response.text, 'lxml')
                 ipo_list = []
-                
-                # IPO 정보가 담긴 테이블의 모든 행(tr)을 찾음
-                rows = soup.select('table.type_7 tr')
+                rows = soup.select('table.type_7 > tbody > tr')
 
                 for row in rows:
                     item_area = row.find('div', class_='item_area')
-                    if not item_area:
-                        continue
+                    if not item_area: continue
 
-                    # 기본 정보 추출
                     company_name_tag = item_area.find('h4', class_='item_name')
                     company_name = company_name_tag.find('a').get_text(strip=True)
                     market_type = company_name_tag.find('span', class_='type').get_text(strip=True)
-                    detail_page_url = urljoin(base_url, company_name_tag.find('a')['href'])
                     
-                    info = {'company_name': company_name, 'market_type': market_type, 'detail_page_url': detail_page_url}
-
-                    # 상세 정보 리스트(ul)에서 데이터 추출
+                    info = {'company_name': company_name, 'market_type': market_type}
                     info_list = item_area.find('ul', class_='lst_info')
-                    if info_list:
-                        items = info_list.find_all('li', recursive=False)
-                        for item in items:
-                            key = item.find('em', class_='tit').get_text(strip=True)
-                            value_tag = item.find('span', class_='num')
-                            value = value_tag.get_text(strip=True) if value_tag else item.get_text(strip=True).replace(key, '').strip()
-                            
-                            info_map = {
-                                '공모가': 'offer_price',
-                                '업종': 'industry',
-                                '주관사': 'underwriters',
-                                '개인청약경쟁률': 'competition_rate',
-                                '진행상태': 'status',
-                                '개인청약': 'subscription_period',
-                                '상장일': 'listing_date'
-                            }
-                            if key in info_map:
-                                info[info_map[key]] = value.replace('~', ' ~ ')
-                    
-                    # PDF 링크 추출
-                    pdf_links_cell = row.find('td', class_=None)
-                    if pdf_links_cell:
-                        links = pdf_links_cell.find_all('a', class_='lst')
-                        info['documents'] = []
-                        for link in links:
-                            link_text = link.get_text(strip=True)
-                            link_href = link['href']
-                            doc_type = '기업개요' if '기업개요' in link_text else 'IR BOOK' if 'IR BOOK' in link_text else '기타'
-                            info['documents'].append({'type': doc_type, 'url': link_href})
 
+                    if info_list:
+                        price_li = info_list.find('li', class_='area_price')
+                        info['offer_price'] = price_li.find('span', class_='num').get_text(strip=True).replace('~', ' ~ ') if price_li and price_li.find('span', class_='num') else '미정'
+                        
+                        type_li = info_list.find('li', class_='area_type')
+                        info['industry'] = get_text_without_children(type_li, 'em') if type_li else '미정'
+
+                        sup_li = info_list.find('li', class_='area_sup')
+                        info['underwriters'] = get_text_without_children(sup_li, 'em') if sup_li else '미정'
+
+                        comp_li = info_list.find('li', class_='area_competition')
+                        info['competition_rate'] = comp_li.find('span', class_='num').get_text(strip=True) if comp_li and comp_li.find('span', class_='num') else '-'
+
+                        state_li = info_list.find('li', class_='area_state')
+                        info['status'] = get_text_without_children(state_li, 'div') if state_li else '정보없음'
+
+                        private_li = info_list.find('li', class_='area_private')
+                        info['subscription_period'] = private_li.find('span', class_='num').get_text(strip=True).replace('~', ' ~ ') if private_li and private_li.find('span', 'num') else '미정'
+                        
+                        list_li = info_list.find('li', class_='area_list')
+                        info['listing_date'] = list_li.find('span', 'num').get_text(strip=True) if list_li and list_li.find('span', 'num') else '미정'
+
+                    docs_cell = row.find_all('td')[-1]
+                    info['documents'] = []
+                    if docs_cell:
+                        for link in docs_cell.find_all('a', class_='lst'):
+                            doc_type = '기업개요' if '기업개요' in link.get_text(strip=True) else 'IR BOOK'
+                            info['documents'].append({'type': doc_type, 'url': link['href']})
+                    
                     ipo_list.append(info)
-                    print(f"   ✅ {market_type} '{company_name}' 정보 수집 완료 (상태: {info.get('status', 'N/A')})")
+                    print(f"   ✅ {market_type} '{company_name}' 정보 수집 완료")
 
                 print(f"🎉 총 {len(ipo_list)}개 IPO 정보 수집 완료!")
                 return ipo_list
 
             except Exception as e:
-                print(f"❌ 크롤링 중 심각한 오류 발생: {e}")
+                print(f"❌ 크롤링 중 오류 발생: {e}")
                 return []
 
         def main():
-            ipo_data = crawl_n_finance_ipo()
-            
+            ipo_data = crawl_naver_finance_ipo_final()
             if not ipo_data:
-                print("🚨 크롤링된 데이터가 없어 파일을 생성하지 않습니다.")
+                print("🚨 크롤링된 데이터가 없어 파일 생성을 건너뜁니다.")
                 return
 
             final_data = {
                 'update_time': datetime.now().strftime('%Y년 %m월 %d일 %H시 %M분'),
-                'crawl_time': datetime.now().isoformat(),
-                'data_source': 'n 금융 IPO 실시간 크롤링',
-                'source_url': 'https://finance.naver.com/sise/ipo.nhn',
+                'data_source': '네이버 금융 IPO',
                 'total_ipos': len(ipo_data),
                 'ipo_list': ipo_data
             }
-
+            
+            # 🎯 파일명 수정
             output_file = 'n_ipo_data.json'
+            
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(final_data, f, ensure_ascii=False, indent=2)
             
@@ -144,16 +135,17 @@ jobs:
     - name: Commit and push results
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "n IPO Crawler"
+        git config --local user.name "Final IPO Crawler"
         
+        # 🎯 파일명 수정
         if [ -f "n_ipo_data.json" ]; then
           git add n_ipo_data.json
           if git diff --staged --quiet; then
             echo "ℹ️ 변경사항 없음"
           else
-            git commit -m "🏢 n 금융 IPO 실시간 크롤링 $(date +'%Y-%m-%d %H:%M')"
+            git commit -m "🚀 네이버 IPO 크롤러 최종 업데이트"
             git push
-            echo "✅ n IPO 데이터 업데이트 완료"
+            echo "✅ 최종 IPO 데이터 업데이트 완료"
           fi
         else
           echo "❌ 커밋할 파일이 없습니다"
