@@ -1,4 +1,4 @@
-name: IPO Information Crawler
+name: Final IPO Information Crawler
 
 on:
   schedule:
@@ -31,13 +31,13 @@ jobs:
         import json
         from datetime import datetime
         from bs4 import BeautifulSoup
-        from urllib.parse import urljoin
         import copy
 
-        def get_text_without_children(tag, child_to_remove):
+        def get_text_without_children(tag, *children_to_remove):
             d = copy.copy(tag)
-            if d.find(child_to_remove):
-                d.find(child_to_remove).decompose()
+            for child_name in children_to_remove:
+                for child in d.find_all(child_name):
+                    child.decompose()
             return d.get_text(strip=True)
 
         def crawl_final_ipo_data():
@@ -49,7 +49,6 @@ jobs:
                 response.encoding = 'euc-kr'
 
                 if response.status_code != 200:
-                    print(f"❌ HTTP Error: {response.status_code}")
                     return []
 
                 soup = BeautifulSoup(response.text, 'lxml')
@@ -69,7 +68,7 @@ jobs:
 
                     if info_list:
                         price_li = info_list.find('li', class_='area_price')
-                        info['offer_price'] = price_li.find('span', class_='num').get_text(strip=True).replace('~', ' ~ ') if price_li and price_li.find('span', class_='num') else '미정'
+                        info['offer_price'] = price_li.find('span', 'num').get_text(strip=True).replace('~', ' ~ ') if price_li and price_li.find('span', 'num') else '미정'
                         
                         type_li = info_list.find('li', class_='area_type')
                         info['industry'] = get_text_without_children(type_li, 'em') if type_li else '미정'
@@ -78,45 +77,37 @@ jobs:
                         info['underwriters'] = get_text_without_children(sup_li, 'em') if sup_li else '미정'
 
                         comp_li = info_list.find('li', class_='area_competition')
-                        info['competition_rate'] = comp_li.find('span', class_='num').get_text(strip=True) if comp_li and comp_li.find('span', class_='num') else '-'
+                        info['competition_rate'] = comp_li.find('span', 'num').get_text(strip=True) if comp_li and comp_li.find('span', 'num') else '-'
 
                         state_li = info_list.find('li', class_='area_state')
-                        info['status'] = get_text_without_children(state_li, 'div') if state_li else '정보없음'
+                        info['status'] = get_text_without_children(state_li, 'em', 'div', 'button') if state_li else '정보없음'
 
                         private_li = info_list.find('li', class_='area_private')
-                        info['subscription_period'] = private_li.find('span', class_='num').get_text(strip=True).replace('~', ' ~ ') if private_li and private_li.find('span', 'num') else '미정'
+                        info['subscription_period'] = private_li.find('span', 'num').get_text(strip=True).replace('~', ' ~ ') if private_li and private_li.find('span', 'num') else '미정'
                         
                         list_li = info_list.find('li', class_='area_list')
                         info['listing_date'] = list_li.find('span', 'num').get_text(strip=True) if list_li and list_li.find('span', 'num') else '미정'
                     
                     ipo_list.append(info)
-                    print(f"   ✅ '{company_name}' 정보 수집 완료")
-
-                print(f"🎉 총 {len(ipo_list)}개 IPO 정보 수집!")
                 return ipo_list
 
             except Exception as e:
-                print(f"❌ 크롤링 오류: {e}")
                 return []
 
         def main():
             ipo_data = crawl_final_ipo_data()
-            if not ipo_data:
-                print("🚨 크롤링된 데이터가 없습니다.")
-                return
+            if not ipo_data: return
 
             final_data = {
                 'update_time': datetime.now().strftime('%Y년 %m월 %d일 %H시 %M분'),
                 'data_source': '실시간 정보',
-                'total_ipos': len(ipo_data),
                 'ipo_list': ipo_data
             }
             
-            output_file = 'n_ipo_data.json'
-            with open(output_file, 'w', encoding='utf-8') as f:
+            with open('n_ipo_data.json', 'w', encoding='utf-8') as f:
                 json.dump(final_data, f, ensure_ascii=False, indent=2)
             
-            print(f"✅ '{output_file}' 파일 저장 완료!")
+            print("✅ 'n_ipo_data.json' 파일 저장 완료!")
 
         if __name__ == "__main__":
             main()
@@ -126,13 +117,12 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "Final IPO Crawler"
-        
         if [ -f "n_ipo_data.json" ]; then
           git add n_ipo_data.json
           if git diff --staged --quiet; then
             echo "ℹ️ 변경사항 없음"
           else
-            git commit -m "🚀 IPO 정보 최종 업데이트"
+            git commit -m "🚀 IPO 정보 최종 업데이트 (+업종)"
             git push
             echo "✅ 최종 IPO 데이터 푸시 완료"
           fi
