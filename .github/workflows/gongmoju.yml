@@ -1,8 +1,8 @@
-name: IPO Auto Crawler
+name: IPO Calendar Crawler (Real Structure)
 
 on:
   schedule:
-    - cron: '0 */2 * * *'  # 2시간마다 실행
+    - cron: '0 */2 * * *'
   workflow_dispatch:
 
 jobs:
@@ -22,9 +22,9 @@ jobs:
         
     - name: Install dependencies
       run: |
-        pip install requests beautifulsoup4 lxml pandas
+        pip install requests beautifulsoup4 lxml selenium webdriver-manager
         
-    - name: IPO data crawling
+    - name: Real structure crawling
       run: |
         python << 'EOF'
         import requests
@@ -34,188 +34,263 @@ jobs:
         import re
         from bs4 import BeautifulSoup
 
-        def format_money_ipo(amount_str):
-            """공모금액 포맷팅"""
+        def parse_company_id(onclick_text):
+            """fnDetailView에서 회사 ID 추출"""
             try:
-                if not amount_str:
-                    return "미정"
-                
-                # 억원 단위 처리
-                if '억' in amount_str:
-                    return amount_str
-                
-                # 숫자만 추출해서 억원으로 변환
-                numbers = re.findall(r'\d+', amount_str.replace(',', ''))
-                if numbers:
-                    amount = int(numbers[0])
-                    if amount >= 100:
-                        return f"{amount // 100}억원"
-                    else:
-                        return f"{amount}억원"
-                
-                return amount_str
+                if 'fnDetailView' in onclick_text:
+                    match = re.search(r"fnDetailView\('([^']+)'\)", onclick_text)
+                    if match:
+                        return match.group(1)
+                return None
             except:
-                return "미정"
+                return None
 
-        def crawl_38_communication():
-            """38커뮤니케이션에서 공모주 정보 크롤링"""
+        def get_market_type(img_src):
+            """시장 구분 파악"""
+            if 'icn_t_yu.gif' in img_src:
+                return '유가증권'
+            elif 'icn_t_ko.gif' in img_src:
+                return '코스닥'
+            else:
+                return '기타'
+
+        def crawl_38_calendar():
+            """38커뮤니케이션 달력 페이지 크롤링 (실제 구조 기반)"""
             try:
-                print("🏢 38커뮤니케이션 크롤링 시작...")
+                print("🏢 38커뮤니케이션 달력 크롤링 시작...")
                 
-                # 공모청약일정 페이지
-                url = "http://www.38.co.kr/html/fund/?o=k"
-                headers = {
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-                }
+                # 현재 월과 다음 월 크롤링
+                current_date = datetime.now()
+                urls = []
                 
-                response = requests.get(url, headers=headers, timeout=15)
-                response.raise_for_status()
-                soup = BeautifulSoup(response.text, 'html.parser')
+                # 이번 달, 다음 달 URL 생성
+                for i in range(2):
+                    target_date = current_date + timedelta(days=30*i)
+                    year = target_date.year
+                    month = target_date.month
+                    url = f"http://www.38.co.kr/html/fund/index.html?o=k&year={year}&month={month:02d}"
+                    urls.append((url, f"{year}-{month:02d}"))
                 
-                ipo_list = []
+                all_events = []
                 
-                # 테이블에서 공모주 정보 추출
-                table = soup.find('table', class_='tb_st01')
-                if table:
-                    rows = table.find_all('tr')[1:]  # 헤더 제외
+                for url, date_str in urls:
+                    print(f"📅 {date_str} 달력 크롤링...")
                     
-                    for row in rows:
-                        cols = row.find_all('td')
-                        if len(cols) >= 6:
-                            try:
-                                company_name = cols[0].get_text().strip()
-                                schedule = cols[1].get_text().strip()
-                                confirmed_price = cols[2].get_text().strip()
-                                hoped_price = cols[3].get_text().strip()
-                                competition_ratio = cols[4].get_text().strip()
-                                underwriter = cols[5].get_text().strip()
+                    headers = {
+                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                        'Accept-Language': 'ko-KR,ko;q=0.8,en-US;q=0.5,en;q=0.3',
+                        'Accept-Encoding': 'gzip, deflate',
+                        'Connection': 'keep-alive',
+                        'Upgrade-Insecure-Requests': '1',
+                    }
+                    
+                    try:
+                        response = requests.get(url, headers=headers, timeout=15)
+                        response.raise_for_status()
+                        response.encoding = 'euc-kr'  # 한글 깨짐 방지
+                        
+                        soup = BeautifulSoup(response.text, 'html.parser')
+                        
+                        # calBig2 테이블 찾기
+                        calendar_div = soup.find('div', {'id': 'calBig2'})
+                        if not calendar_div:
+                            print(f"   ❌ {date_str} 달력을 찾을 수 없습니다")
+                            continue
+                        
+                        # 테이블 내의 모든 날짜 셀 처리
+                        table = calendar_div.find('table')
+                        if table:
+                            cells = table.find_all('td')
+                            
+                            for cell in cells:
+                                # 날짜 추출
+                                day_text = cell.get_text().strip()
+                                if not day_text or not day_text.isdigit():
+                                    continue
                                 
-                                if company_name and company_name != '종목명':
-                                    ipo_info = {
-                                        'company_name': company_name,
-                                        'schedule': schedule,
-                                        'confirmed_price': confirmed_price if confirmed_price != '-' else '미정',
-                                        'hoped_price': hoped_price,
-                                        'competition_ratio': competition_ratio if competition_ratio != '-' else '미정',
-                                        'underwriter': underwriter,
-                                        'source': '38커뮤니케이션'
-                                    }
-                                    ipo_list.append(ipo_info)
-                                    print(f"   ✅ {company_name} 정보 수집")
+                                day = int(day_text)
+                                full_date = f"{date_str}-{day:02d}"
+                                
+                                # 해당 날짜의 이벤트 리스트 찾기
+                                ul = cell.find('ul')
+                                if not ul:
+                                    continue
+                                
+                                # 이벤트 타입과 회사 정보 파싱
+                                li_elements = ul.find_all('li')
+                                current_event_type = None
+                                
+                                for li in li_elements:
+                                    # 이벤트 타입인지 확인 (배경색이 있는 경우)
+                                    style = li.get('style', '')
+                                    if 'background:#EBF6F8' in style:
+                                        strong = li.find('strong')
+                                        if strong:
+                                            current_event_type = strong.get_text().strip()
+                                            continue
                                     
-                            except Exception as e:
-                                print(f"   ❌ 행 파싱 오류: {e}")
-                                continue
+                                    # 회사 링크인지 확인
+                                    link = li.find('a')
+                                    if link and current_event_type:
+                                        onclick = link.get('onclick', '')
+                                        company_id = parse_company_id(onclick)
+                                        
+                                        if company_id:
+                                            # 회사명 추출
+                                            company_name = link.get_text().strip()
+                                            
+                                            # 시장 구분 추출
+                                            img = link.find('img')
+                                            market_type = get_market_type(img.get('src', '')) if img else '기타'
+                                            
+                                            event_data = {
+                                                'date': full_date,
+                                                'day': day,
+                                                'event_type': current_event_type,
+                                                'company_name': company_name,
+                                                'company_id': company_id,
+                                                'market_type': market_type,
+                                                'source_url': url,
+                                                'crawl_time': datetime.now().isoformat()
+                                            }
+                                            
+                                            all_events.append(event_data)
+                                            print(f"   ✅ {full_date} {current_event_type}: {company_name} ({market_type})")
+                        
+                        time.sleep(2)  # 서버 부하 방지
+                        
+                    except Exception as e:
+                        print(f"   ❌ {date_str} 크롤링 실패: {e}")
+                        continue
                 
-                print(f"✅ 38커뮤니케이션에서 {len(ipo_list)}개 공모주 정보 수집 완료")
-                return ipo_list
+                return all_events
                 
             except Exception as e:
-                print(f"❌ 38커뮤니케이션 크롤링 실패: {e}")
+                print(f"❌ 달력 크롤링 전체 실패: {e}")
                 return []
 
-        def crawl_additional_ipo_info():
-            """추가 공모주 정보 크롤링 (수요예측 결과 등)"""
+        def get_detailed_info(company_id):
+            """회사 상세 정보 수집"""
             try:
-                print("📊 추가 공모주 정보 크롤링...")
+                detail_url = f"http://www.38.co.kr/html/fund/index.html?o=k&no={company_id}"
                 
-                url = "http://www.38.co.kr/html/fund/?o=r1"
                 headers = {
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                    'Referer': 'http://www.38.co.kr/'
                 }
                 
-                response = requests.get(url, headers=headers, timeout=15)
-                response.raise_for_status()
+                response = requests.get(detail_url, headers=headers, timeout=10)
+                response.encoding = 'euc-kr'
+                
                 soup = BeautifulSoup(response.text, 'html.parser')
                 
-                additional_info = {}
-                
-                # 수요예측 결과 테이블 파싱
-                table = soup.find('table', class_='tb_st01')
-                if table:
-                    rows = table.find_all('tr')[1:]
-                    
-                    for row in rows:
-                        cols = row.find_all('td')
-                        if len(cols) >= 4:
-                            try:
-                                company_name = cols[0].get_text().strip()
-                                prediction_date = cols[1].get_text().strip()
-                                price_range = cols[2].get_text().strip()
-                                final_price = cols[3].get_text().strip()
-                                
-                                if company_name:
-                                    additional_info[company_name] = {
-                                        'prediction_date': prediction_date,
-                                        'price_range': price_range,
-                                        'final_price': final_price
-                                    }
-                                    
-                            except Exception as e:
-                                continue
-                
-                return additional_info
-                
-            except Exception as e:
-                print(f"❌ 추가 정보 크롤링 실패: {e}")
-                return {}
-
-        def get_current_ipo_status():
-            """현재 진행 중인 공모주 상태 분석"""
-            try:
-                today = datetime.now()
-                
-                # 오늘 날짜 기준으로 상태 분류
-                status_info = {
-                    'today_subscription': [],      # 오늘 청약
-                    'upcoming_subscription': [],   # 곧 청약 예정
-                    'today_listing': [],          # 오늘 상장
-                    'upcoming_listing': []        # 곧 상장 예정
+                # 상세 정보 파싱 (실제 페이지 구조에 따라 조정)
+                detail_info = {
+                    'price_range': '',
+                    'confirmed_price': '',
+                    'subscription_date': '',
+                    'listing_date': '',
+                    'underwriter': '',
+                    'business_type': ''
                 }
                 
-                return status_info
+                # 여기서 실제 상세 페이지 구조에 맞춰 정보 추출
+                # (페이지 구조를 보고 추가 개발 필요)
                 
-            except Exception as e:
-                print(f"❌ 상태 분석 실패: {e}")
+                return detail_info
+                
+            except:
                 return {}
 
+        def categorize_events(events):
+            """이벤트 카테고리별 분류"""
+            categorized = {
+                '오늘_이벤트': [],
+                '이번주_이벤트': [],
+                '다음주_이벤트': [],
+                '상장_예정': [],
+                'IR_일정': [],
+                '수요예측': [],
+                '기타': []
+            }
+            
+            today = datetime.now().date()
+            
+            for event in events:
+                try:
+                    event_date = datetime.strptime(event['date'], '%Y-%m-%d').date()
+                    days_diff = (event_date - today).days
+                    
+                    # 날짜별 분류
+                    if days_diff == 0:
+                        categorized['오늘_이벤트'].append(event)
+                    elif 0 < days_diff <= 7:
+                        categorized['이번주_이벤트'].append(event)
+                    elif 7 < days_diff <= 14:
+                        categorized['다음주_이벤트'].append(event)
+                    
+                    # 이벤트 타입별 분류
+                    event_type = event['event_type']
+                    if '상장' in event_type:
+                        categorized['상장_예정'].append(event)
+                    elif 'IR' in event_type:
+                        categorized['IR_일정'].append(event)
+                    elif '수요예측' in event_type:
+                        categorized['수요예측'].append(event)
+                    else:
+                        categorized['기타'].append(event)
+                        
+                except:
+                    categorized['기타'].append(event)
+            
+            return categorized
+
         def main():
-            print('🏢 공모주 정보 자동 크롤링 시작...')
+            print('🏢 38커뮤니케이션 실제 구조 기반 크롤링 시작...')
             
-            # 메인 공모주 정보 크롤링
-            ipo_data = crawl_38_communication()
-            time.sleep(2)
+            # 달력에서 이벤트 수집
+            events = crawl_38_calendar()
+            print(f"📊 총 {len(events)}개 이벤트 수집")
             
-            # 추가 정보 크롤링
-            additional_info = crawl_additional_ipo_info()
-            time.sleep(2)
+            # 상세 정보 수집 (주요 이벤트만)
+            important_events = [e for e in events if e['event_type'] in ['상장', '수요예측']]
+            for event in important_events[:5]:  # 처리량 제한
+                detail_info = get_detailed_info(event['company_id'])
+                event.update(detail_info)
+                time.sleep(1)
             
-            # 현재 상태 분석
-            status_info = get_current_ipo_status()
-            
-            # 메인 데이터에 추가 정보 병합
-            for ipo in ipo_data:
-                company_name = ipo['company_name']
-                if company_name in additional_info:
-                    ipo.update(additional_info[company_name])
+            # 이벤트 분류
+            categorized_events = categorize_events(events)
             
             # 최종 JSON 생성
             final_data = {
                 'updateTime': datetime.now().strftime('%Y년 %m월 %d일 %H시 %M분'),
                 'crawlTime': datetime.now().isoformat(),
-                'totalIPOs': len(ipo_data),
-                'dataSource': '38커뮤니케이션 자동크롤링',
-                'status': status_info,
-                'ipos': ipo_data
+                'totalEvents': len(events),
+                'dataSource': '38커뮤니케이션 달력 (실제구조기반)',
+                'crawlingMethod': 'HTML달력파싱 + 상세정보수집',
+                'summary': {
+                    '오늘_이벤트_수': len(categorized_events['오늘_이벤트']),
+                    '이번주_이벤트_수': len(categorized_events['이번주_이벤트']),
+                    '상장_예정_수': len(categorized_events['상장_예정']),
+                    'IR_일정_수': len(categorized_events['IR_일정']),
+                    '수요예측_수': len(categorized_events['수요예측'])
+                },
+                'categorized_events': categorized_events,
+                'all_events': events
             }
             
             # JSON 저장
-            with open('ipo_data.json', 'w', encoding='utf-8') as f:
+            with open('ipo_calendar.json', 'w', encoding='utf-8') as f:
                 json.dump(final_data, f, ensure_ascii=False, indent=2)
                 
-            print(f'\n🎉 공모주 크롤링 완료!')
-            print(f'📊 총 {len(ipo_data)}개 공모주 정보 수집')
-            print(f'🕐 업데이트 시간: {final_data["updateTime"]}')
+            print(f'\n🎉 실제 구조 기반 크롤링 완료!')
+            print(f'📊 총 {len(events)}개 이벤트')
+            print(f'📅 오늘 이벤트: {len(categorized_events["오늘_이벤트"])}개')
+            print(f'📈 상장 예정: {len(categorized_events["상장_예정"])}개')
+            print(f'🏢 IR 일정: {len(categorized_events["IR_일정"])}개')
+            print(f'📊 수요예측: {len(categorized_events["수요예측"])}개')
             
         if __name__ == "__main__":
             main()
@@ -224,12 +299,12 @@ jobs:
     - name: Commit and push
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "IPO Auto Crawler"
-        git add ipo_data.json
+        git config --local user.name "IPO Calendar Crawler"
+        git add ipo_calendar.json
         if git diff --staged --quiet; then
           echo "변경사항 없음"
         else
-          git commit -m "🏢 공모주 정보 자동업데이트 $(date +'%Y-%m-%d %H:%M')"
+          git commit -m "🏢 실제구조 기반 공모주 달력 크롤링 $(date +'%Y-%m-%d %H:%M')"
           git push
-          echo "✅ 공모주 데이터 업로드 완료"
+          echo "✅ 실제 구조 기반 데이터 업로드"
         fi
