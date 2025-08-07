@@ -1,4 +1,4 @@
-name: Final IPO Information Crawler
+name: Final IPO Crawler with KST
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  final-ipo-crawler:
+  final-ipo-crawler-kst:
     runs-on: ubuntu-latest
     
     steps:
@@ -24,12 +24,13 @@ jobs:
       run: |
         pip install requests beautifulsoup4 lxml
         
-    - name: Crawl IPO Information (Final Version)
+    - name: Crawl IPO Information (KST)
       run: |
         python << 'EOF'
         import requests
         import json
         from datetime import datetime
+        from zoneinfo import ZoneInfo # 🎯 Python 3.9+ 표준 라이브러리 사용
         from bs4 import BeautifulSoup
         import copy
 
@@ -48,8 +49,7 @@ jobs:
                 response = requests.get(url, headers=headers, timeout=20)
                 response.encoding = 'euc-kr'
 
-                if response.status_code != 200:
-                    return []
+                if response.status_code != 200: return []
 
                 soup = BeautifulSoup(response.text, 'lxml')
                 ipo_list = []
@@ -98,8 +98,13 @@ jobs:
             ipo_data = crawl_final_ipo_data()
             if not ipo_data: return
 
+            # 🎯 한국 시간(KST) 기준으로 시간 생성
+            kst = ZoneInfo("Asia/Seoul")
+            kst_now = datetime.now(kst)
+            update_time_str = kst_now.strftime('%Y년 %m월 %d일 %H시 %M분') + " (한국시간 기준)"
+
             final_data = {
-                'update_time': datetime.now().strftime('%Y년 %m월 %d일 %H시 %M분'),
+                'update_time': update_time_str,
                 'data_source': '실시간 정보',
                 'ipo_list': ipo_data
             }
@@ -122,9 +127,9 @@ jobs:
           if git diff --staged --quiet; then
             echo "ℹ️ 변경사항 없음"
           else
-            git commit -m "🚀 IPO 정보 최종 업데이트 (+업종)"
+            git commit -m "🚀 IPO 정보 최종 업데이트 (KST 적용)"
             git push
-            echo "✅ 최종 IPO 데이터 푸시 완료"
+            echo "✅ 최종 IPO 데이터 푸시 완료 (KST)"
           fi
         else
           echo "❌ 커밋할 파일이 없습니다"
