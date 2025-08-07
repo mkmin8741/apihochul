@@ -1,7 +1,6 @@
 {
-  "update_time": "2025년 08월 07일 06시 18분",
+  "update_time": "2025년 08월 07일 06시 25분",
   "data_source": "실시간 정보",
-  "total_ipos": 50,
   "ipo_list": [
     {
       "company_name": "교보18호스팩",
@@ -43,7 +42,7 @@
       "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
       "underwriters": "신한투자증권",
       "competition_rate": "-",
-      "status": "진행상태공모청약팁",
+      "status": "공모청약",
       "subscription_period": "25.08.07 ~ 08.08",
       "listing_date": "25.08.19"
     },
@@ -54,7 +53,7 @@
       "industry": "합성고무 및 플라스틱 물질 제조업",
       "underwriters": "KB증권, 신한투자증권",
       "competition_rate": "-",
-      "status": "진행상태수요예측팁",
+      "status": "수요예측",
       "subscription_period": "25.08.11 ~ 08.12",
       "listing_date": "미정"
     },
@@ -65,7 +64,7 @@
       "industry": "금융 지원 서비스업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
-      "status": "진행상태수요예측팁",
+      "status": "수요예측",
       "subscription_period": "25.08.11 ~ 08.12",
       "listing_date": "25.08.21"
     },
@@ -76,7 +75,7 @@
       "industry": "자동차 신품 부품 제조업",
       "underwriters": "대신증권",
       "competition_rate": "-",
-      "status": "진행상태수요예측팁",
+      "status": "수요예측",
       "subscription_period": "25.08.11 ~ 08.12",
       "listing_date": "미정"
     },
@@ -87,7 +86,7 @@
       "industry": "의료용 기기 제조업",
       "underwriters": "키움증권",
       "competition_rate": "-",
-      "status": "진행상태수요예측팁",
+      "status": "수요예측",
       "subscription_period": "25.08.11 ~ 08.12",
       "listing_date": "미정"
     },
@@ -98,7 +97,7 @@
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "미래에셋증권",
       "competition_rate": "-",
-      "status": "진행상태심사승인팁",
+      "status": "심사승인",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -109,7 +108,7 @@
       "industry": "의약품 제조업",
       "underwriters": "KB증권",
       "competition_rate": "-",
-      "status": "진행상태심사승인팁",
+      "status": "심사승인",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -120,7 +119,7 @@
       "industry": "금융 지원 서비스업",
       "underwriters": "NH투자증권",
       "competition_rate": "-",
-      "status": "진행상태심사승인팁",
+      "status": "심사승인",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -131,7 +130,7 @@
       "industry": "사진장비 및 광학기기 제조업",
       "underwriters": "키움증권",
       "competition_rate": "-",
-      "status": "진행상태심사승인팁",
+      "status": "심사승인",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -142,7 +141,7 @@
       "industry": "금융 지원 서비스업",
       "underwriters": "키움증권",
       "competition_rate": "-",
-      "status": "진행상태심사승인팁",
+      "status": "심사승인",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -153,7 +152,7 @@
       "industry": "금융 지원 서비스업",
       "underwriters": "KB증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -164,7 +163,7 @@
       "industry": "사진장비 및 광학기기 제조업",
       "underwriters": "신영증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -175,7 +174,7 @@
       "industry": "항공기,우주선 및 부품 제조업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -186,7 +185,7 @@
       "industry": "그외 기타 제품 제조업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -197,7 +196,7 @@
       "industry": "영화, 비디오물, 방송프로그램 제작 및 배급업",
       "underwriters": "미래에셋증권, 삼성증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -208,7 +207,7 @@
       "industry": "연료용 가스 제조 및 배관공급업",
       "underwriters": "NH투자증권, 미래에셋증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -219,7 +218,7 @@
       "industry": "의료용 기기 제조업",
       "underwriters": "신한투자증권, KB증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -230,7 +229,7 @@
       "industry": "의료용 기기 제조업",
       "underwriters": "미래에셋증권, 삼성증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -241,7 +240,7 @@
       "industry": "의료용 기기 제조업",
       "underwriters": "KB증권, 한국투자증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -252,7 +251,7 @@
       "industry": "기타 금융업",
       "underwriters": "BNK투자증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -263,7 +262,7 @@
       "industry": "항공기,우주선 및 부품 제조업",
       "underwriters": "NH투자증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -274,7 +273,7 @@
       "industry": "금융 지원 서비스업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -285,7 +284,7 @@
       "industry": "동물용 사료 및 조제식품 제조업",
       "underwriters": "대신증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -296,7 +295,7 @@
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -307,7 +306,7 @@
       "industry": "통신 및 방송 장비 제조업",
       "underwriters": "신한투자증권, KB증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -318,7 +317,7 @@
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "삼성증권, 하나증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -329,7 +328,7 @@
       "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
       "underwriters": "유비에스증권, 신한투자증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -340,7 +339,7 @@
       "industry": "측정, 시험, 항해, 제어 및 기타 정밀기기 제조업; 광학기기 제외",
       "underwriters": "미래에셋증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -351,7 +350,7 @@
       "industry": "전자부품 제조업",
       "underwriters": "미래에셋증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -362,7 +361,7 @@
       "industry": "기타 화학제품 제조업",
       "underwriters": "신한투자증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -373,7 +372,7 @@
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "신한투자증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -384,7 +383,7 @@
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "NH투자증권, 삼성증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -395,7 +394,7 @@
       "industry": "창작 및 예술관련 서비스업",
       "underwriters": "한국투자증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -406,7 +405,7 @@
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "미래에셋증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -417,7 +416,7 @@
       "industry": "일반 목적용 기계 제조업",
       "underwriters": "키움증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -428,7 +427,7 @@
       "industry": "특수 목적용 기계 제조업",
       "underwriters": "미래에셋증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -439,7 +438,7 @@
       "industry": "특수 목적용 기계 제조업",
       "underwriters": "KB증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -450,7 +449,7 @@
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "NH투자증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -461,7 +460,7 @@
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "NH투자증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -472,7 +471,7 @@
       "industry": "특수 목적용 기계 제조업",
       "underwriters": "한국투자증권, 미래에셋증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -483,7 +482,7 @@
       "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
       "underwriters": "KB증권, 삼성증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -494,7 +493,7 @@
       "industry": "자동차 신품 부품 제조업",
       "underwriters": "대신증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -505,7 +504,7 @@
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "미래에셋증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -516,7 +515,7 @@
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "NH투자증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -527,7 +526,7 @@
       "industry": "기타 금융업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -538,7 +537,7 @@
       "industry": "절연선 및 케이블 제조업",
       "underwriters": "미래에셋증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -549,7 +548,7 @@
       "industry": "그외 기타 전문, 과학 및 기술 서비스업",
       "underwriters": "NH투자증권",
       "competition_rate": "-",
-      "status": "진행상태예심청구팁",
+      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     }
