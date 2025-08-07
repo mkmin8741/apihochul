@@ -1,4 +1,4 @@
-name: IPO Crawler
+name: IPO Information Crawler
 
 on:
   schedule:
@@ -43,9 +43,7 @@ jobs:
         def crawl_final_ipo_data():
             try:
                 print("🏢 최종 IPO 정보 크롤링 시작...")
-                base_url = "https://finance.n.com" # 실제 URL은 숨김 처리
-                url = "https://finance.naver.com/sise/ipo.naver" # 크롤링 대상 URL
-                
+                url = "https://finance.naver.com/sise/ipo.naver"
                 headers = {'User-Agent': 'Mozilla/5.0'}
                 response = requests.get(url, headers=headers, timeout=20)
                 response.encoding = 'euc-kr'
@@ -90,13 +88,6 @@ jobs:
                         
                         list_li = info_list.find('li', class_='area_list')
                         info['listing_date'] = list_li.find('span', 'num').get_text(strip=True) if list_li and list_li.find('span', 'num') else '미정'
-
-                    docs_cell = row.find_all('td')[-1]
-                    info['documents'] = []
-                    if docs_cell:
-                        for link in docs_cell.find_all('a', class_='lst'):
-                            doc_type = '기업개요' if '기업개요' in link.get_text(strip=True) else 'IR BOOK'
-                            info['documents'].append({'type': doc_type, 'url': link['href']})
                     
                     ipo_list.append(info)
                     print(f"   ✅ '{company_name}' 정보 수집 완료")
