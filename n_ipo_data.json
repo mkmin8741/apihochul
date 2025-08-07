@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 08월 07일 23시 53분 (한국시간 기준)",
+  "update_time": "2025년 08월 08일 01시 56분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -69,22 +69,22 @@
       "listing_date": "25.08.21"
     },
     {
-      "company_name": "한라캐스트",
+      "company_name": "제이피아이헬스케어",
       "market_type": "코스닥",
-      "offer_price": "5,100 ~ 5,800",
-      "industry": "자동차 신품 부품 제조업",
-      "underwriters": "대신증권",
+      "offer_price": "16,500 ~ 20,000",
+      "industry": "의료용 기기 제조업",
+      "underwriters": "키움증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.08.11 ~ 08.12",
       "listing_date": "미정"
     },
     {
-      "company_name": "제이피아이헬스케어",
+      "company_name": "한라캐스트",
       "market_type": "코스닥",
-      "offer_price": "16,500 ~ 20,000",
-      "industry": "의료용 기기 제조업",
-      "underwriters": "키움증권",
+      "offer_price": "5,100 ~ 5,800",
+      "industry": "자동차 신품 부품 제조업",
+      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.08.11 ~ 08.12",
