@@ -1,18 +1,16 @@
 {
-  "update_time": "2025년 08월 07일 05시 46분",
-  "crawl_time": "2025-08-07T05:46:55.453426",
-  "data_source": "n 금융 IPO 실시간 크롤링",
-  "source_url": "https://finance.naver.com/sise/ipo.nhn",
+  "update_time": "2025년 08월 07일 05시 58분",
+  "data_source": "네이버 금융 IPO",
   "total_ipos": 50,
   "ipo_list": [
     {
       "company_name": "교보18호스팩",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0041B0",
       "offer_price": "2,000",
       "industry": "기타 금융업",
       "underwriters": "교보증권",
       "competition_rate": "80.75:1",
+      "status": "정보없음",
       "subscription_period": "25.08.05 ~ 08.06",
       "listing_date": "25.08.14",
       "documents": []
@@ -20,59 +18,87 @@
     {
       "company_name": "지투지바이오",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A456160",
       "offer_price": "58,000",
       "industry": "의약품 제조업",
       "underwriters": "미래에셋증권",
       "competition_rate": "470.11:1",
+      "status": "정보없음",
       "subscription_period": "25.08.05 ~ 08.06",
       "listing_date": "25.08.14",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A456160/company/A456160_company_20250804164003.pdf"
+        },
+        {
+          "type": "IR BOOK",
+          "url": "https://stock.pstatic.net/stock-ipo/A456160/irBook/A456160_irBook_20250804164003.pdf"
+        }
+      ]
     },
     {
       "company_name": "삼양컴텍",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A484590",
       "offer_price": "7,700",
       "industry": "무기 및 총포탄 제조업",
       "underwriters": "신한투자증권, NH투자증권",
       "competition_rate": "927.72:1",
+      "status": "정보없음",
       "subscription_period": "25.08.05 ~ 08.06",
       "listing_date": "25.08.18",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A484590/company/A484590_company_20250804112002.pdf"
+        },
+        {
+          "type": "IR BOOK",
+          "url": "https://stock.pstatic.net/stock-ipo/A484590/irBook/A484590_irBook_20250804112002.pdf"
+        }
+      ]
     },
     {
       "company_name": "에스엔시스",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0008Z0",
       "offer_price": "30,000",
       "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
       "underwriters": "신한투자증권",
-      "status": "공모청약팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태공모청약팁",
       "subscription_period": "25.08.07 ~ 08.08",
       "listing_date": "25.08.19",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A0008Z0/company/A0008Z0_company_20250805155003.pdf"
+        }
+      ]
     },
     {
       "company_name": "그래피",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A318060",
       "offer_price": "17,000 ~ 20,000",
       "industry": "합성고무 및 플라스틱 물질 제조업",
       "underwriters": "KB증권, 신한투자증권",
-      "status": "수요예측팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태수요예측팁",
       "subscription_period": "25.08.11 ~ 08.12",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A318060/company/A318060_company_20250714163004.pdf"
+        }
+      ]
     },
     {
       "company_name": "삼성스팩10호",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0044K0",
       "offer_price": "2,000",
       "industry": "금융 지원 서비스업",
       "underwriters": "삼성증권",
-      "status": "수요예측팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태수요예측팁",
       "subscription_period": "25.08.11 ~ 08.12",
       "listing_date": "25.08.21",
       "documents": []
@@ -80,59 +106,79 @@
     {
       "company_name": "한라캐스트",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A125490",
       "offer_price": "5,100 ~ 5,800",
       "industry": "자동차 신품 부품 제조업",
       "underwriters": "대신증권",
-      "status": "수요예측팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태수요예측팁",
       "subscription_period": "25.08.11 ~ 08.12",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A125490/company/A125490_company_20250714174002.pdf"
+        }
+      ]
     },
     {
       "company_name": "제이피아이헬스케어",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0010V0",
       "offer_price": "16,500 ~ 20,000",
       "industry": "의료용 기기 제조업",
       "underwriters": "키움증권",
-      "status": "수요예측팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태수요예측팁",
       "subscription_period": "25.08.11 ~ 08.12",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A0010V0/company/A0010V0_company_20250714153004.pdf"
+        }
+      ]
     },
     {
       "company_name": "노타",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A486990",
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "미래에셋증권",
-      "status": "심사승인팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태심사승인팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A486990/company/A486990_company_20250523155004.pdf"
+        }
+      ]
     },
     {
       "company_name": "명인제약",
       "market_type": "코스피",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A317450",
       "offer_price": "미정",
       "industry": "의약품 제조업",
       "underwriters": "KB증권",
-      "status": "심사승인팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태심사승인팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A317450/company/A317450_company_20250502134002.pdf"
+        }
+      ]
     },
     {
       "company_name": "엔에이치스팩32호",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0054V0",
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "NH투자증권",
-      "status": "심사승인팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태심사승인팁",
       "subscription_period": "미정",
       "listing_date": "미정",
       "documents": []
@@ -140,23 +186,28 @@
     {
       "company_name": "큐리오시스",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A494120",
       "offer_price": "미정",
       "industry": "사진장비 및 광학기기 제조업",
       "underwriters": "키움증권",
-      "status": "심사승인팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태심사승인팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A494120/company/A494120_company_20250715150003.pdf"
+        }
+      ]
     },
     {
       "company_name": "키움히어로제1호스팩",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A466690",
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "키움증권",
-      "status": "심사승인팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태심사승인팁",
       "subscription_period": "미정",
       "listing_date": "미정",
       "documents": []
@@ -164,11 +215,11 @@
     {
       "company_name": "KB제33호스팩",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0072Z0",
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "KB증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
       "documents": []
@@ -176,107 +227,147 @@
     {
       "company_name": "그린광학",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0015G0",
       "offer_price": "미정",
       "industry": "사진장비 및 광학기기 제조업",
       "underwriters": "신영증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A0015G0/company/A0015G0_company_20250714151003.pdf"
+        }
+      ]
     },
     {
       "company_name": "나라스페이스테크놀로지",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A478340",
       "offer_price": "미정",
       "industry": "항공기,우주선 및 부품 제조업",
       "underwriters": "삼성증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A478340/company/A478340_company_20250702134003.pdf"
+        }
+      ]
     },
     {
       "company_name": "닷",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0013S0",
       "offer_price": "미정",
       "industry": "그외 기타 제품 제조업",
       "underwriters": "삼성증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A0013S0/company/A0013S0_company_20250530161003.pdf"
+        }
+      ]
     },
     {
       "company_name": "더핑크퐁컴퍼니",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A403850",
       "offer_price": "미정",
       "industry": "영화, 비디오물, 방송프로그램 제작 및 배급업",
       "underwriters": "미래에셋증권, 삼성증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A403850/company/A403850_company_20250530105004.pdf"
+        }
+      ]
     },
     {
       "company_name": "덕양에너젠",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0001A0",
       "offer_price": "미정",
       "industry": "연료용 가스 제조 및 배관공급업",
       "underwriters": "NH투자증권, 미래에셋증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A0001A0/company/A0001A0_company_20250806172002.pdf"
+        }
+      ]
     },
     {
       "company_name": "레메디",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A387690",
       "offer_price": "미정",
       "industry": "의료용 기기 제조업",
       "underwriters": "신한투자증권, KB증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A387690/company/A387690_company_20241021130003.pdf"
+        }
+      ]
     },
     {
       "company_name": "리브스메드",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A491000",
       "offer_price": "미정",
       "industry": "의료용 기기 제조업",
       "underwriters": "미래에셋증권, 삼성증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A491000/company/A491000_company_20250509152005.pdf"
+        }
+      ]
     },
     {
       "company_name": "리센스메디컬",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A394420",
       "offer_price": "미정",
       "industry": "의료용 기기 제조업",
       "underwriters": "KB증권, 한국투자증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A394420/company/A394420_company_20250703164002.pdf"
+        }
+      ]
     },
     {
       "company_name": "비엔케이제3호스팩",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0068Y0",
       "offer_price": "미정",
       "industry": "기타 금융업",
       "underwriters": "BNK투자증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
       "documents": []
@@ -284,23 +375,28 @@
     {
       "company_name": "비츠로넥스텍",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A488900",
       "offer_price": "미정",
       "industry": "항공기,우주선 및 부품 제조업",
       "underwriters": "NH투자증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A488900/company/A488900_company_20250421132002.pdf"
+        }
+      ]
     },
     {
       "company_name": "삼성스팩11호",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0071M0",
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "삼성증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
       "documents": []
@@ -308,302 +404,427 @@
     {
       "company_name": "삼진식품",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0013V0",
       "offer_price": "미정",
       "industry": "동물용 사료 및 조제식품 제조업",
       "underwriters": "대신증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A0013V0/company/A0013V0_company_20250626180005.pdf"
+        }
+      ]
     },
     {
       "company_name": "서울로보틱스",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0024P0",
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "삼성증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A0024P0/company/A0024P0_company_20250801160002.pdf"
+        }
+      ]
     },
     {
       "company_name": "세나테크놀로지",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A061090",
       "offer_price": "미정",
       "industry": "통신 및 방송 장비 제조업",
       "underwriters": "신한투자증권, KB증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A061090/company/A061090_company_20250619110002.pdf"
+        }
+      ]
     },
     {
       "company_name": "세레신",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A802752",
       "offer_price": "미정",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "삼성증권, 하나증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A802752/company/A802752_company_20250612162002.pdf"
+        }
+      ]
     },
     {
       "company_name": "세미파이브",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A490470",
       "offer_price": "미정",
       "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
       "underwriters": "유비에스증권, 신한투자증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A490470/company/A490470_company_20250721094002.pdf"
+        }
+      ]
     },
     {
       "company_name": "싸이몬",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A088920",
       "offer_price": "미정",
       "industry": "측정, 시험, 항해, 제어 및 기타 정밀기기 제조업; 광학기기 제외",
       "underwriters": "미래에셋증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A088920/company/A088920_company_20250620142002.pdf"
+        }
+      ]
     },
     {
       "company_name": "씨엠티엑스",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A388210",
       "offer_price": "미정",
       "industry": "전자부품 제조업",
       "underwriters": "미래에셋증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A388210/company/A388210_company_20250725173004.pdf"
+        }
+      ]
     },
     {
       "company_name": "아로마티카",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0015N0",
       "offer_price": "미정",
       "industry": "기타 화학제품 제조업",
       "underwriters": "신한투자증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A0015N0/company/A0015N0_company_20250421131003.pdf"
+        }
+      ]
     },
     {
       "company_name": "아크릴",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0007C0",
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "신한투자증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A0007C0/company/A0007C0_company_20250512113004.pdf"
+        }
+      ]
     },
     {
       "company_name": "알지노믹스",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A476830",
       "offer_price": "미정",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "NH투자증권, 삼성증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A476830/company/A476830_company_20250728140002.pdf"
+        }
+      ]
     },
     {
       "company_name": "에스팀",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A458350",
       "offer_price": "미정",
       "industry": "창작 및 예술관련 서비스업",
       "underwriters": "한국투자증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A458350/company/A458350_company_20250701164002.pdf"
+        }
+      ]
     },
     {
       "company_name": "에임드바이오",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0009K0",
       "offer_price": "미정",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "미래에셋증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A0009K0/company/A0009K0_company_20250725173003.pdf"
+        }
+      ]
     },
     {
       "company_name": "에코크레이션",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A413550",
       "offer_price": "미정",
       "industry": "일반 목적용 기계 제조업",
       "underwriters": "키움증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A413550/company/A413550_company_20250704183003.pdf"
+        }
+      ]
     },
     {
       "company_name": "엘에스이",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A422090",
       "offer_price": "미정",
       "industry": "특수 목적용 기계 제조업",
       "underwriters": "미래에셋증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A422090/company/A422090_company_20250610110002.pdf"
+        }
+      ]
     },
     {
       "company_name": "이노테크",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A469610",
       "offer_price": "미정",
       "industry": "특수 목적용 기계 제조업",
       "underwriters": "KB증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A469610/company/A469610_company_20250528162002.pdf"
+        }
+      ]
     },
     {
       "company_name": "이지스",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A261520",
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "NH투자증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A261520/company/A261520_company_20250416110002.pdf"
+        }
+      ]
     },
     {
       "company_name": "인벤테라",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0007J0",
       "offer_price": "미정",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "NH투자증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A0007J0/company/A0007J0_company_20250718173004.pdf"
+        }
+      ]
     },
     {
       "company_name": "인투코어테크놀로지",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A461800",
       "offer_price": "미정",
       "industry": "특수 목적용 기계 제조업",
       "underwriters": "한국투자증권, 미래에셋증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A461800/company/A461800_company_20250728124002.pdf"
+        }
+      ]
     },
     {
       "company_name": "채비",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0011T0",
       "offer_price": "미정",
       "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
       "underwriters": "KB증권, 삼성증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A0011T0/company/A0011T0_company_20250722142002.pdf"
+        }
+      ]
     },
     {
       "company_name": "카네비모빌리티",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A313090",
       "offer_price": "미정",
       "industry": "자동차 신품 부품 제조업",
       "underwriters": "대신증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A313090/company/A313090_company_20250714145004.pdf"
+        }
+      ]
     },
     {
       "company_name": "카인사이언스",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0017B0",
       "offer_price": "미정",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "미래에셋증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A0017B0/company/A0017B0_company_20250714143004.pdf"
+        }
+      ]
     },
     {
       "company_name": "쿼드메디슨",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A464490",
       "offer_price": "미정",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "NH투자증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A464490/company/A464490_company_20250717152003.pdf"
+        }
+      ]
     },
     {
       "company_name": "테라뷰",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A802751",
       "offer_price": "미정",
       "industry": "기타 금융업",
       "underwriters": "삼성증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A802751/company/A802751_company_20250520161002.pdf"
+        }
+      ]
     },
     {
       "company_name": "티엠씨",
       "market_type": "코스피",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A217590",
       "offer_price": "미정",
       "industry": "절연선 및 케이블 제조업",
       "underwriters": "미래에셋증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A217590/company/A217590_company_20250717144002.pdf"
+        }
+      ]
     },
     {
       "company_name": "페스카로",
       "market_type": "코스닥",
-      "detail_page_url": "https://m.stock.naver.com/ipo/A0015S0",
       "offer_price": "미정",
       "industry": "그외 기타 전문, 과학 및 기술 서비스업",
       "underwriters": "NH투자증권",
-      "status": "예심청구팁STEP1예심청구한국거래소의 상장을 준비하는 기업이 첨부서류와 상장 예비 심사를 청구하는 것.STEP2심사승인상장 예비심사 신청서를 제출한 기업에 대해 상장적격성 심사결과 승인이 인정된 것.STEP3수요예측주식을 공모함에 있어 기관투자자의 수요를 파악하는 것으로 최종 공모가격이 결정됨.STEP4공모청약일반인으로부터 공모주식에 대해 청약을 받아 주식을 배정하는 것.닫기",
+      "competition_rate": "-",
+      "status": "진행상태예심청구팁",
       "subscription_period": "미정",
       "listing_date": "미정",
-      "documents": []
+      "documents": [
+        {
+          "type": "기업개요",
+          "url": "https://stock.pstatic.net/stock-ipo/A0015S0/company/A0015S0_company_20250610141006.pdf"
+        }
+      ]
     }
   ]
 }
