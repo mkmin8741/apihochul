@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 08월 07일 06시 08분",
+  "update_time": "2025년 08월 07일 06시 18분",
   "data_source": "실시간 정보",
   "total_ipos": 50,
   "ipo_list": [
@@ -12,8 +12,7 @@
       "competition_rate": "80.75:1",
       "status": "정보없음",
       "subscription_period": "25.08.05 ~ 08.06",
-      "listing_date": "25.08.14",
-      "documents": []
+      "listing_date": "25.08.14"
     },
     {
       "company_name": "지투지바이오",
@@ -24,17 +23,7 @@
       "competition_rate": "470.11:1",
       "status": "정보없음",
       "subscription_period": "25.08.05 ~ 08.06",
-      "listing_date": "25.08.14",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A456160/company/A456160_company_20250804164003.pdf"
-        },
-        {
-          "type": "IR BOOK",
-          "url": "https://stock.pstatic.net/stock-ipo/A456160/irBook/A456160_irBook_20250804164003.pdf"
-        }
-      ]
+      "listing_date": "25.08.14"
     },
     {
       "company_name": "삼양컴텍",
@@ -45,17 +34,7 @@
       "competition_rate": "927.72:1",
       "status": "정보없음",
       "subscription_period": "25.08.05 ~ 08.06",
-      "listing_date": "25.08.18",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A484590/company/A484590_company_20250804112002.pdf"
-        },
-        {
-          "type": "IR BOOK",
-          "url": "https://stock.pstatic.net/stock-ipo/A484590/irBook/A484590_irBook_20250804112002.pdf"
-        }
-      ]
+      "listing_date": "25.08.18"
     },
     {
       "company_name": "에스엔시스",
@@ -66,13 +45,7 @@
       "competition_rate": "-",
       "status": "진행상태공모청약팁",
       "subscription_period": "25.08.07 ~ 08.08",
-      "listing_date": "25.08.19",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A0008Z0/company/A0008Z0_company_20250805155003.pdf"
-        }
-      ]
+      "listing_date": "25.08.19"
     },
     {
       "company_name": "그래피",
@@ -83,13 +56,7 @@
       "competition_rate": "-",
       "status": "진행상태수요예측팁",
       "subscription_period": "25.08.11 ~ 08.12",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A318060/company/A318060_company_20250714163004.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "삼성스팩10호",
@@ -100,8 +67,7 @@
       "competition_rate": "-",
       "status": "진행상태수요예측팁",
       "subscription_period": "25.08.11 ~ 08.12",
-      "listing_date": "25.08.21",
-      "documents": []
+      "listing_date": "25.08.21"
     },
     {
       "company_name": "한라캐스트",
@@ -112,13 +78,7 @@
       "competition_rate": "-",
       "status": "진행상태수요예측팁",
       "subscription_period": "25.08.11 ~ 08.12",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A125490/company/A125490_company_20250714174002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "제이피아이헬스케어",
@@ -129,13 +89,7 @@
       "competition_rate": "-",
       "status": "진행상태수요예측팁",
       "subscription_period": "25.08.11 ~ 08.12",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A0010V0/company/A0010V0_company_20250714153004.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "노타",
@@ -146,13 +100,7 @@
       "competition_rate": "-",
       "status": "진행상태심사승인팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A486990/company/A486990_company_20250523155004.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "명인제약",
@@ -163,13 +111,7 @@
       "competition_rate": "-",
       "status": "진행상태심사승인팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A317450/company/A317450_company_20250502134002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "엔에이치스팩32호",
@@ -180,8 +122,7 @@
       "competition_rate": "-",
       "status": "진행상태심사승인팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": []
+      "listing_date": "미정"
     },
     {
       "company_name": "큐리오시스",
@@ -192,13 +133,7 @@
       "competition_rate": "-",
       "status": "진행상태심사승인팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A494120/company/A494120_company_20250715150003.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "키움히어로제1호스팩",
@@ -209,8 +144,7 @@
       "competition_rate": "-",
       "status": "진행상태심사승인팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": []
+      "listing_date": "미정"
     },
     {
       "company_name": "KB제33호스팩",
@@ -221,8 +155,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": []
+      "listing_date": "미정"
     },
     {
       "company_name": "그린광학",
@@ -233,13 +166,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A0015G0/company/A0015G0_company_20250714151003.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "나라스페이스테크놀로지",
@@ -250,13 +177,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A478340/company/A478340_company_20250702134003.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "닷",
@@ -267,13 +188,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A0013S0/company/A0013S0_company_20250530161003.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "더핑크퐁컴퍼니",
@@ -284,13 +199,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A403850/company/A403850_company_20250530105004.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "덕양에너젠",
@@ -301,13 +210,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A0001A0/company/A0001A0_company_20250806172002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "레메디",
@@ -318,13 +221,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A387690/company/A387690_company_20241021130003.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "리브스메드",
@@ -335,13 +232,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A491000/company/A491000_company_20250509152005.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "리센스메디컬",
@@ -352,13 +243,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A394420/company/A394420_company_20250703164002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "비엔케이제3호스팩",
@@ -369,8 +254,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": []
+      "listing_date": "미정"
     },
     {
       "company_name": "비츠로넥스텍",
@@ -381,13 +265,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A488900/company/A488900_company_20250421132002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "삼성스팩11호",
@@ -398,8 +276,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": []
+      "listing_date": "미정"
     },
     {
       "company_name": "삼진식품",
@@ -410,13 +287,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A0013V0/company/A0013V0_company_20250626180005.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "서울로보틱스",
@@ -427,13 +298,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A0024P0/company/A0024P0_company_20250801160002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "세나테크놀로지",
@@ -444,13 +309,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A061090/company/A061090_company_20250619110002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "세레신",
@@ -461,13 +320,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A802752/company/A802752_company_20250612162002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "세미파이브",
@@ -478,13 +331,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A490470/company/A490470_company_20250721094002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "싸이몬",
@@ -495,13 +342,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A088920/company/A088920_company_20250620142002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "씨엠티엑스",
@@ -512,13 +353,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A388210/company/A388210_company_20250725173004.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "아로마티카",
@@ -529,13 +364,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A0015N0/company/A0015N0_company_20250421131003.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "아크릴",
@@ -546,13 +375,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A0007C0/company/A0007C0_company_20250512113004.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "알지노믹스",
@@ -563,13 +386,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A476830/company/A476830_company_20250728140002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "에스팀",
@@ -580,13 +397,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A458350/company/A458350_company_20250701164002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "에임드바이오",
@@ -597,13 +408,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A0009K0/company/A0009K0_company_20250725173003.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "에코크레이션",
@@ -614,13 +419,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A413550/company/A413550_company_20250704183003.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "엘에스이",
@@ -631,13 +430,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A422090/company/A422090_company_20250610110002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "이노테크",
@@ -648,13 +441,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A469610/company/A469610_company_20250528162002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "이지스",
@@ -665,13 +452,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A261520/company/A261520_company_20250416110002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "인벤테라",
@@ -682,13 +463,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A0007J0/company/A0007J0_company_20250718173004.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "인투코어테크놀로지",
@@ -699,13 +474,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A461800/company/A461800_company_20250728124002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "채비",
@@ -716,13 +485,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A0011T0/company/A0011T0_company_20250722142002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "카네비모빌리티",
@@ -733,13 +496,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A313090/company/A313090_company_20250714145004.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "카인사이언스",
@@ -750,13 +507,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A0017B0/company/A0017B0_company_20250714143004.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "쿼드메디슨",
@@ -767,13 +518,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A464490/company/A464490_company_20250717152003.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "테라뷰",
@@ -784,13 +529,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A802751/company/A802751_company_20250520161002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "티엠씨",
@@ -801,13 +540,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A217590/company/A217590_company_20250717144002.pdf"
-        }
-      ]
+      "listing_date": "미정"
     },
     {
       "company_name": "페스카로",
@@ -818,13 +551,7 @@
       "competition_rate": "-",
       "status": "진행상태예심청구팁",
       "subscription_period": "미정",
-      "listing_date": "미정",
-      "documents": [
-        {
-          "type": "기업개요",
-          "url": "https://stock.pstatic.net/stock-ipo/A0015S0/company/A0015S0_company_20250610141006.pdf"
-        }
-      ]
+      "listing_date": "미정"
     }
   ]
 }
