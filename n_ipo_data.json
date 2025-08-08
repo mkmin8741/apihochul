@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 08월 08일 23시 51분 (한국시간 기준)",
+  "update_time": "2025년 08월 09일 01시 48분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -41,8 +41,8 @@
       "offer_price": "30,000",
       "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
       "underwriters": "신한투자증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "1,472.48:1",
+      "status": "정보없음",
       "subscription_period": "25.08.07 ~ 08.08",
       "listing_date": "25.08.19"
     },
