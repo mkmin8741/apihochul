@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 08월 10일 23시 39분 (한국시간 기준)",
+  "update_time": "2025년 08월 11일 01시 49분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -53,7 +53,7 @@
       "industry": "합성고무 및 플라스틱 물질 제조업",
       "underwriters": "KB증권, 신한투자증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "25.08.11 ~ 08.12",
       "listing_date": "25.08.25"
     },
@@ -64,7 +64,7 @@
       "industry": "금융 지원 서비스업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "25.08.11 ~ 08.12",
       "listing_date": "25.08.21"
     },
@@ -75,7 +75,7 @@
       "industry": "의료용 기기 제조업",
       "underwriters": "키움증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "25.08.11 ~ 08.12",
       "listing_date": "25.08.21"
     },
@@ -86,7 +86,7 @@
       "industry": "자동차 신품 부품 제조업",
       "underwriters": "대신증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "25.08.11 ~ 08.12",
       "listing_date": "25.08.20"
     },
