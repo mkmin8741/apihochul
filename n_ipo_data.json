@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 08월 12일 15시 56분 (한국시간 기준)",
+  "update_time": "2025년 08월 12일 17시 54분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -47,15 +47,15 @@
       "listing_date": "25.08.19"
     },
     {
-      "company_name": "그래피",
+      "company_name": "한라캐스트",
       "market_type": "코스닥",
-      "offer_price": "15,000",
-      "industry": "합성고무 및 플라스틱 물질 제조업",
-      "underwriters": "KB증권, 신한투자증권",
+      "offer_price": "5,800",
+      "industry": "자동차 신품 부품 제조업",
+      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "공모청약",
       "subscription_period": "25.08.11 ~ 08.12",
-      "listing_date": "25.08.25"
+      "listing_date": "25.08.20"
     },
     {
       "company_name": "삼성스팩10호",
@@ -80,15 +80,26 @@
       "listing_date": "25.08.21"
     },
     {
-      "company_name": "한라캐스트",
+      "company_name": "그래피",
       "market_type": "코스닥",
-      "offer_price": "5,800",
-      "industry": "자동차 신품 부품 제조업",
-      "underwriters": "대신증권",
+      "offer_price": "15,000",
+      "industry": "합성고무 및 플라스틱 물질 제조업",
+      "underwriters": "KB증권, 신한투자증권",
       "competition_rate": "-",
       "status": "공모청약",
       "subscription_period": "25.08.11 ~ 08.12",
-      "listing_date": "25.08.20"
+      "listing_date": "25.08.25"
+    },
+    {
+      "company_name": "에스투더블유",
+      "market_type": "코스닥",
+      "offer_price": "13,200",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.09.10 ~ 09.11",
+      "listing_date": "25.08.19"
     },
     {
       "company_name": "노타",
@@ -536,6 +547,17 @@
       "offer_price": "미정",
       "industry": "절연선 및 케이블 제조업",
       "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "티케이씨",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "기타 전기장비 제조업",
+      "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
