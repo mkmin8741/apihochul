@@ -1,29 +1,7 @@
 {
-  "update_time": "2025년 08월 13일 23시 47분 (한국시간 기준)",
+  "update_time": "2025년 08월 14일 01시 44분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "교보18호스팩",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "기타 금융업",
-      "underwriters": "교보증권",
-      "competition_rate": "80.75:1",
-      "status": "정보없음",
-      "subscription_period": "25.08.05 ~ 08.06",
-      "listing_date": "25.08.14"
-    },
-    {
-      "company_name": "지투지바이오",
-      "market_type": "코스닥",
-      "offer_price": "58,000",
-      "industry": "의약품 제조업",
-      "underwriters": "미래에셋증권",
-      "competition_rate": "470.11:1",
-      "status": "정보없음",
-      "subscription_period": "25.08.05 ~ 08.06",
-      "listing_date": "25.08.14"
-    },
     {
       "company_name": "삼양컴텍",
       "market_type": "코스닥",
