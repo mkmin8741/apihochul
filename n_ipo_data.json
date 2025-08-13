@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 08월 13일 17시 56분 (한국시간 기준)",
+  "update_time": "2025년 08월 13일 19시 48분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -183,17 +183,6 @@
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "항공기,우주선 및 부품 제조업",
-      "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "닷",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "그외 기타 제품 제조업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "예심청구",
