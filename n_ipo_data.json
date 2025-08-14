@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 08월 14일 07시 38분 (한국시간 기준)",
+  "update_time": "2025년 08월 14일 12시 43분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -536,6 +536,17 @@
       "offer_price": "미정",
       "industry": "그외 기타 전문, 과학 및 기술 서비스업",
       "underwriters": "NH투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "한컴인스페이스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
