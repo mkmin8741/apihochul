@@ -1,18 +1,7 @@
 {
-  "update_time": "2025년 08월 17일 23시 38분 (한국시간 기준)",
+  "update_time": "2025년 08월 18일 01시 47분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "삼양컴텍",
-      "market_type": "코스닥",
-      "offer_price": "7,700",
-      "industry": "무기 및 총포탄 제조업",
-      "underwriters": "신한투자증권, NH투자증권",
-      "competition_rate": "927.72:1",
-      "status": "정보없음",
-      "subscription_period": "25.08.05 ~ 08.06",
-      "listing_date": "25.08.18"
-    },
     {
       "company_name": "에스엔시스",
       "market_type": "코스닥",
