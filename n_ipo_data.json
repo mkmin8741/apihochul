@@ -1,18 +1,7 @@
 {
-  "update_time": "2025년 08월 18일 23시 48분 (한국시간 기준)",
+  "update_time": "2025년 08월 19일 01시 54분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "에스엔시스",
-      "market_type": "코스닥",
-      "offer_price": "30,000",
-      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
-      "underwriters": "신한투자증권",
-      "competition_rate": "1,472.48:1",
-      "status": "정보없음",
-      "subscription_period": "25.08.07 ~ 08.08",
-      "listing_date": "25.08.19"
-    },
     {
       "company_name": "한라캐스트",
       "market_type": "코스닥",
