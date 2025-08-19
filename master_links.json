@@ -1,0 +1,134 @@
+{
+  "groups": [
+    [
+      {
+        "url": "https://toplight.co.kr",
+        "text": "일상노하우"
+      },
+      {
+        "url": "https://cvinet.com",
+        "text": "카드혜택"
+      },
+      {
+        "url": "https://sports.lulucast.com",
+        "text": "실시간정보"
+      },
+      {
+        "url": "https://bokjiro.go.kr",
+        "text": "대출정보"
+      },
+      {
+        "url": "https://youtube.com",
+        "text": "세상의모든것"
+      },
+      {
+        "url": "https://laiis.go.kr",
+        "text": "원스톱정보"
+      }
+    ],
+    [
+      {
+        "url": "https://jeonju.lulucast.com",
+        "text": "알아보기"
+      },
+      {
+        "url": "https://gody.co.kr",
+        "text": "실시간정보"
+      },
+      {
+        "url": "https://living.benefitview.co.kr",
+        "text": "필수정보"
+      },
+      {
+        "url": "https://bupyeong.lulucast.com",
+        "text": "흥미로운사실"
+      },
+      {
+        "url": "https://lawstery.com",
+        "text": "이슈분석"
+      },
+      {
+        "url": "https://laiis.go.kr",
+        "text": "경제트렌드"
+      }
+    ],
+    [
+      {
+        "url": "https://toplight.co.kr",
+        "text": "스마트라이프"
+      },
+      {
+        "url": "https://infospot.kr",
+        "text": "웰빙라이프"
+      },
+      {
+        "url": "https://benefitview.co.kr",
+        "text": "금융소식"
+      },
+      {
+        "url": "https://gwanak.lulucast.com",
+        "text": "숨겨진팁"
+      },
+      {
+        "url": "https://centertopia.com",
+        "text": "바로가기"
+      },
+      {
+        "url": "https://nowon.lulucast.com",
+        "text": "인기글보기"
+      }
+    ],
+    [
+      {
+        "url": "https://yeonsu.lulucast.com",
+        "text": "숨겨진팁"
+      },
+      {
+        "url": "https://dongtan.lulucast.com",
+        "text": "현명한선택"
+      },
+      {
+        "url": "https://toplight.co.kr",
+        "text": "살림정보"
+      },
+      {
+        "url": "https://gody.co.kr",
+        "text": "대출정보"
+      },
+      {
+        "url": "https://weddingheal.com",
+        "text": "최신뉴스"
+      },
+      {
+        "url": "https://lawstery.com",
+        "text": "비용절약팁"
+      }
+    ],
+    [
+      {
+        "url": "https://toplight.co.kr",
+        "text": "새로운소식"
+      },
+      {
+        "url": "https://yeonsu.lulucast.com",
+        "text": "지원금신청"
+      },
+      {
+        "url": "https://songpa.lulucast.com",
+        "text": "최신업데이트"
+      },
+      {
+        "url": "https://living.benefitview.co.kr",
+        "text": "카드혜택"
+      },
+      {
+        "url": "https://wellnesshub.kr",
+        "text": "핵심정보"
+      },
+      {
+        "url": "https://weddingheal.com",
+        "text": "생활꿀팁"
+      }
+    ]
+  ]
+}
