@@ -3,7 +3,7 @@ name: Generate Master Links File
 
 on:
   schedule:
-    - cron: '0 0 * * 1' # 매주 월요일 자정(UTC)
+    - cron: '0 15 25 * *'  # 매달 25일 한국 시간 0시
   workflow_dispatch:
 
 jobs:
