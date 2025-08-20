@@ -1,29 +1,7 @@
 {
-  "update_time": "2025년 08월 20일 23시 42분 (한국시간 기준)",
+  "update_time": "2025년 08월 21일 01시 47분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "삼성스팩10호",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "삼성증권",
-      "competition_rate": "122.76:1",
-      "status": "정보없음",
-      "subscription_period": "25.08.11 ~ 08.12",
-      "listing_date": "25.08.21"
-    },
-    {
-      "company_name": "제이피아이헬스케어",
-      "market_type": "코스닥",
-      "offer_price": "20,000",
-      "industry": "의료용 기기 제조업",
-      "underwriters": "키움증권",
-      "competition_rate": "1,154.54:1",
-      "status": "정보없음",
-      "subscription_period": "25.08.11 ~ 08.12",
-      "listing_date": "25.08.21"
-    },
     {
       "company_name": "그래피",
       "market_type": "코스닥",
