@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 08월 21일 07시 36분 (한국시간 기준)",
+  "update_time": "2025년 08월 21일 12시 30분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -195,6 +195,17 @@
       "offer_price": "미정",
       "industry": "의료용 기기 제조업",
       "underwriters": "KB증권, 한국투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "미래에셋비전스팩8호",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "기타 금융업",
+      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
