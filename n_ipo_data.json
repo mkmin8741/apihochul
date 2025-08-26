@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 08월 26일 17시 51분 (한국시간 기준)",
+  "update_time": "2025년 08월 26일 19시 43분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -36,6 +36,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "KB제33호스팩",
+      "market_type": "코스닥",
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "KB증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.09.22 ~ 09.23",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "노타",
       "market_type": "코스닥",
       "offer_price": "7,600 ~ 9,100",
@@ -55,17 +66,6 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "25.10.27 ~ 10.28",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "KB제33호스팩",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "KB증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
       "listing_date": "미정"
     },
     {
