@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 08월 26일 07시 38분 (한국시간 기준)",
+  "update_time": "2025년 08월 26일 12시 30분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -25,6 +25,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "삼성스팩11호",
+      "market_type": "코스닥",
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.09.19 ~ 09.22",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "노타",
       "market_type": "코스닥",
       "offer_price": "7,600 ~ 9,100",
@@ -44,6 +55,28 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "25.10.27 ~ 10.28",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "KB제33호스팩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "KB증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "비엔케이제3호스팩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "기타 금융업",
+      "underwriters": "BNK투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
       "listing_date": "미정"
     },
     {
@@ -98,17 +131,6 @@
       "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "KB제33호스팩",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "KB증권",
-      "competition_rate": "-",
-      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
@@ -201,21 +223,10 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "비엔케이제3호스팩",
+      "company_name": "삼성스팩12호",
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "기타 금융업",
-      "underwriters": "BNK투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "삼성스팩11호",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "예심청구",
