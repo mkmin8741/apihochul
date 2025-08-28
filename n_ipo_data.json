@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 08월 28일 13시 40분 (한국시간 기준)",
+  "update_time": "2025년 08월 28일 15시 52분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -216,6 +216,17 @@
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "기타 금융업",
+      "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "미래에셋비전스팩9호",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
       "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
