@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 08월 29일 15시 50분 (한국시간 기준)",
+  "update_time": "2025년 08월 29일 17시 45분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -84,17 +84,6 @@
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "항공기,우주선 및 부품 제조업",
-      "underwriters": "NH투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "엔에이치스팩32호",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
       "underwriters": "NH투자증권",
       "competition_rate": "-",
       "status": "심사승인",
