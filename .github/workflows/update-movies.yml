@@ -1,17 +1,14 @@
 name: Full Auto Crawler
-
 on:
   schedule:
-    # 더 안정적인 스케줄링 (겹치지 않는 시간대)
-    - cron: '17 */6 * * *'  # 매 6시간마다 17분에 실행 (UTC)
-  workflow_dispatch:  # 수동 실행 가능
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   full-auto:
     runs-on: ubuntu-latest
-    
+
     steps:
-    # 워크플로우 활성 상태 유지 및 모니터링
     - name: Keep workflow active
       run: |
         echo "🤖 완전 자동화 크롤링 시스템 시작"
@@ -20,21 +17,22 @@ jobs:
         echo "📅 한국 시간: $(TZ=Asia/Seoul date)"
         echo "🔄 실행 번호: ${{ github.run_number }}"
         echo "⏰ 다음 실행까지 6시간"
-        
+
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        
+
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.9'
-        
+
     - name: Install dependencies
       run: |
-        pip install requests beautifulsoup4 lxml
-        
+        # br 응답 안정 처리를 위해 brotli 설치
+        pip install requests beautifulsoup4 lxml brotli
+
     - name: Full auto crawling system
       env:
         KOBIS_KEY: ${{ secrets.KOBIS_API_KEY }}
@@ -47,54 +45,71 @@ jobs:
         import time
         import re
         from bs4 import BeautifulSoup
-        from urllib.parse import quote
+        from urllib.parse import quote, urlparse, parse_qs, unquote
 
         def format_date_korean(date_str):
-            """개봉일 한국어 포맷팅"""
             try:
                 if not date_str:
                     return "개봉일 미정"
-                
                 if '-' in date_str and len(date_str) == 10:
                     year, month, day = date_str.split('-')
                     return f"{year}년 {month}월 {day}일"
-                
                 if len(date_str) == 8 and date_str.isdigit():
-                    year = date_str[:4]
-                    month = date_str[4:6] 
-                    day = date_str[6:8]
+                    year = date_str[:4]; month = date_str[4:6]; day = date_str[6:8]
                     return f"{year}년 {month}월 {day}일"
-                
                 return date_str
             except:
                 return "개봉일 미정"
 
-        def optimize_image_50kb(image_url):
-            """이미지 50KB 최적화"""
+        def pick_img_src(img):
+            # 일반 속성 → lazy 속성 → srcset 순 폴백
+            for attr in ['src', 'data-src', 'data-lazy-src', 'data-original', 'data-image-src']:
+                v = img.get(attr)
+                if v and v.startswith(('http://', 'https://')):
+                    return v
+            srcset = img.get('srcset')
+            if srcset:
+                cand = srcset.split(',').strip().split(' ')
+                if cand.startswith(('http://', 'https://')):
+                    return cand
+            return None
+
+        def normalize_naver_image(url):
+            # search.pstatic.net 프록시 리사이즈/품질 파라미터 표준화
             try:
-                if not image_url:
-                    return ""
-                
-                if 'pstatic.net' in image_url:
-                    # 50KB 내외 최적화
-                    if '&size=' in image_url:
-                        optimized = re.sub(r'&size=\d+x\d+', '&size=140x210', image_url)
-                        if '&quality=' not in optimized:
-                            optimized += '&quality=65'
+                if 'search.pstatic.net/common' in url:
+                    # size
+                    if 'size=' in url:
+                        url = re.sub(r'([?&])size=\d+x\d+', r'\g<1>size=140x210', url)
                     else:
-                        optimized = image_url + '&size=140x210&quality=65'
-                    return optimized
-                
-                return image_url
+                        url += ('&' if '?' in url else '?') + 'size=140x210'
+                    # quality
+                    if 'quality=' in url:
+                        url = re.sub(r'([?&])quality=\d+', r'\g<1>quality=65', url)
+                    else:
+                        url += '&quality=65'
+                    # type (썸네일 타입 가드)
+                    if 'type=' not in url:
+                        url += '&type=f140_200'
+                return url
             except:
-                return image_url
+                return url
+
+        def extract_original_from_proxy(url):
+            # 필요 시 search.pstatic 프록시의 src 파라미터에서 원본 복구
+            try:
+                if 'search.pstatic.net/common' in url:
+                    q = parse_qs(urlparse(url).query)
+                    if 'src' in q and q['src']:
+                        return unquote(q['src'])
+                return url
+            except:
+                return url
 
         def crawl_naver_auto(movie_title):
-            """네이버에서 완전 자동 크롤링 - 사용자 제공 구조 활용"""
             try:
                 print(f"🕷️ '{movie_title}' 네이버 자동 크롤링...")
-                
-                # 네이버 영화 검색 (사용자 제공 방식)
+
                 search_url = "https://search.naver.com/search.naver"
                 params = {
                     'where': 'nexearch',
@@ -103,19 +118,20 @@ jobs:
                     'pkid': '68',
                     'query': f'영화 {movie_title} 정보'
                 }
-                
+
+                # br 제거 또는 brotli 설치되어 있으면 유지 가능
                 headers = {
                     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
                     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
                     'Accept-Language': 'ko-KR,ko;q=0.8,en-US;q=0.5,en;q=0.3',
-                    'Accept-Encoding': 'gzip, deflate, br',
+                    'Accept-Encoding': 'gzip, deflate',  # ← br 제외
                     'Connection': 'keep-alive',
                 }
-                
+
                 response = requests.get(search_url, params=params, headers=headers, timeout=15)
                 response.raise_for_status()
                 soup = BeautifulSoup(response.text, 'html.parser')
-                
+
                 result = {
                     'poster_url': '',
                     'plot': '',
@@ -124,122 +140,83 @@ jobs:
                     'grade': '',
                     'english_title': ''
                 }
-                
-                # 1. 포스터 이미지 크롤링 (사용자 제공 구조)
+
+                # 1) 포스터: 지식패널(cm_info_box) 우선 + 폴백
                 try:
-                    # 사용자 제공: .thumb ._item img
-                    thumb_link = soup.find('a', class_='thumb')
-                    if not thumb_link:
-                        # 대안 셀렉터
-                        thumb_link = soup.select_one('a[class*="thumb"]')
-                    
-                    if thumb_link:
-                        img_tag = thumb_link.find('img')
-                        if img_tag and img_tag.get('src'):
-                            poster_url = img_tag['src']
-                            result['poster_url'] = optimize_image_50kb(poster_url)
-                            print(f"   ✅ 포스터: {result['poster_url'][:50]}...")
-                    
-                    # 추가 시도
-                    if not result['poster_url']:
-                        img_tags = soup.find_all('img')
-                        for img in img_tags:
-                            src = img.get('src', '')
-                            alt = img.get('alt', '')
-                            if ('pstatic.net' in src and 'movie' in src) or movie_title in alt:
-                                result['poster_url'] = optimize_image_50kb(src)
-                                print(f"   ✅ 대안 포스터 발견")
-                                break
-                        
+                    thumb_link = soup.select_one('div.cm_info_box a.thumb._item') or soup.select_one('a.thumb')
+                    img_tag = thumb_link.find('img') if thumb_link else soup.select_one('img._img') or soup.find('img')
+                    if img_tag:
+                        poster_url = pick_img_src(img_tag)
+                        if poster_url:
+                            # 원본이 필요하면 아래 줄 주석 해제
+                            # poster_url = extract_original_from_proxy(poster_url)
+                            poster_url = normalize_naver_image(poster_url)
+                            result['poster_url'] = poster_url
+                            print(f"   ✅ 포스터: {result['poster_url'][:80]}...")
                 except Exception as e:
                     print(f"   ❌ 포스터 크롤링 실패: {e}")
-                
-                # 2. 줄거리 크롤링 (사용자 제공 구조)
+
+                # 2) 줄거리(가능 시): intro류 또는 cm_info_box 내부 텍스트 탐색
                 try:
-                    # 사용자 제공: .intro_box._content .text._content_text
-                    intro_box = soup.find('div', class_='intro_box')
-                    if not intro_box:
-                        intro_box = soup.select_one('div[class*="intro"]')
-                    
+                    intro_box = soup.find('div', class_='intro_box') or soup.select_one('div[class*="intro"]')
+                    plot_element = None
                     if intro_box:
-                        # 사용자 제공: .text._content_text
-                        plot_element = intro_box.find('p', class_='text')
-                        if not plot_element:
-                            plot_element = intro_box.find('p')
-                        
-                        if plot_element:
-                            plot_text = plot_element.get_text().strip()
-                            if plot_text and len(plot_text) > 20:
-                                # 텍스트 정리
-                                plot_clean = re.sub(r'\s+', ' ', plot_text).strip()
-                                if not any(skip_word in plot_clean for skip_word in ['로그인', '회원가입', '네이버', '검색']):
-                                    result['plot'] = plot_clean
-                                    print(f"   ✅ 줄거리: {result['plot'][:50]}...")
-                                
+                        plot_element = intro_box.find('p', class_='text') or intro_box.find('p')
+                    if not plot_element:
+                        # 지식패널 내부에 간단 설명이 있을 경우
+                        plot_element = soup.select_one('div.cm_info_box p')
+                    if plot_element:
+                        plot_text = re.sub(r'\s+', ' ', plot_element.get_text().strip())
+                        if plot_text and len(plot_text) > 20 and not any(w in plot_text for w in ['로그인', '회원가입', '네이버', '검색']):
+                            result['plot'] = plot_text
+                            print(f"   ✅ 줄거리: {result['plot'][:50]}...")
                 except Exception as e:
                     print(f"   ❌ 줄거리 크롤링 실패: {e}")
-                
-                # 3. 상세 정보 크롤링 (사용자 제공 구조)
+
+                # 3) 상세정보: dl.info > div.info_group에서 라벨-값 매핑
                 try:
-                    # 사용자 제공: .info.txt_4 .info_group
-                    info_area = soup.find('dl', class_='info')
-                    if not info_area:
-                        info_area = soup.select_one('dl[class*="info"]')
-                    
+                    info_area = soup.find('dl', class_='info') or soup.select_one('dl[class*="info"]')
                     if info_area:
-                        # 사용자 제공: .info_group
-                        info_groups = info_area.find_all('div', class_='info_group')
-                        if not info_groups:
-                            info_groups = info_area.find_all('div')
-                        
+                        info_groups = info_area.find_all('div', class_='info_group') or info_area.find_all('div')
                         for group in info_groups:
-                            try:
-                                dt = group.find('dt')
-                                dd = group.find('dd')
-                                if dt and dd:
-                                    label_text = dt.get_text().strip()
-                                    value_text = dd.get_text().strip()
-                                    
-                                    # 정보 매핑
-                                    if '장르' in label_text and value_text:
-                                        result['genre'] = value_text
-                                        print(f"   ✅ 장르: {value_text}")
-                                    elif '등급' in label_text and value_text:
-                                        result['grade'] = value_text
-                                        print(f"   ✅ 등급: {value_text}")
-                                    elif '러닝타임' in label_text and value_text:
-                                        result['runtime'] = value_text
-                                        print(f"   ✅ 러닝타임: {value_text}")
-                                        
-                            except Exception as e:
-                                print(f"   상세정보 파싱 오류: {e}")
+                            dt = group.find('dt'); dd = group.find('dd')
+                            if not (dt and dd): 
                                 continue
-                                
+                            label = dt.get_text(strip=True)
+                            value = dd.get_text(strip=True)
+                            if '장르' in label and value:
+                                result['genre'] = value
+                                print(f"   ✅ 장르: {value}")
+                            elif '등급' in label and value:
+                                result['grade'] = value
+                                print(f"   ✅ 등급: {value}")
+                            elif '러닝타임' in label and value:
+                                result['runtime'] = value
+                                print(f"   ✅ 러닝타임: {value}")
+                            elif '원제' in label and value:
+                                result['english_title'] = value
+                                print(f"   ✅ 영어제목(원제): {value}")
                 except Exception as e:
                     print(f"   ❌ 상세정보 크롤링 실패: {e}")
-                
-                # 4. 영어제목 크롤링
+
+                # 4) 서브 타이틀(보조 영어 제목) 폴백
                 try:
-                    sub_title_area = soup.find('div', class_='sub_title')
-                    if sub_title_area:
-                        spans = sub_title_area.find_all('span', class_='txt')
-                        for span in spans:
-                            text = span.get_text().strip()
-                            # 영어 제목 패턴 확인
-                            if re.match(r'^[A-Za-z\s:\'\.\-]+$', text) and len(text) > 2 and text not in ['영화', '2025']:
-                                result['english_title'] = text
-                                print(f"   ✅ 영어제목: {text}")
-                                break
-                                
+                    if not result['english_title']:
+                        sub_title_area = soup.find('div', class_='sub_title')
+                        if sub_title_area:
+                            for span in sub_title_area.find_all('span', class_='txt'):
+                                text = span.get_text().strip()
+                                if re.match(r'^[A-Za-z\s:\'\.\-]+$', text) and len(text) > 2 and text not in ['영화', '2025']:
+                                    result['english_title'] = text
+                                    print(f"   ✅ 영어제목(보조): {text}")
+                                    break
                 except Exception as e:
                     print(f"   ❌ 영어제목 크롤링 실패: {e}")
-                
-                # 크롤링 결과 검증
+
                 success_count = sum(1 for v in result.values() if v)
                 print(f"✅ '{movie_title}' 자동 크롤링 완료 ({success_count}/6 항목 성공)")
-                
                 return result
-                
+
             except Exception as e:
                 print(f"❌ '{movie_title}' 전체 크롤링 실패: {e}")
                 return {
@@ -254,108 +231,78 @@ jobs:
         def main():
             print('🤖 완전 자동화 크롤링 시스템 시작...')
             print(f'🕐 한국시간: {datetime.now().strftime("%Y년 %m월 %d일 %H시 %M분")}')
-            
-            # KOBIS API 호출
+
             kobis_key = os.environ['KOBIS_KEY']
             yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
-            
             print(f'📅 조회 날짜: {yesterday}')
-            
+
             kobis_url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"
-            kobis_params = {
-                'key': kobis_key,
-                'targetDt': yesterday,
-                'itemPerPage': 10
-            }
-            
+            kobis_params = {'key': kobis_key, 'targetDt': yesterday, 'itemPerPage': 10}
+
             try:
                 kobis_response = requests.get(kobis_url, params=kobis_params, timeout=15)
                 kobis_response.raise_for_status()
                 kobis_data = kobis_response.json()
-                
                 movies = kobis_data['boxOfficeResult']['dailyBoxOfficeList']
                 print(f'📊 KOBIS에서 {len(movies)}개 영화 정보 수집 완료')
-                
             except Exception as e:
                 print(f'❌ KOBIS API 호출 실패: {e}')
                 return
-            
-            # 각 영화 완전 자동 크롤링
+
             enhanced_movies = []
-            
             for i, movie in enumerate(movies):
                 print(f'\n🎬 {i+1}/{len(movies)} - {movie["movieNm"]} 완전 자동 처리...')
-                
                 movie_title = movie['movieNm']
-                
-                # 완전 자동 크롤링 (하드코딩 없음)
                 movie_details = crawl_naver_auto(movie_title)
-                time.sleep(3)  # 안전한 크롤링 간격
-                
-                # 개봉일 포맷팅
+                time.sleep(2.5)  # 안전 간격
                 formatted_open_date = format_date_korean(movie.get('openDt', ''))
-                
-                # 최종 데이터 생성
-                enhanced_movie = {
-                    **movie,
-                    **movie_details,
-                    'formatted_open_date': formatted_open_date
-                }
-                
+                enhanced_movie = {**movie, **movie_details, 'formatted_open_date': formatted_open_date}
                 enhanced_movies.append(enhanced_movie)
                 print(f'✅ {movie_title} 완전 자동 처리 완료')
-            
-            # 최종 JSON 생성
+
             final_data = {
                 'updateTime': datetime.now().strftime('%Y년 %m월 %d일 %H시 %M분'),
                 'targetDate': yesterday,
                 'totalMovies': len(enhanced_movies),
-                'dataSource': 'KOBIS + 네이버 완전자동크롤링 (하드코딩 없음)',
-                'imageOptimized': '50KB 자동최적화',
-                'crawlingMethod': '사용자제공 HTML구조 기반 자동크롤링',
+                'dataSource': 'KOBIS + 네이버 완전자동크롤링',
+                'imageOptimized': '프록시 size=140x210, quality=65',
+                'crawlingMethod': '지식패널 구조 + 폴백',
                 'systemStatus': '정상 작동',
                 'nextUpdate': '6시간 후 자동 실행',
                 'movies': enhanced_movies
             }
-            
-            # JSON 저장
+
             try:
                 with open('movies.json', 'w', encoding='utf-8') as f:
                     json.dump(final_data, f, ensure_ascii=False, indent=2)
-                    
                 print(f'\n🎉 완전 자동화 크롤링 완료!')
                 print(f'📊 총 {len(enhanced_movies)}개 영화')
                 print(f'🖼️ 포스터 자동수집: {sum(1 for m in enhanced_movies if m.get("poster_url"))}개')
                 print(f'📝 줄거리 자동수집: {sum(1 for m in enhanced_movies if m.get("plot") and "수집 중" not in m["plot"])}개')
                 print(f'🎭 상세정보 자동수집: {sum(1 for m in enhanced_movies if m.get("genre") and "수집 중" not in m["genre"])}개')
                 print(f'⏰ 다음 실행: 6시간 후')
-                
             except Exception as e:
                 print(f'❌ JSON 파일 저장 실패: {e}')
-                
+
         if __name__ == "__main__":
             main()
         EOF
-        
+
     - name: Commit and push with enhanced stability
       run: |
-        # Git 설정
         git config --local user.email "action@github.com"
         git config --local user.name "Full Auto Crawler Bot"
-        
-        # 변경사항 확인 및 커밋
+
         git add movies.json
-        
+
         if git diff --staged --quiet; then
           echo "📝 변경사항 없음 - 워크플로우 활성 상태 유지"
-          # 빈 커밋으로라도 활동 기록 (60일 비활성화 방지)
           git commit --allow-empty -m "🤖 워크플로우 활성상태 유지 - $(date +'%Y-%m-%d %H:%M KST')"
         else
           echo "📝 변경사항 발견 - 새 데이터 커밋"
           git commit -m "🤖 완전자동화크롤링 데이터 업데이트 - $(date +'%Y-%m-%d %H:%M KST')"
         fi
-        
-        # Push with retry logic (네트워크 이슈 대응)
+
         echo "📤 GitHub에 푸시 시도..."
         for attempt in {1..5}; do
           if git push; then
@@ -373,7 +320,7 @@ jobs:
             fi
           fi
         done
-        
+
     - name: Workflow completion report
       run: |
         echo "🎉 ===== 완전 자동화 크롤링 시스템 실행 완료 ====="
