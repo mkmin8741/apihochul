@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 09월 11일 10시 20분 (한국시간 기준)",
+  "update_time": "2025년 09월 11일 11시 58분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -66,6 +66,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "25.11.04 ~ 11.05",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "그린광학",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "사진장비 및 광학기기 제조업",
+      "underwriters": "신영증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
       "listing_date": "미정"
     },
     {
@@ -140,17 +151,6 @@
       "offer_price": "미정",
       "industry": "기타 금융업",
       "underwriters": "교보증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "그린광학",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "사진장비 및 광학기기 제조업",
-      "underwriters": "신영증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
