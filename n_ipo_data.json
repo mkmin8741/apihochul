@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 09월 11일 15시 26분 (한국시간 기준)",
+  "update_time": "2025년 09월 11일 17시 23분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -58,6 +58,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "노타",
+      "market_type": "코스닥",
+      "offer_price": "7,600 ~ 9,100",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.10.16 ~ 10.17",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "세나테크놀로지",
       "market_type": "코스닥",
       "offer_price": "47,500 ~ 56,800",
@@ -74,17 +85,6 @@
       "offer_price": "미정",
       "industry": "사진장비 및 광학기기 제조업",
       "underwriters": "신영증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "노타",
-      "market_type": "코스닥",
-      "offer_price": "7,600 ~ 9,100",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
