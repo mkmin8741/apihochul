@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 09월 11일 23시 17분 (한국시간 기준)",
+  "update_time": "2025년 09월 12일 01시 21분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -8,8 +8,8 @@
       "offer_price": "13,200",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "대신증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "1,972.62:1",
+      "status": "정보없음",
       "subscription_period": "25.09.10 ~ 09.11",
       "listing_date": "25.09.19"
     },
