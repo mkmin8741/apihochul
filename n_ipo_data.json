@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 09월 19일 23시 17분 (한국시간 기준)",
+  "update_time": "2025년 09월 20일 01시 21분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -8,8 +8,8 @@
       "offer_price": "58,000",
       "industry": "의약품 제조업",
       "underwriters": "KB증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "587:1",
+      "status": "정보없음",
       "subscription_period": "25.09.18 ~ 09.19",
       "listing_date": "25.10.01"
     },
