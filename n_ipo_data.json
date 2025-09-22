@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 09월 22일 07시 15분 (한국시간 기준)",
+  "update_time": "2025년 09월 22일 10시 25분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -91,6 +91,28 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "나라스페이스테크놀로지",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "항공기,우주선 및 부품 제조업",
+      "underwriters": "삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "더핑크퐁컴퍼니",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "영화, 비디오물, 방송프로그램 제작 및 배급업",
+      "underwriters": "미래에셋증권, 삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "비엔케이제3호스팩",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -118,6 +140,28 @@
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "신한투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "알지노믹스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "자연과학 및 공학 연구개발업",
+      "underwriters": "NH투자증권, 삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "에임드바이오",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "자연과학 및 공학 연구개발업",
+      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
@@ -168,33 +212,22 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "나라스페이스테크놀로지",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "항공기,우주선 및 부품 제조업",
-      "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "더핑크퐁컴퍼니",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "영화, 비디오물, 방송프로그램 제작 및 배급업",
-      "underwriters": "미래에셋증권, 삼성증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "덕양에너젠",
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "연료용 가스 제조 및 배관공급업",
       "underwriters": "NH투자증권, 미래에셋증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "디티에스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "특수 목적용 기계 제조업",
+      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -377,11 +410,11 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "알지노믹스",
+      "company_name": "액스비스",
       "market_type": "코스닥",
       "offer_price": "미정",
-      "industry": "자연과학 및 공학 연구개발업",
-      "underwriters": "NH투자증권, 삼성증권",
+      "industry": "기타 전기장비 제조업",
+      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -410,17 +443,6 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "에임드바이오",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "자연과학 및 공학 연구개발업",
-      "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "에코크레이션",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -437,17 +459,6 @@
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "NH투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "엘에스이",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "특수 목적용 기계 제조업",
-      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
