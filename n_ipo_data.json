@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 09월 22일 17시 25분 (한국시간 기준)",
+  "update_time": "2025년 09월 22일 19시 20분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -102,22 +102,22 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "더핑크퐁컴퍼니",
+      "market_type": "코스닥",
+      "offer_price": "32,000 ~ 38,000",
+      "industry": "영화, 비디오물, 방송프로그램 제작 및 배급업",
+      "underwriters": "미래에셋증권, 삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.11.06 ~ 11.07",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "나라스페이스테크놀로지",
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "항공기,우주선 및 부품 제조업",
       "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "더핑크퐁컴퍼니",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "영화, 비디오물, 방송프로그램 제작 및 배급업",
-      "underwriters": "미래에셋증권, 삼성증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
