@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 09월 22일 23시 18분 (한국시간 기준)",
+  "update_time": "2025년 09월 23일 01시 23분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -8,8 +8,8 @@
       "offer_price": "2,000",
       "industry": "금융 지원 서비스업",
       "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "70.39:1",
+      "status": "정보없음",
       "subscription_period": "25.09.19 ~ 09.22",
       "listing_date": "25.09.30"
     },
