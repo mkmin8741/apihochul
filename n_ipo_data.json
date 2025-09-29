@@ -1,29 +1,7 @@
 {
-  "update_time": "2025년 09월 29일 23시 18분 (한국시간 기준)",
+  "update_time": "2025년 09월 30일 01시 18분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "KB제33호스팩",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "KB증권",
-      "competition_rate": "202.63:1",
-      "status": "정보없음",
-      "subscription_period": "25.09.22 ~ 09.23",
-      "listing_date": "25.09.30"
-    },
-    {
-      "company_name": "삼성스팩11호",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "삼성증권",
-      "competition_rate": "70.39:1",
-      "status": "정보없음",
-      "subscription_period": "25.09.19 ~ 09.22",
-      "listing_date": "25.09.30"
-    },
     {
       "company_name": "명인제약",
       "market_type": "코스피",
