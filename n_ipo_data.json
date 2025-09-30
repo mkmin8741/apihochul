@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 09월 30일 15시 28분 (한국시간 기준)",
+  "update_time": "2025년 09월 30일 17시 25분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -102,6 +102,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "아로마티카",
+      "market_type": "코스닥",
+      "offer_price": "6,000 ~ 8,000",
+      "industry": "기타 화학제품 제조업",
+      "underwriters": "신한투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.11.11 ~ 11.12",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "에임드바이오",
       "market_type": "코스닥",
       "offer_price": "9,000 ~ 11,000",
@@ -140,17 +151,6 @@
       "offer_price": "미정",
       "industry": "전자부품 제조업",
       "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "아로마티카",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "기타 화학제품 제조업",
-      "underwriters": "신한투자증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
