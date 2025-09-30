@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 09월 30일 17시 25분 (한국시간 기준)",
+  "update_time": "2025년 09월 30일 19시 18분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -124,6 +124,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "알지노믹스",
+      "market_type": "코스닥",
+      "offer_price": "17,000 ~ 22,500",
+      "industry": "자연과학 및 공학 연구개발업",
+      "underwriters": "NH투자증권, 삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.11.24 ~ 11.25",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "비엔케이제3호스팩",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -162,17 +173,6 @@
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "신한투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "알지노믹스",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "자연과학 및 공학 연구개발업",
-      "underwriters": "NH투자증권, 삼성증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
