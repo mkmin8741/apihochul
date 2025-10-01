@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 10월 01일 15시 27분 (한국시간 기준)",
+  "update_time": "2025년 10월 01일 17시 24분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -47,22 +47,22 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "큐리오시스",
-      "market_type": "코스닥",
-      "offer_price": "18,000 ~ 22,000",
-      "industry": "사진장비 및 광학기기 제조업",
-      "underwriters": "키움증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "25.10.27 ~ 10.28",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "세나테크놀로지",
       "market_type": "코스닥",
       "offer_price": "47,500 ~ 56,800",
       "industry": "통신 및 방송 장비 제조업",
       "underwriters": "신한투자증권, KB증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.11.04 ~ 11.05",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "큐리오시스",
+      "market_type": "코스닥",
+      "offer_price": "18,000 ~ 22,000",
+      "industry": "사진장비 및 광학기기 제조업",
+      "underwriters": "키움증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "25.11.04 ~ 11.05",
@@ -77,6 +77,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "25.11.06 ~ 11.07",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "씨엠티엑스",
+      "market_type": "코스닥",
+      "offer_price": "51,000 ~ 60,500",
+      "industry": "전자부품 제조업",
+      "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.11.10 ~ 11.11",
       "listing_date": "미정"
     },
     {
@@ -135,22 +146,22 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "신영스팩11호",
+      "company_name": "세미파이브",
       "market_type": "코스닥",
       "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "신영증권",
+      "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
+      "underwriters": "유비에스증권, 신한투자증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
     {
-      "company_name": "씨엠티엑스",
+      "company_name": "신영스팩11호",
       "market_type": "코스닥",
       "offer_price": "미정",
-      "industry": "전자부품 제조업",
-      "underwriters": "미래에셋증권",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "신영증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
@@ -366,6 +377,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "삼성스팩13호",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "기타 금융업",
+      "underwriters": "삼성증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "삼진식품",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -393,17 +415,6 @@
       "offer_price": "미정",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "삼성증권, 하나증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "세미파이브",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
-      "underwriters": "유비에스증권, 신한투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
