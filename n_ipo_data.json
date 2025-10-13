@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 10월 13일 07시 15분 (한국시간 기준)",
+  "update_time": "2025년 10월 13일 10시 25분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -146,6 +146,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "미래에셋비전스팩8호",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "기타 금융업",
+      "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "비엔케이제3호스팩",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -217,6 +228,17 @@
       "offer_price": "미정",
       "industry": "기타 금융업",
       "underwriters": "삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "티엠씨",
+      "market_type": "코스피",
+      "offer_price": "미정",
+      "industry": "절연선 및 케이블 제조업",
+      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
@@ -311,17 +333,6 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "메리츠제1호스팩",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "메리츠증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "메쥬",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -348,17 +359,6 @@
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
-      "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "미래에셋비전스팩8호",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "기타 금융업",
       "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
@@ -569,17 +569,6 @@
       "offer_price": "미정",
       "industry": "기타 정보 서비스업",
       "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "티엠씨",
-      "market_type": "코스피",
-      "offer_price": "미정",
-      "industry": "절연선 및 케이블 제조업",
-      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
