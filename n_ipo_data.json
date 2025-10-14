@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 10월 14일 17시 22분 (한국시간 기준)",
+  "update_time": "2025년 10월 14일 19시 19분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -135,6 +135,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "테라뷰 홀딩스",
+      "market_type": "코스닥",
+      "offer_price": "7,000 ~ 8,000",
+      "industry": "기타 금융업",
+      "underwriters": "삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.11.24 ~ 11.25",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "쿼드메디슨",
       "market_type": "코스닥",
       "offer_price": "12,000 ~ 15,000",
@@ -228,17 +239,6 @@
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "키움증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "테라뷰",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "기타 금융업",
-      "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
