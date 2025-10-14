@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 10월 14일 15시 27분 (한국시간 기준)",
+  "update_time": "2025년 10월 14일 17시 22분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -146,6 +146,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "이지스",
+      "market_type": "코스닥",
+      "offer_price": "13,000 ~ 15,000",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "NH투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.12.02 ~ 12.03",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "리브스메드",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -206,17 +217,6 @@
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "신한투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "이지스",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "NH투자증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
