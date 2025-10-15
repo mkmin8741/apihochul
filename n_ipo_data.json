@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 10월 15일 15시 27분 (한국시간 기준)",
+  "update_time": "2025년 10월 15일 17시 25분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -11,17 +11,6 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.10.23 ~ 10.24",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "비츠로넥스텍",
-      "market_type": "코스닥",
-      "offer_price": "5,900 ~ 6,900",
-      "industry": "항공기,우주선 및 부품 제조업",
-      "underwriters": "NH투자증권, 교보증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "25.10.27 ~ 10.28",
       "listing_date": "미정"
     },
     {
@@ -102,6 +91,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "비츠로넥스텍",
+      "market_type": "코스닥",
+      "offer_price": "5,900 ~ 6,900",
+      "industry": "항공기,우주선 및 부품 제조업",
+      "underwriters": "NH투자증권, 교보증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.11.11 ~ 11.12",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "아로마티카",
       "market_type": "코스닥",
       "offer_price": "6,000 ~ 8,000",
@@ -154,6 +154,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "25.11.25 ~ 11.26",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "페스카로",
+      "market_type": "코스닥",
+      "offer_price": "12,500 ~ 15,500",
+      "industry": "그외 기타 전문, 과학 및 기술 서비스업",
+      "underwriters": "NH투자증권, 한화투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.12.01 ~ 12.02",
       "listing_date": "미정"
     },
     {
@@ -250,17 +261,6 @@
       "offer_price": "미정",
       "industry": "절연선 및 케이블 제조업",
       "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "페스카로",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "그외 기타 전문, 과학 및 기술 서비스업",
-      "underwriters": "NH투자증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
