@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 10월 16일 10시 21분 (한국시간 기준)",
+  "update_time": "2025년 10월 16일 12시 02분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -11,7 +11,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.10.23 ~ 10.24",
-      "listing_date": "미정"
+      "listing_date": "25.11.03"
     },
     {
       "company_name": "이노테크",
@@ -22,7 +22,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.10.27 ~ 10.28",
-      "listing_date": "미정"
+      "listing_date": "25.11.07"
     },
     {
       "company_name": "세나테크놀로지",
@@ -223,6 +223,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "삼성스팩12호",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "기타 금융업",
+      "underwriters": "삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "세미파이브",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -382,17 +393,6 @@
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "삼성스팩12호",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "기타 금융업",
-      "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
