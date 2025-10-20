@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 10월 20일 15시 28분 (한국시간 기준)",
+  "update_time": "2025년 10월 20일 17시 25분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -190,6 +190,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "아크릴",
+      "market_type": "코스닥",
+      "offer_price": "17,500 ~ 19,500",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "신한투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.11.25 ~ 11.26",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "쿼드메디슨",
       "market_type": "코스닥",
       "offer_price": "12,000 ~ 15,000",
@@ -198,6 +209,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "25.11.25 ~ 11.26",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "리브스메드",
+      "market_type": "코스닥",
+      "offer_price": "44,000 ~ 55,000",
+      "industry": "의료용 기기 제조업",
+      "underwriters": "미래에셋증권, 삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.12.01 ~ 12.02",
       "listing_date": "미정"
     },
     {
@@ -234,17 +256,6 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "리브스메드",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "의료용 기기 제조업",
-      "underwriters": "미래에셋증권, 삼성증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "메리츠제1호스팩",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -261,17 +272,6 @@
       "offer_price": "미정",
       "industry": "기타 금융업",
       "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "아크릴",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "신한투자증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
@@ -470,17 +470,6 @@
       "offer_price": "미정",
       "industry": "창작 및 예술관련 서비스업",
       "underwriters": "한국투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "에이텍솔루션",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "반도체 제조업",
-      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
