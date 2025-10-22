@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 10월 22일 23시 19분 (한국시간 기준)",
+  "update_time": "2025년 10월 23일 01시 24분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -9,7 +9,7 @@
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "미래에셋증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "25.10.23 ~ 10.24",
       "listing_date": "25.11.03"
     },
@@ -31,7 +31,7 @@
       "industry": "통신 및 방송 장비 제조업",
       "underwriters": "신한투자증권, KB증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "25.11.04 ~ 11.05",
       "listing_date": "미정"
     },
