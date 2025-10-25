@@ -1,5 +1,5 @@
 {
-  "updateTime": "2025년 10월 25일 12시 52분",
+  "updateTime": "2025년 10월 25일 18시 37분",
   "targetDate": "20251024",
   "totalMovies": 10,
   "dataSource": "KOBIS + 네이버 완전자동크롤링",
@@ -81,12 +81,12 @@
       "audiAcc": "2336480",
       "scrnCnt": "716",
       "showCnt": "1931",
-      "poster_url": "",
-      "plot": "줄거리 정보를 수집 중입니다.",
-      "genre": "정보 수집 중",
-      "runtime": "정보 수집 중",
-      "grade": "정보 수집 중",
-      "english_title": "",
+      "poster_url": "https://search.pstatic.net/common?type=o&size=140x210&quality=65&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20251014_288%2F1760409682527qVta7_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2",
+      "plot": "조직의 미래가 걸린 차기 보스 선출을 앞두고 각자의 꿈을 위해 서로에게 보스 자리를 치열하게 ‘양보’하는 조직원들의 필사적인 대결을 그린 코믹 액션",
+      "genre": "코미디, 액션",
+      "runtime": "98분",
+      "grade": "15세 이상 관람가",
+      "english_title": "BOSS",
       "formatted_open_date": "2025년 10월 03일"
     },
     {
