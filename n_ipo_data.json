@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 10월 26일 23시 15분 (한국시간 기준)",
+  "update_time": "2025년 10월 27일 01시 20분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -20,7 +20,7 @@
       "industry": "특수 목적용 기계 제조업",
       "underwriters": "KB증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "25.10.27 ~ 10.28",
       "listing_date": "25.11.07"
     },
@@ -42,7 +42,7 @@
       "industry": "사진장비 및 광학기기 제조업",
       "underwriters": "키움증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "25.11.04 ~ 11.05",
       "listing_date": "미정"
     },
