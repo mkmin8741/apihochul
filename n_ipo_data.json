@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 10월 28일 13시 21분 (한국시간 기준)",
+  "update_time": "2025년 10월 28일 15시 29분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -278,6 +278,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "교보19호기업인수목적",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "기타 금융업",
+      "underwriters": "교보증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "메리츠제1호스팩",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -300,6 +311,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "유진스팩12호",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "유진투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "키움히어로제1호스팩",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -316,17 +338,6 @@
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "IBK투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "교보19호기업인수목적",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "기타 금융업",
-      "underwriters": "교보증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -492,17 +503,6 @@
       "offer_price": "미정",
       "industry": "일반 목적용 기계 제조업",
       "underwriters": "키움증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "유진스팩12호",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "유진투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
