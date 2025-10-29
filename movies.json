@@ -1,5 +1,5 @@
 {
-  "updateTime": "2025년 10월 29일 13시 02분",
+  "updateTime": "2025년 10월 29일 18시 44분",
   "targetDate": "20251028",
   "totalMovies": 10,
   "dataSource": "KOBIS + 네이버 완전자동크롤링",
@@ -270,12 +270,12 @@
       "audiAcc": "197736",
       "scrnCnt": "421",
       "showCnt": "654",
-      "poster_url": "https://search.pstatic.net/common?type=o&size=140x210&quality=65&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20251021_23%2F1761006879729TwPY1_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2",
-      "plot": "\"최강의 두 사람, 다시는 돌아갈 수 없는 푸른 봄\" 2006년 봄, 주술고등전문학교 시절의 고죠 사토루와 게토 스구루. 불사의 술식을 가진 주술계 핵심, 텐겐으로부터 의뢰가 도착한다. 의뢰는 두 가지, 텐겐과 적합자인 성장체 아마나이 리코라는 소녀의 ‘호위’와 ‘말소’. 두 사람은 주술계 존속을 위한 호위 임무에 나서지만 후시구로라 불리는 ‘주술사 킬러’가 암살을 노리고 나타난다. 최강의 주술사와 최악의 주저사가 된 고죠와 게토, 두 사람의 엇갈린 운명의 과거가 밝혀진다.",
-      "genre": "애니메이션",
-      "runtime": "110분",
-      "grade": "15세 이상 관람가",
-      "english_title": "JUJUTSU KAISEN: Hidden Inventory / Premature Death - The Movie",
+      "poster_url": "https://search.pstatic.net/common?type=f&size=140x210&quality=65&direct=true&src=https%3A%2F%2Fssl.pstatic.net%2Fimgmovie%2Fmultimedia%2FMOVIECLIP%2FTRAILER%2F60020_cover_20250926055219.jpg",
+      "plot": "",
+      "genre": "",
+      "runtime": "",
+      "grade": "",
+      "english_title": "",
       "formatted_open_date": "2025년 10월 16일"
     }
   ]
