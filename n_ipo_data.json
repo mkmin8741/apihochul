@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 10월 29일 17시 26분 (한국시간 기준)",
+  "update_time": "2025년 10월 29일 19시 20분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -29,7 +29,7 @@
       "market_type": "코스닥",
       "offer_price": "47,500 ~ 56,800",
       "industry": "통신 및 방송 장비 제조업",
-      "underwriters": "신한투자증권, KB증권",
+      "underwriters": "KB증권, 신한투자증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.11.04 ~ 11.05",
@@ -227,7 +227,7 @@
       "market_type": "코스닥",
       "offer_price": "44,000 ~ 55,000",
       "industry": "의료용 기기 제조업",
-      "underwriters": "미래에셋증권, 삼성증권",
+      "underwriters": "삼성증권, 미래에셋증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "25.12.01 ~ 12.02",
