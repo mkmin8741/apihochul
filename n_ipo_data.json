@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 10월 31일 17시 24분 (한국시간 기준)",
+  "update_time": "2025년 10월 31일 19시 19분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -99,17 +99,6 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "25.11.11 ~ 11.12",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "티엠씨",
-      "market_type": "코스피",
-      "offer_price": "8,000 ~ 9,300",
-      "industry": "절연선 및 케이블 제조업",
-      "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "25.11.12 ~ 11.13",
       "listing_date": "미정"
     },
     {
@@ -264,6 +253,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "25.12.02 ~ 12.03",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "티엠씨",
+      "market_type": "코스피",
+      "offer_price": "8,000 ~ 9,300",
+      "industry": "절연선 및 케이블 제조업",
+      "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.12.03 ~ 12.04",
       "listing_date": "미정"
     },
     {
