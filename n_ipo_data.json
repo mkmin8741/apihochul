@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 10월 31일 15시 28분 (한국시간 기준)",
+  "update_time": "2025년 10월 31일 17시 24분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -27,7 +27,7 @@
     {
       "company_name": "세나테크놀로지",
       "market_type": "코스닥",
-      "offer_price": "47,500 ~ 56,800",
+      "offer_price": "56,800",
       "industry": "통신 및 방송 장비 제조업",
       "underwriters": "KB증권, 신한투자증권",
       "competition_rate": "-",
@@ -300,6 +300,28 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "미래에셋비전스팩11호",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "삼진식품",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "동물용 사료 및 조제식품 제조업",
+      "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "알지노믹스",
       "market_type": "코스닥",
       "offer_price": "17,000 ~ 22,500",
@@ -404,39 +426,6 @@
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "미래에셋비전스팩11호",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "삼성스팩13호",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "기타 금융업",
-      "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "삼진식품",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "동물용 사료 및 조제식품 제조업",
-      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
