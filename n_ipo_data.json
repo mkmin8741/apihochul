@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 11월 03일 13시 27분 (한국시간 기준)",
+  "update_time": "2025년 11월 03일 15시 29분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -27,13 +27,13 @@
     {
       "company_name": "큐리오시스",
       "market_type": "코스닥",
-      "offer_price": "18,000 ~ 22,000",
+      "offer_price": "22,000",
       "industry": "사진장비 및 광학기기 제조업",
       "underwriters": "키움증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.11.04 ~ 11.05",
-      "listing_date": "미정"
+      "listing_date": "25.11.13"
     },
     {
       "company_name": "그린광학",
