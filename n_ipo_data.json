@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 11월 03일 17시 27분 (한국시간 기준)",
+  "update_time": "2025년 11월 03일 19시 21분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -212,6 +212,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "삼진식품",
+      "market_type": "코스닥",
+      "offer_price": "6,700 ~ 7,600",
+      "industry": "동물용 사료 및 조제식품 제조업",
+      "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.12.01 ~ 12.02",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "페스카로",
       "market_type": "코스닥",
       "offer_price": "12,500 ~ 15,500",
@@ -294,17 +305,6 @@
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "삼진식품",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "동물용 사료 및 조제식품 제조업",
-      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
