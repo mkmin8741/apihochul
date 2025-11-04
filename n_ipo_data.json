@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 11월 04일 13시 21분 (한국시간 기준)",
+  "update_time": "2025년 11월 04일 15시 29분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -55,7 +55,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.11.06 ~ 11.07",
-      "listing_date": "미정"
+      "listing_date": "25.11.17"
     },
     {
       "company_name": "씨엠티엑스",
@@ -410,11 +410,11 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "미래에셋비전스팩10호",
+      "company_name": "삼성스팩13호",
       "market_type": "코스닥",
       "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "미래에셋증권",
+      "industry": "기타 금융업",
+      "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -568,17 +568,6 @@
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "기타 정보 서비스업",
-      "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "티케이씨",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "기타 전기장비 제조업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "예심청구",
