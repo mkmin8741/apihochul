@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 11월 05일 13시 22분 (한국시간 기준)",
+  "update_time": "2025년 11월 05일 15시 28분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -44,7 +44,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.11.06 ~ 11.07",
-      "listing_date": "미정"
+      "listing_date": "25.11.17"
     },
     {
       "company_name": "더핑크퐁컴퍼니",
@@ -215,7 +215,7 @@
       "company_name": "삼진식품",
       "market_type": "코스닥",
       "offer_price": "6,700 ~ 7,600",
-      "industry": "동물용 사료 및 조제식품 제조업",
+      "industry": "수산물 가공 및 저장 처리업",
       "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "심사승인",
