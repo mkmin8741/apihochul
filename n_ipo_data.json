@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 11월 06일 07시 17분 (한국시간 기준)",
+  "update_time": "2025년 11월 06일 10시 25분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -256,17 +256,6 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "세미파이브",
-      "market_type": "코스닥",
-      "offer_price": "21,000 ~ 24,000",
-      "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
-      "underwriters": "유비에스증권, 삼성증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "25.12.02 ~ 12.03",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "유진스팩12호",
       "market_type": "코스닥",
       "offer_price": "2,000",
@@ -333,11 +322,33 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "세미파이브",
+      "market_type": "코스닥",
+      "offer_price": "21,000 ~ 24,000",
+      "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
+      "underwriters": "유비에스증권, 삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "알지노믹스",
       "market_type": "코스닥",
       "offer_price": "17,000 ~ 22,500",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "NH투자증권, 삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "하나36호스팩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "하나증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
@@ -591,17 +602,6 @@
       "offer_price": "미정",
       "industry": "기타 정보 서비스업",
       "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "하나36호스팩",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "하나증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
