@@ -1,5 +1,5 @@
 {
-  "updateTime": "2025년 11월 07일 02시 14분",
+  "updateTime": "2025년 11월 07일 06시 45분",
   "targetDate": "20251106",
   "totalMovies": 10,
   "dataSource": "KOBIS + 네이버 완전자동크롤링",
@@ -162,12 +162,12 @@
       "audiAcc": "10805",
       "scrnCnt": "452",
       "showCnt": "839",
-      "poster_url": "",
-      "plot": "줄거리 정보를 수집 중입니다.",
-      "genre": "정보 수집 중",
-      "runtime": "정보 수집 중",
-      "grade": "정보 수집 중",
-      "english_title": "",
+      "poster_url": "https://search.pstatic.net/common?type=o&size=140x210&quality=65&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20251107_101%2F1762483118670irSY9_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2",
+      "plot": "축복의 땅이라고 불리는 오복리에 이사 온 '영범'(김병철)과 '선희'(송지효). 그곳에서 의문의 노인을 만난 뒤, 교통사고로 걷지 못하던 아들 '종훈'이 다시 걷게 되는 기적을 경험한다. 한편, ‘오복리’에서 홀로 아들 '민재'를 키우며 살아오던 '춘서’(김히어라)는 그의 가족에게 닥친 저주에 가까운 불행들이 ‘영범’ 가족과 관련이 있음을 알게 되는데…",
+      "genre": "미스터리",
+      "runtime": "103분",
+      "grade": "15세 이상 관람가",
+      "english_title": "THE FAVOR",
       "formatted_open_date": "2025년 11월 05일"
     },
     {
