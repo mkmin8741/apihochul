@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 11월 07일 15시 28분 (한국시간 기준)",
+  "update_time": "2025년 11월 07일 17시 25분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -49,13 +49,13 @@
     {
       "company_name": "씨엠티엑스",
       "market_type": "코스닥",
-      "offer_price": "51,000 ~ 60,500",
+      "offer_price": "60,500",
       "industry": "전자부품 제조업",
       "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.11.10 ~ 11.11",
-      "listing_date": "미정"
+      "listing_date": "25.11.20"
     },
     {
       "company_name": "비엔케이제3호스팩",
@@ -66,7 +66,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.11.11 ~ 11.12",
-      "listing_date": "미정"
+      "listing_date": "25.11.21"
     },
     {
       "company_name": "비츠로넥스텍",
@@ -165,17 +165,6 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "25.11.24 ~ 11.25",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "아크릴",
-      "market_type": "코스닥",
-      "offer_price": "17,500 ~ 19,500",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "신한투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "25.11.25 ~ 11.26",
       "listing_date": "미정"
     },
     {
@@ -289,6 +278,28 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "아크릴",
+      "market_type": "코스닥",
+      "offer_price": "17,500 ~ 19,500",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "신한투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.12.04 ~ 12.05",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "세미파이브",
+      "market_type": "코스닥",
+      "offer_price": "21,000 ~ 24,000",
+      "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
+      "underwriters": "유비에스증권, 삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.12.05 ~ 12.08",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "나라스페이스테크놀로지",
       "market_type": "코스닥",
       "offer_price": "13,100 ~ 16,500",
@@ -300,22 +311,22 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "미래에셋비전스팩11호",
+      "company_name": "덕양에너젠",
       "market_type": "코스닥",
       "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "미래에셋증권",
+      "industry": "연료용 가스 제조 및 배관공급업",
+      "underwriters": "NH투자증권, 미래에셋증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
     {
-      "company_name": "세미파이브",
+      "company_name": "미래에셋비전스팩11호",
       "market_type": "코스닥",
-      "offer_price": "21,000 ~ 24,000",
-      "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
-      "underwriters": "유비에스증권, 삼성증권",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
@@ -349,17 +360,6 @@
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "IBK투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "덕양에너젠",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "연료용 가스 제조 및 배관공급업",
-      "underwriters": "NH투자증권, 미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
