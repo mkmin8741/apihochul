@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 11월 10일 07시 16분 (한국시간 기준)",
+  "update_time": "2025년 11월 10일 10시 37분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -553,6 +553,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "져스텍",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
+      "underwriters": "삼성증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "채비",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -569,6 +580,17 @@
       "offer_price": "미정",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "한국투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "코드잇",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "교육지원 서비스업",
+      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
