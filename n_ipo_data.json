@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 11월 11일 07시 18분 (한국시간 기준)",
+  "update_time": "2025년 11월 11일 10시 26분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -503,6 +503,17 @@
       "offer_price": "미정",
       "industry": "창작 및 예술관련 서비스업",
       "underwriters": "한국투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "에식스솔루션즈",
+      "market_type": "코스피",
+      "offer_price": "미정",
+      "industry": "절연선 및 케이블 제조업",
+      "underwriters": "미래에셋증권, 한국투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
