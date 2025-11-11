@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 11월 11일 15시 29분 (한국시간 기준)",
+  "update_time": "2025년 11월 11일 17시 25분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -591,6 +591,17 @@
       "offer_price": "미정",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "한국투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "케이뱅크",
+      "market_type": "코스피",
+      "offer_price": "미정",
+      "industry": "은행 및 저축기관",
+      "underwriters": "NH투자증권, 삼성증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
