@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 11월 12일 07시 18분 (한국시간 기준)",
+  "update_time": "2025년 11월 12일 10시 25분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -344,6 +344,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "IBKS제25호스팩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "IBK투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "덕양에너젠",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -351,17 +362,6 @@
       "underwriters": "NH투자증권, 미래에셋증권",
       "competition_rate": "-",
       "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "IBKS제25호스팩",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "IBK투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
