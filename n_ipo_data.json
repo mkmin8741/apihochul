@@ -1,18 +1,7 @@
 {
-  "update_time": "2025년 11월 13일 23시 18분 (한국시간 기준)",
+  "update_time": "2025년 11월 14일 01시 23분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "세나테크놀로지",
-      "market_type": "코스닥",
-      "offer_price": "56,800",
-      "industry": "통신 및 방송 장비 제조업",
-      "underwriters": "KB증권, 신한투자증권",
-      "competition_rate": "885.48:1",
-      "status": "정보없음",
-      "subscription_period": "25.11.04 ~ 11.05",
-      "listing_date": "25.11.14"
-    },
     {
       "company_name": "그린광학",
       "market_type": "코스닥",
@@ -102,22 +91,22 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "미래에셋비전스팩9호",
+      "company_name": "삼성스팩12호",
       "market_type": "코스닥",
       "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "미래에셋증권",
+      "industry": "기타 금융업",
+      "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.11.19 ~ 11.20",
       "listing_date": "미정"
     },
     {
-      "company_name": "삼성스팩12호",
+      "company_name": "미래에셋비전스팩9호",
       "market_type": "코스닥",
       "offer_price": "2,000",
-      "industry": "기타 금융업",
-      "underwriters": "삼성증권",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.11.19 ~ 11.20",
