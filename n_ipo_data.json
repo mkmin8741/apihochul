@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 11월 14일 23시 18분 (한국시간 기준)",
+  "update_time": "2025년 11월 15일 01시 24분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -63,8 +63,8 @@
       "offer_price": "2,000",
       "industry": "금융 지원 서비스업",
       "underwriters": "신영증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "415.44:1",
+      "status": "정보없음",
       "subscription_period": "25.11.13 ~ 11.14",
       "listing_date": "25.11.24"
     },
