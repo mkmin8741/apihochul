@@ -1,5 +1,5 @@
 {
-  "updateTime": "2025년 11월 15일 12시 54분",
+  "updateTime": "2025년 11월 15일 18시 38분",
   "targetDate": "20251114",
   "totalMovies": 10,
   "dataSource": "KOBIS + 네이버 완전자동크롤링",
@@ -81,12 +81,12 @@
       "audiAcc": "296340",
       "scrnCnt": "687",
       "showCnt": "1956",
-      "poster_url": "",
-      "plot": "줄거리 정보를 수집 중입니다.",
-      "genre": "정보 수집 중",
-      "runtime": "정보 수집 중",
-      "grade": "정보 수집 중",
-      "english_title": "",
+      "poster_url": "https://search.pstatic.net/common?type=o&size=140x210&quality=65&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20251105_63%2F176230967787630PaG_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2",
+      "plot": "위험이 도사리는 죽음의 땅. 사냥할 것인가, 사냥당할 것인가. 프레데터로서 존재를 증명하기 위해 우주에서 가장 위험한 행성으로 첫 사냥에 나선 ‘덱’. 죽음의 땅에 도사린 모든 것으로부터 공격을 받던 순간, 휴머노이드 ‘티아’를 만난다. 최상위 포식자 칼리스크에 맞서게 된 둘은 생존과 각자의 목적을 위해 극한의 사투를 벌이게 되는데…",
+      "genre": "SF, 액션",
+      "runtime": "107분",
+      "grade": "15세 이상 관람가",
+      "english_title": "Predator: Badlands",
       "formatted_open_date": "2025년 11월 05일"
     },
     {
@@ -243,12 +243,12 @@
       "audiAcc": "101329",
       "scrnCnt": "200",
       "showCnt": "256",
-      "poster_url": "https://search.pstatic.net/common?type=o&size=140x210&quality=65&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20251022_120%2F1761101991917Ejewy_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2",
-      "plot": "반장, 모범생, 학교 인싸인 동시에 연애가 가장 큰 관심사인 열여덟 ‘이주인’. 어느 날, 반 친구 ‘수호’가 제안한 서명운동에 전교생이 동참하던 중 오직 ‘주인’만이 내용에 동의할 수 없다며 나 홀로 서명을 거부한다. 어떻게든 설득하려는 ‘수호’와 단호한 ‘주인’의 실랑이가 결국 말싸움으로 번지고, 화가 난 ‘주인’이 아무렇게나 질러버린 한마디가 주변을 혼란에 빠뜨린다. 설상가상, ‘주인’을 추궁하는 익명의 쪽지가 배달되기 시작하는데……. 인싸? 관종? 허언증? 거짓말쟁이? “이주인, 뭐가 진짜 너야?”",
-      "genre": "드라마",
-      "runtime": "119분",
-      "grade": "12세 이상 관람가",
-      "english_title": "The World of Love",
+      "poster_url": "",
+      "plot": "줄거리 정보를 수집 중입니다.",
+      "genre": "정보 수집 중",
+      "runtime": "정보 수집 중",
+      "grade": "정보 수집 중",
+      "english_title": "",
       "formatted_open_date": "2025년 10월 22일"
     },
     {
@@ -270,12 +270,12 @@
       "audiAcc": "24213",
       "scrnCnt": "120",
       "showCnt": "132",
-      "poster_url": "",
-      "plot": "줄거리 정보를 수집 중입니다.",
-      "genre": "정보 수집 중",
-      "runtime": "정보 수집 중",
-      "grade": "정보 수집 중",
-      "english_title": "",
+      "poster_url": "https://search.pstatic.net/common?type=o&size=140x210&quality=65&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20251015_114%2F1760497731700GHYyH_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2",
+      "plot": "1937년, 젊은 우편 배달부 ‘아창’은 전쟁 속 목숨을 부지하기 위해 일본군 종군 기자 ‘이토 히데오’의 요청으로 난징의 한 사진관에서 사진을 인화하게 된다. 사진관 주인 ‘진씨’ 가족과 그곳에 하나 둘 모인 피난민들. 그리고 비밀리에 인화된 수백 장의 사진. 그 사진 속에는 일본군의 참혹한 만행과 살아 남기 위해 숨죽인 평범한 이들의 모습이 담겨 있었다. 정체가 드러날 위기 속, ‘아창’은 사진관을 임시 피난처로 지키며 세상에 알려야 할 진실, 그 증거들을 모은다. 그리고 마침내 숨겨둔 필름 한 통이 전 세계에 알려지며 진실이 밝혀지는데..",
+      "genre": "드라마",
+      "runtime": "137분",
+      "grade": "15세 이상 관람가",
+      "english_title": "Dead to Rights",
       "formatted_open_date": "2025년 11월 05일"
     }
   ]
