@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 11월 17일 17시 28분 (한국시간 기준)",
+  "update_time": "2025년 11월 17일 19시 22분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -140,17 +140,6 @@
       "offer_price": "44,000 ~ 55,000",
       "industry": "의료용 기기 제조업",
       "underwriters": "삼성증권, 미래에셋증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "25.12.01 ~ 12.02",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "삼진식품",
-      "market_type": "코스닥",
-      "offer_price": "6,700 ~ 7,600",
-      "industry": "수산물 가공 및 저장 처리업",
-      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "25.12.01 ~ 12.02",
@@ -308,6 +297,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "25.12.10 ~ 12.11",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "삼진식품",
+      "market_type": "코스닥",
+      "offer_price": "6,700 ~ 7,600",
+      "industry": "수산물 가공 및 저장 처리업",
+      "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.12.11 ~ 12.12",
       "listing_date": "미정"
     },
     {
