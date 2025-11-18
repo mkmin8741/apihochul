@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 11월 18일 07시 17분 (한국시간 기준)",
+  "update_time": "2025년 11월 18일 10시 25분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -66,7 +66,7 @@
       "competition_rate": "-",
       "status": "공모청약",
       "subscription_period": "25.11.18 ~ 11.19",
-      "listing_date": "미정"
+      "listing_date": "25.11.27"
     },
     {
       "company_name": "미래에셋비전스팩9호",
@@ -382,6 +382,17 @@
       "offer_price": "미정",
       "industry": "의료용 기기 제조업",
       "underwriters": "KB증권, 한국투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "마키나락스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
