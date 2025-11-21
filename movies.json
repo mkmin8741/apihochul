@@ -1,5 +1,5 @@
 {
-  "updateTime": "2025년 11월 21일 06시 46분",
+  "updateTime": "2025년 11월 21일 12시 59분",
   "targetDate": "20251120",
   "totalMovies": 10,
   "dataSource": "KOBIS + 네이버 완전자동크롤링",
@@ -216,12 +216,12 @@
       "audiAcc": "114717",
       "scrnCnt": "109",
       "showCnt": "140",
-      "poster_url": "",
-      "plot": "줄거리 정보를 수집 중입니다.",
-      "genre": "정보 수집 중",
-      "runtime": "정보 수집 중",
-      "grade": "정보 수집 중",
-      "english_title": "",
+      "poster_url": "https://search.pstatic.net/common?type=o&size=140x210&quality=65&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20251022_120%2F1761101991917Ejewy_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2",
+      "plot": "반장, 모범생, 학교 인싸인 동시에 연애가 가장 큰 관심사인 열여덟 ‘이주인’. 어느 날, 반 친구 ‘수호’가 제안한 서명운동에 전교생이 동참하던 중 오직 ‘주인’만이 내용에 동의할 수 없다며 나 홀로 서명을 거부한다. 어떻게든 설득하려는 ‘수호’와 단호한 ‘주인’의 실랑이가 결국 말싸움으로 번지고, 화가 난 ‘주인’이 아무렇게나 질러버린 한마디가 주변을 혼란에 빠뜨린다. 설상가상, ‘주인’을 추궁하는 익명의 쪽지가 배달되기 시작하는데……. 인싸? 관종? 허언증? 거짓말쟁이? “이주인, 뭐가 진짜 너야?”",
+      "genre": "드라마",
+      "runtime": "119분",
+      "grade": "12세 이상 관람가",
+      "english_title": "The World of Love",
       "formatted_open_date": "2025년 10월 22일"
     },
     {
