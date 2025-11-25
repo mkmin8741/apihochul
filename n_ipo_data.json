@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 11월 25일 12시 13분 (한국시간 기준)",
+  "update_time": "2025년 11월 25일 13시 25분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -421,6 +421,28 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "신한제17호스팩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "신한투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "신한제18호스팩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "신한투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "아이엠바이오로직스",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -613,6 +635,17 @@
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "대신증권, 한국투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "한화플러스제6호스팩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "기타 금융업",
+      "underwriters": "한화투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
