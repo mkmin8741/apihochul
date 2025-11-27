@@ -1,18 +1,7 @@
 {
-  "update_time": "2025년 11월 27일 23시 19분 (한국시간 기준)",
+  "update_time": "2025년 11월 28일 01시 23분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "삼성스팩12호",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "기타 금융업",
-      "underwriters": "삼성증권",
-      "competition_rate": "120.36:1",
-      "status": "정보없음",
-      "subscription_period": "25.11.19 ~ 11.20",
-      "listing_date": "25.11.28"
-    },
     {
       "company_name": "미래에셋비전스팩9호",
       "market_type": "코스닥",
@@ -58,22 +47,22 @@
       "listing_date": "25.12.09"
     },
     {
-      "company_name": "페스카로",
+      "company_name": "키움히어로제1호스팩",
       "market_type": "코스닥",
-      "offer_price": "12,500 ~ 15,500",
-      "industry": "그외 기타 전문, 과학 및 기술 서비스업",
-      "underwriters": "NH투자증권, 한화투자증권",
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "키움증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.12.01 ~ 12.02",
       "listing_date": "미정"
     },
     {
-      "company_name": "키움히어로제1호스팩",
+      "company_name": "페스카로",
       "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "키움증권",
+      "offer_price": "12,500 ~ 15,500",
+      "industry": "그외 기타 전문, 과학 및 기술 서비스업",
+      "underwriters": "NH투자증권, 한화투자증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.12.01 ~ 12.02",
@@ -91,32 +80,10 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "유진스팩12호",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "유진투자증권",
-      "competition_rate": "-",
-      "status": "수요예측",
-      "subscription_period": "25.12.02 ~ 12.03",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "이지스",
       "market_type": "코스닥",
       "offer_price": "13,000 ~ 15,000",
       "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "NH투자증권",
-      "competition_rate": "-",
-      "status": "수요예측",
-      "subscription_period": "25.12.02 ~ 12.03",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "쿼드메디슨",
-      "market_type": "코스닥",
-      "offer_price": "12,000 ~ 15,000",
-      "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "NH투자증권",
       "competition_rate": "-",
       "status": "수요예측",
@@ -143,6 +110,28 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.12.04 ~ 12.05",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "유진스팩12호",
+      "market_type": "코스닥",
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "유진투자증권",
+      "competition_rate": "-",
+      "status": "수요예측",
+      "subscription_period": "25.12.02 ~ 12.03",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "쿼드메디슨",
+      "market_type": "코스닥",
+      "offer_price": "12,000 ~ 15,000",
+      "industry": "자연과학 및 공학 연구개발업",
+      "underwriters": "NH투자증권",
+      "competition_rate": "-",
+      "status": "수요예측",
+      "subscription_period": "25.12.02 ~ 12.03",
       "listing_date": "미정"
     },
     {
