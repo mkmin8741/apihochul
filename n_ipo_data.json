@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 12월 01일 17시 30분 (한국시간 기준)",
+  "update_time": "2025년 12월 01일 19시 22분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -88,7 +88,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.12.02 ~ 12.03",
-      "listing_date": "미정"
+      "listing_date": "25.12.11"
     },
     {
       "company_name": "쿼드메디슨",
@@ -99,7 +99,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.12.02 ~ 12.03",
-      "listing_date": "미정"
+      "listing_date": "25.12.12"
     },
     {
       "company_name": "티엠씨",
@@ -323,6 +323,17 @@
     },
     {
       "company_name": "마키나락스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "매드업",
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
