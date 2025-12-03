@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 12월 03일 15시 31분 (한국시간 기준)",
+  "update_time": "2025년 12월 03일 17시 27분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -47,28 +47,6 @@
       "listing_date": "25.12.10"
     },
     {
-      "company_name": "키움히어로제1호스팩",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "키움증권",
-      "competition_rate": "538.09:1",
-      "status": "정보없음",
-      "subscription_period": "25.12.01 ~ 12.02",
-      "listing_date": "25.12.12"
-    },
-    {
-      "company_name": "교보19호기업인수목적",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "기타 금융업",
-      "underwriters": "교보증권",
-      "competition_rate": "-",
-      "status": "공모청약",
-      "subscription_period": "25.12.02 ~ 12.03",
-      "listing_date": "25.12.12"
-    },
-    {
       "company_name": "유진스팩12호",
       "market_type": "코스닥",
       "offer_price": "2,000",
@@ -91,6 +69,17 @@
       "listing_date": "25.12.11"
     },
     {
+      "company_name": "교보19호기업인수목적",
+      "market_type": "코스닥",
+      "offer_price": "2,000",
+      "industry": "기타 금융업",
+      "underwriters": "교보증권",
+      "competition_rate": "-",
+      "status": "공모청약",
+      "subscription_period": "25.12.02 ~ 12.03",
+      "listing_date": "25.12.12"
+    },
+    {
       "company_name": "쿼드메디슨",
       "market_type": "코스닥",
       "offer_price": "15,000",
@@ -99,6 +88,17 @@
       "competition_rate": "-",
       "status": "공모청약",
       "subscription_period": "25.12.02 ~ 12.03",
+      "listing_date": "25.12.12"
+    },
+    {
+      "company_name": "키움히어로제1호스팩",
+      "market_type": "코스닥",
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "키움증권",
+      "competition_rate": "538.09:1",
+      "status": "정보없음",
+      "subscription_period": "25.12.01 ~ 12.02",
       "listing_date": "25.12.12"
     },
     {
@@ -126,13 +126,13 @@
     {
       "company_name": "아크릴",
       "market_type": "코스닥",
-      "offer_price": "17,500 ~ 19,500",
+      "offer_price": "19,500",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "신한투자증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.12.04 ~ 12.05",
-      "listing_date": "미정"
+      "listing_date": "25.12.16"
     },
     {
       "company_name": "나라스페이스테크놀로지",
