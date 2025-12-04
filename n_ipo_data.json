@@ -1,18 +1,7 @@
 {
-  "update_time": "2025년 12월 04일 23시 20분 (한국시간 기준)",
+  "update_time": "2025년 12월 05일 01시 28분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "엔에이치스팩32호",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "NH투자증권",
-      "competition_rate": "210.23:1",
-      "status": "정보없음",
-      "subscription_period": "25.11.24 ~ 11.25",
-      "listing_date": "25.12.05"
-    },
     {
       "company_name": "테라뷰 홀딩스",
       "market_type": "코스닥",
@@ -96,8 +85,8 @@
       "offer_price": "9,300",
       "industry": "절연선 및 케이블 제조업",
       "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "1,287.63:1",
+      "status": "정보없음",
       "subscription_period": "25.12.03 ~ 12.04",
       "listing_date": "25.12.15"
     },
@@ -146,6 +135,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "하나36호스팩",
+      "market_type": "코스닥",
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "하나증권",
+      "competition_rate": "-",
+      "status": "수요예측",
+      "subscription_period": "25.12.11 ~ 12.12",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "IBKS제25호스팩",
       "market_type": "코스닥",
       "offer_price": "2,000",
@@ -173,17 +173,6 @@
       "offer_price": "6,700 ~ 7,600",
       "industry": "수산물 가공 및 저장 처리업",
       "underwriters": "대신증권",
-      "competition_rate": "-",
-      "status": "수요예측",
-      "subscription_period": "25.12.11 ~ 12.12",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "하나36호스팩",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "하나증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.12.11 ~ 12.12",
