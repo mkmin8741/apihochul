@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 12월 05일 23시 20분 (한국시간 기준)",
+  "update_time": "2025년 12월 06일 01시 25분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -85,8 +85,8 @@
       "offer_price": "2,000",
       "industry": "금융 지원 서비스업",
       "underwriters": "메리츠증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "193.98:1",
+      "status": "정보없음",
       "subscription_period": "25.12.04 ~ 12.05",
       "listing_date": "25.12.15"
     },
@@ -107,8 +107,8 @@
       "offer_price": "19,500",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "신한투자증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "1,129.83:1",
+      "status": "정보없음",
       "subscription_period": "25.12.04 ~ 12.05",
       "listing_date": "25.12.16"
     },
