@@ -1,18 +1,7 @@
 {
-  "update_time": "2025년 12월 08일 23시 21분 (한국시간 기준)",
+  "update_time": "2025년 12월 09일 01시 27분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "테라뷰 홀딩스",
-      "market_type": "코스닥",
-      "offer_price": "8,000",
-      "industry": "기타 금융업",
-      "underwriters": "삼성증권",
-      "competition_rate": "42.25:1",
-      "status": "정보없음",
-      "subscription_period": "25.11.21 ~ 11.24",
-      "listing_date": "25.12.09"
-    },
     {
       "company_name": "페스카로",
       "market_type": "코스닥",
@@ -130,7 +119,7 @@
       "industry": "금융 지원 서비스업",
       "underwriters": "IBK투자증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "25.12.09 ~ 12.10",
       "listing_date": "25.12.19"
     },
@@ -141,7 +130,7 @@
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "NH투자증권, 삼성증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "25.12.09 ~ 12.10",
       "listing_date": "25.12.18"
     },
