@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 12월 09일 15시 31분 (한국시간 기준)",
+  "update_time": "2025년 12월 09일 17시 28분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -143,7 +143,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.12.10 ~ 12.11",
-      "listing_date": "미정"
+      "listing_date": "25.12.22"
     },
     {
       "company_name": "하나36호스팩",
@@ -154,7 +154,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.12.11 ~ 12.12",
-      "listing_date": "미정"
+      "listing_date": "25.12.22"
     },
     {
       "company_name": "삼진식품",
@@ -177,6 +177,17 @@
       "status": "수요예측",
       "subscription_period": "25.12.15 ~ 12.16",
       "listing_date": "25.12.24"
+    },
+    {
+      "company_name": "미래에셋비전스팩10호",
+      "market_type": "코스닥",
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "25.12.12 ~ 12.15",
+      "listing_date": "25.12.23"
     },
     {
       "company_name": "세미파이브",
@@ -209,17 +220,6 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.01.20 ~ 01.21",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "미래에셋비전스팩10호",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
       "listing_date": "미정"
     },
     {
