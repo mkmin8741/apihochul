@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 12월 12일 23시 18분 (한국시간 기준)",
+  "update_time": "2025년 12월 13일 01시 24분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -85,8 +85,8 @@
       "offer_price": "7,600",
       "industry": "수산물 가공 및 저장 처리업",
       "underwriters": "대신증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "3,224.76:1",
+      "status": "정보없음",
       "subscription_period": "25.12.11 ~ 12.12",
       "listing_date": "25.12.22"
     },
@@ -96,8 +96,8 @@
       "offer_price": "2,000",
       "industry": "금융 지원 서비스업",
       "underwriters": "하나증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "421.21:1",
+      "status": "정보없음",
       "subscription_period": "25.12.11 ~ 12.12",
       "listing_date": "25.12.22"
     },
