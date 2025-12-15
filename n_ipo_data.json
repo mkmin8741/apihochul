@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 12월 15일 07시 17분 (한국시간 기준)",
+  "update_time": "2025년 12월 15일 10시 43분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -228,6 +228,17 @@
       "offer_price": "미정",
       "industry": "의료용 기기 제조업",
       "underwriters": "신한투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "메타넷엑스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "컴퓨터 프로그래밍, 시스템 통합 및 관리업",
+      "underwriters": "NH투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
