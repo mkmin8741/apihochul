@@ -1,18 +1,7 @@
 {
-  "update_time": "2025년 12월 15일 23시 24분 (한국시간 기준)",
+  "update_time": "2025년 12월 16일 01시 29분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "아크릴",
-      "market_type": "코스닥",
-      "offer_price": "19,500",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "신한투자증권",
-      "competition_rate": "1,129.83:1",
-      "status": "정보없음",
-      "subscription_period": "25.12.04 ~ 12.05",
-      "listing_date": "25.12.16"
-    },
     {
       "company_name": "나라스페이스테크놀로지",
       "market_type": "코스닥",
@@ -85,8 +74,8 @@
       "offer_price": "2,000",
       "industry": "금융 지원 서비스업",
       "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "914.5:1",
+      "status": "정보없음",
       "subscription_period": "25.12.12 ~ 12.15",
       "listing_date": "25.12.23"
     },
