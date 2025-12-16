@@ -1,18 +1,7 @@
 {
-  "update_time": "2025년 12월 16일 23시 23분 (한국시간 기준)",
+  "update_time": "2025년 12월 17일 01시 28분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "나라스페이스테크놀로지",
-      "market_type": "코스닥",
-      "offer_price": "16,500",
-      "industry": "항공기,우주선 및 부품 제조업",
-      "underwriters": "삼성증권",
-      "competition_rate": "699.64:1",
-      "status": "정보없음",
-      "subscription_period": "25.12.08 ~ 12.09",
-      "listing_date": "25.12.17"
-    },
     {
       "company_name": "알지노믹스",
       "market_type": "코스닥",
@@ -85,8 +74,8 @@
       "offer_price": "55,000",
       "industry": "의료용 기기 제조업",
       "underwriters": "삼성증권, 미래에셋증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "390.61:1",
+      "status": "정보없음",
       "subscription_period": "25.12.15 ~ 12.16",
       "listing_date": "25.12.24"
     },
