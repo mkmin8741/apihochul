@@ -1,5 +1,5 @@
 {
-  "update_time": "2025년 12월 17일 12시 19분 (한국시간 기준)",
+  "update_time": "2025년 12월 17일 13시 32분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -82,13 +82,13 @@
     {
       "company_name": "세미파이브",
       "market_type": "코스닥",
-      "offer_price": "21,000 ~ 24,000",
+      "offer_price": "24,000",
       "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
       "underwriters": "유비에스증권, 삼성증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "25.12.18 ~ 12.19",
-      "listing_date": "미정"
+      "listing_date": "25.12.29"
     },
     {
       "company_name": "삼성스팩13호",
