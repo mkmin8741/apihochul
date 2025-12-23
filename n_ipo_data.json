@@ -1,18 +1,7 @@
 {
-  "update_time": "2025년 12월 23일 23시 20분 (한국시간 기준)",
+  "update_time": "2025년 12월 24일 01시 26분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "리브스메드",
-      "market_type": "코스닥",
-      "offer_price": "55,000",
-      "industry": "의료용 기기 제조업",
-      "underwriters": "삼성증권, 미래에셋증권",
-      "competition_rate": "390.61:1",
-      "status": "정보없음",
-      "subscription_period": "25.12.15 ~ 12.16",
-      "listing_date": "25.12.24"
-    },
     {
       "company_name": "세미파이브",
       "market_type": "코스닥",
