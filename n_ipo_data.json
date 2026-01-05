@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 01월 05일 15시 38분 (한국시간 기준)",
+  "update_time": "2026년 01월 05일 17시 31분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -22,6 +22,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.01.20 ~ 01.21",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "카나프테라퓨틱스",
+      "market_type": "코스닥",
+      "offer_price": "16,000 ~ 20,000",
+      "industry": "자연과학 및 공학 연구개발업",
+      "underwriters": "한국투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.01.29 ~ 01.30",
       "listing_date": "미정"
     },
     {
@@ -63,17 +74,6 @@
       "offer_price": "미정",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "NH투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "카나프테라퓨틱스",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "자연과학 및 공학 연구개발업",
-      "underwriters": "한국투자증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
