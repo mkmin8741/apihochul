@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 01월 11일 23시 18분 (한국시간 기준)",
+  "update_time": "2026년 01월 12일 01시 23분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -9,7 +9,7 @@
       "industry": "기타 금융업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "26.01.12 ~ 01.13",
       "listing_date": "26.01.21"
     },
@@ -20,7 +20,7 @@
       "industry": "연료용 가스 제조 및 배관공급업",
       "underwriters": "NH투자증권, 미래에셋증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.01.20 ~ 01.21",
       "listing_date": "미정"
     },
