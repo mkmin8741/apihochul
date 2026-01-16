@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 01월 16일 13시 39분 (한국시간 기준)",
+  "update_time": "2026년 01월 16일 15시 33분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -36,6 +36,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "액스비스",
+      "market_type": "코스닥",
+      "offer_price": "10,100 ~ 11,500",
+      "industry": "기타 전기장비 제조업",
+      "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.02.23 ~ 02.24",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "리센스메디컬",
       "market_type": "코스닥",
       "offer_price": "9,000 ~ 11,000",
@@ -52,17 +63,6 @@
       "offer_price": "미정",
       "industry": "의료용 기기 제조업",
       "underwriters": "신한투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "액스비스",
-      "market_type": "코스닥",
-      "offer_price": "10,100 ~ 11,500",
-      "industry": "기타 전기장비 제조업",
-      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
