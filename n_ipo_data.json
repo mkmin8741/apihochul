@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 01월 19일 15시 37분 (한국시간 기준)",
+  "update_time": "2026년 01월 19일 17시 32분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -23,6 +23,17 @@
       "status": "수요예측",
       "subscription_period": "26.01.20 ~ 01.21",
       "listing_date": "26.01.30"
+    },
+    {
+      "company_name": "카나프테라퓨틱스",
+      "market_type": "코스닥",
+      "offer_price": "16,000 ~ 20,000",
+      "industry": "자연과학 및 공학 연구개발업",
+      "underwriters": "한국투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.02.19 ~ 02.20",
+      "listing_date": "미정"
     },
     {
       "company_name": "케이뱅크",
@@ -58,6 +69,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "아이엠바이오로직스",
+      "market_type": "코스닥",
+      "offer_price": "19,000 ~ 26,000",
+      "industry": "기초 의약물질 제조업",
+      "underwriters": "한국투자증권, 신한투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.03.11 ~ 03.12",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "메쥬",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -69,22 +91,22 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "인벤테라",
+      "company_name": "에스팀",
       "market_type": "코스닥",
       "offer_price": "미정",
-      "industry": "자연과학 및 공학 연구개발업",
-      "underwriters": "NH투자증권",
+      "industry": "창작 및 예술관련 서비스업",
+      "underwriters": "한국투자증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
     {
-      "company_name": "카나프테라퓨틱스",
+      "company_name": "인벤테라",
       "market_type": "코스닥",
-      "offer_price": "16,000 ~ 20,000",
+      "offer_price": "미정",
       "industry": "자연과학 및 공학 연구개발업",
-      "underwriters": "한국투자증권",
+      "underwriters": "NH투자증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
@@ -239,28 +261,6 @@
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "신한투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "아이엠바이오로직스",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "기초 의약물질 제조업",
-      "underwriters": "한국투자증권, 신한투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "에스팀",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "창작 및 예술관련 서비스업",
-      "underwriters": "한국투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
