@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 01월 20일 17시 31분 (한국시간 기준)",
+  "update_time": "2026년 01월 20일 19시 27분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -80,6 +80,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "메쥬",
+      "market_type": "코스닥",
+      "offer_price": "16,700 ~ 21,600",
+      "industry": "의료용 기기 제조업",
+      "underwriters": "신한투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.03.05 ~ 03.06",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "아이엠바이오로직스",
       "market_type": "코스닥",
       "offer_price": "19,000 ~ 26,000",
@@ -88,17 +99,6 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.03.11 ~ 03.12",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "메쥬",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "의료용 기기 제조업",
-      "underwriters": "신한투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
       "listing_date": "미정"
     },
     {
