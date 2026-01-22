@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 01월 22일 17시 31분 (한국시간 기준)",
+  "update_time": "2026년 01월 22일 19시 26분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -92,6 +92,17 @@
     },
     {
       "company_name": "신한제17호스팩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "신한투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "신한제18호스팩",
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
@@ -239,17 +250,6 @@
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "KB증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "신한제18호스팩",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "신한투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
