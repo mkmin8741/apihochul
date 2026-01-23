@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 01월 23일 17시 29분 (한국시간 기준)",
+  "update_time": "2026년 01월 23일 19시 24분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -146,6 +146,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "대신밸런스제20호스팩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "덕산넵코어스",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -261,17 +272,6 @@
       "offer_price": "미정",
       "industry": "절연선 및 케이블 제조업",
       "underwriters": "미래에셋증권, 한국투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "에코크레이션",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "일반 목적용 기계 제조업",
-      "underwriters": "키움증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
