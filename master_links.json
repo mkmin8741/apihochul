@@ -2,132 +2,132 @@
   "groups": [
     [
       {
-        "url": "https://songpa.lulucast.com",
-        "text": "금융소식"
-      },
-      {
-        "url": "https://infospot.kr",
-        "text": "대출정보"
-      },
-      {
-        "url": "https://chungnam.go.kr",
-        "text": "지원금확인"
-      },
-      {
         "url": "https://gangnam.lulucast.com",
-        "text": "IT소식"
+        "text": "여행정보"
       },
       {
-        "url": "https://support-run.com",
-        "text": "최신뉴스"
-      },
-      {
-        "url": "https://blog.naver.com/daegu_news",
-        "text": "인기순위"
-      }
-    ],
-    [
-      {
-        "url": "https://anyang.lulucast.com",
-        "text": "신청하기"
-      },
-      {
-        "url": "https://lawstery.com",
-        "text": "전문가팁"
-      },
-      {
-        "url": "https://youtube.com",
-        "text": "금융소식"
-      },
-      {
-        "url": "https://support-run.com",
+        "url": "https://gangdong.lulucast.com",
         "text": "흥미로운사실"
       },
       {
-        "url": "https://suwon.lulucast.com",
-        "text": "바로확인"
-      },
-      {
-        "url": "https://data.go.kr",
-        "text": "인기순위"
-      }
-    ],
-    [
-      {
-        "url": "https://blog.naver.com/happyjejudo",
+        "url": "https://wellnesshub.kr",
         "text": "놓치면후회"
       },
       {
-        "url": "https://sports.lulucast.com",
-        "text": "흥미로운사실"
+        "url": "https://blog.naver.com/ulsan_nuri",
+        "text": "비용절약팁"
       },
       {
-        "url": "https://jeonju.lulucast.com",
-        "text": "알아보기"
+        "url": "https://practical.gody.co.kr",
+        "text": "세상의모든것"
       },
       {
-        "url": "https://semas.or.kr",
-        "text": "실시간정보"
-      },
-      {
-        "url": "https://sportsview.kr",
-        "text": "지원금확인"
-      },
-      {
-        "url": "https://bokjiro.go.kr",
-        "text": "새로운소식"
+        "url": "https://gov.kr",
+        "text": "인기정보"
       }
     ],
     [
+      {
+        "url": "https://allthingstory.co.kr",
+        "text": "총정리"
+      },
       {
         "url": "https://bucheon.lulucast.com",
-        "text": "핫이슈"
+        "text": "솔직후기"
       },
       {
-        "url": "https://jeonnam.go.kr",
-        "text": "보험비교"
-      },
-      {
-        "url": "https://yongin.lulucast.com",
-        "text": "생활꿀팁"
-      },
-      {
-        "url": "https://signvalue.co.kr",
-        "text": "완벽가이드"
-      },
-      {
-        "url": "https://blog.naver.com/incheontogi",
-        "text": "알아보기"
-      },
-      {
-        "url": "https://infospot.kr",
-        "text": "꿀팁모음"
-      }
-    ],
-    [
-      {
-        "url": "https://gb.go.kr",
-        "text": "꼭알아두세요"
-      },
-      {
-        "url": "https://weddingheal.com",
-        "text": "핵심정보"
-      },
-      {
-        "url": "https://ansan.lulucast.com",
+        "url": "https://daegu.go.kr",
         "text": "살림정보"
       },
       {
-        "url": "https://bokjiro.go.kr",
-        "text": "필수정보"
-      },
-      {
-        "url": "https://blog.naver.com/cbkb21",
-        "text": "정보모음"
+        "url": "https://jeonnam.go.kr",
+        "text": "이용방법"
       },
       {
         "url": "https://klac.or.kr",
-        "text": "솔직후기"
+        "text": "금융소식"
+      },
+      {
+        "url": "https://gwanak.lulucast.com",
+        "text": "가이드북"
+      }
+    ],
+    [
+      {
+        "url": "https://gwangju.go.kr",
+        "text": "원스톱정보"
+      },
+      {
+        "url": "https://implantprime.co.kr",
+        "text": "여행정보"
+      },
+      {
+        "url": "https://vehicleinfo.kr",
+        "text": "숨겨진팁"
+      },
+      {
+        "url": "https://gg.go.kr",
+        "text": "최신트렌드"
+      },
+      {
+        "url": "https://kosmes.or.kr",
+        "text": "종합정보"
+      },
+      {
+        "url": "https://korea.kr",
+        "text": "정보센터"
+      }
+    ],
+    [
+      {
+        "url": "https://centertopia.com",
+        "text": "바로가기"
+      },
+      {
+        "url": "https://flowrapid.com",
+        "text": "최신업데이트"
+      },
+      {
+        "url": "https://blog.naver.com/greenjeonnam",
+        "text": "지원금신청"
+      },
+      {
+        "url": "https://seoul.go.kr",
+        "text": "자세히보기"
+      },
+      {
+        "url": "https://changwon.lulucast.com",
+        "text": "인기정보"
+      },
+      {
+        "url": "https://suwon.lulucast.com",
+        "text": "정보센터"
+      }
+    ],
+    [
+      {
+        "url": "https://korea.kr",
+        "text": "재테크비법"
+      },
+      {
+        "url": "https://daegu.go.kr",
+        "text": "필수정보"
+      },
+      {
+        "url": "https://blog.naver.com/greenjeonnam",
+        "text": "가이드북"
+      },
+      {
+        "url": "https://jeonbuk.go.kr",
+        "text": "궁금한이야기"
+      },
+      {
+        "url": "https://lawstery.com",
+        "text": "경제트렌드"
+      },
+      {
+        "url": "https://centertopia.com",
+        "text": "핵심정보"
       }
     ]
   ]
