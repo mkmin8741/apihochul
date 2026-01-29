@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 01월 29일 23시 36분 (한국시간 기준)",
+  "update_time": "2026년 01월 30일 01시 42분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "덕양에너젠",
-      "market_type": "코스닥",
-      "offer_price": "10,000",
-      "industry": "연료용 가스 제조 및 배관공급업",
-      "underwriters": "NH투자증권, 미래에셋증권",
-      "competition_rate": "1,354.44:1",
-      "status": "정보없음",
-      "subscription_period": "26.01.20 ~ 01.21",
-      "listing_date": "26.01.30"
-    },
     {
       "company_name": "카나프테라퓨틱스",
       "market_type": "코스닥",
