@@ -1,5 +1,5 @@
 {
-  "updateTime": "2026년 02월 01일 03시 29분",
+  "updateTime": "2026년 02월 01일 07시 06분",
   "targetDate": "20260131",
   "totalMovies": 10,
   "dataSource": "KOBIS + 네이버 완전자동크롤링",
@@ -81,12 +81,12 @@
       "audiAcc": "6655407",
       "scrnCnt": "628",
       "showCnt": "1286",
-      "poster_url": "",
-      "plot": "줄거리 정보를 수집 중입니다.",
-      "genre": "정보 수집 중",
-      "runtime": "정보 수집 중",
-      "grade": "정보 수집 중",
-      "english_title": "",
+      "poster_url": "https://search.pstatic.net/common?type=o&size=140x210&quality=65&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20251217_118%2F1765951474121LjtOH_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2",
+      "plot": "판도라를 위협하는 재의 부족, 더 이상 인간만이 적이 아니다! 모두의 운명을 뒤흔들 거대한 전투가 시작된다! 인간들과의 전쟁으로 첫째 아들 ‘네테이얌’을 잃은 후, ‘제이크’와 ‘네이티리’는 깊은 슬픔에 빠진다. 상실에 빠진 이들 앞에 '바랑'이 이끄는 재의 부족이 등장하면서, 판도라는 더욱 큰 위험에 빠지게 되고, ‘설리’ 가족은 선택의 기로에 서게 되는데…",
+      "genre": "SF, 액션, 모험",
+      "runtime": "197분",
+      "grade": "12세 이상 관람가",
+      "english_title": "Avatar: Fire and Ash",
       "formatted_open_date": "2025년 12월 17일"
     },
     {
