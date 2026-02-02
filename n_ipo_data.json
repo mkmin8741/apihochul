@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 02월 02일 17시 41분 (한국시간 기준)",
+  "update_time": "2026년 02월 02일 19시 43분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "카나프테라퓨틱스",
-      "market_type": "코스닥",
-      "offer_price": "16,000 ~ 20,000",
-      "industry": "자연과학 및 공학 연구개발업",
-      "underwriters": "한국투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.02.19 ~ 02.20",
-      "listing_date": "미정"
-    },
     {
       "company_name": "케이뱅크",
       "market_type": "코스피",
@@ -52,6 +41,17 @@
       "offer_price": "16,700 ~ 21,600",
       "industry": "의료용 기기 제조업",
       "underwriters": "신한투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.03.05 ~ 03.06",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "카나프테라퓨틱스",
+      "market_type": "코스닥",
+      "offer_price": "16,000 ~ 20,000",
+      "industry": "자연과학 및 공학 연구개발업",
+      "underwriters": "한국투자증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.03.05 ~ 03.06",
