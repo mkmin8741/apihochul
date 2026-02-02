@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 02월 02일 14시 22분 (한국시간 기준)",
+  "update_time": "2026년 02월 02일 16시 01분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -69,6 +69,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "인벤테라",
+      "market_type": "코스닥",
+      "offer_price": "12,100 ~ 16,600",
+      "industry": "자연과학 및 공학 연구개발업",
+      "underwriters": "NH투자증권, 유진투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.03.16 ~ 03.17",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "리센스메디컬",
       "market_type": "코스닥",
       "offer_price": "9,000 ~ 11,000",
@@ -106,17 +117,6 @@
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
-      "underwriters": "NH투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "인벤테라",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "NH투자증권",
       "competition_rate": "-",
       "status": "심사승인",
