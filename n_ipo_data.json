@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 02월 03일 11시 04분 (한국시간 기준)",
+  "update_time": "2026년 02월 03일 14시 14분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -88,6 +88,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.03.16 ~ 03.17",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "교보20호스팩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "기타 금융업",
+      "underwriters": "교보증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
       "listing_date": "미정"
     },
     {
@@ -283,6 +294,17 @@
       "offer_price": "미정",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "인제니아테라퓨틱스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "자연과학 및 공학 연구개발업",
+      "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
