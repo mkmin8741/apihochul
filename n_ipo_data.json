@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 02월 09일 16시 03분 (한국시간 기준)",
+  "update_time": "2026년 02월 09일 17시 52분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -36,17 +36,6 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "메쥬",
-      "market_type": "코스닥",
-      "offer_price": "16,700 ~ 21,600",
-      "industry": "의료용 기기 제조업",
-      "underwriters": "신한투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.03.05 ~ 03.06",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "카나프테라퓨틱스",
       "market_type": "코스닥",
       "offer_price": "16,000 ~ 20,000",
@@ -66,6 +55,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.03.11 ~ 03.12",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "메쥬",
+      "market_type": "코스닥",
+      "offer_price": "16,700 ~ 21,600",
+      "industry": "의료용 기기 제조업",
+      "underwriters": "신한투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.03.16 ~ 03.17",
       "listing_date": "미정"
     },
     {
