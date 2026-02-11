@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 02월 11일 16시 00분 (한국시간 기준)",
+  "update_time": "2026년 02월 11일 17시 48분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -91,6 +91,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "엔에이치스팩33호",
+      "market_type": "코스닥",
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "NH투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.03.17 ~ 03.18",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "리센스메디컬",
       "market_type": "코스닥",
       "offer_price": "9,000 ~ 11,000",
@@ -129,17 +140,6 @@
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "신한투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "엔에이치스팩33호",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "NH투자증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
