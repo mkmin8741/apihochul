@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 02월 22일 23시 25분 (한국시간 기준)",
+  "update_time": "2026년 02월 23일 01시 29분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -20,7 +20,7 @@
       "industry": "기타 전기장비 제조업",
       "underwriters": "미래에셋증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "26.02.23 ~ 02.24",
       "listing_date": "26.03.09"
     },
@@ -31,7 +31,7 @@
       "industry": "창작 및 예술관련 서비스업",
       "underwriters": "한국투자증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "26.02.23 ~ 02.24",
       "listing_date": "26.03.06"
     },
@@ -42,7 +42,7 @@
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "한국투자증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.03.05 ~ 03.06",
       "listing_date": "미정"
     },
