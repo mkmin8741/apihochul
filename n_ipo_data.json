@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 02월 23일 23시 44분 (한국시간 기준)",
+  "update_time": "2026년 02월 24일 01시 56분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -8,8 +8,8 @@
       "offer_price": "8,300",
       "industry": "은행 및 저축기관",
       "underwriters": "NH투자증권, 삼성증권, 신한투자증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "136.62:1",
+      "status": "정보없음",
       "subscription_period": "26.02.20 ~ 02.23",
       "listing_date": "26.03.05"
     },
