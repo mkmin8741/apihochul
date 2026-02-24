@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 02월 24일 15시 59분 (한국시간 기준)",
+  "update_time": "2026년 02월 24일 17시 47분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -14,17 +14,6 @@
       "listing_date": "26.03.05"
     },
     {
-      "company_name": "액스비스",
-      "market_type": "코스닥",
-      "offer_price": "11,500",
-      "industry": "기타 전기장비 제조업",
-      "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "공모청약",
-      "subscription_period": "26.02.23 ~ 02.24",
-      "listing_date": "26.03.09"
-    },
-    {
       "company_name": "에스팀",
       "market_type": "코스닥",
       "offer_price": "8,500",
@@ -34,6 +23,17 @@
       "status": "공모청약",
       "subscription_period": "26.02.23 ~ 02.24",
       "listing_date": "26.03.06"
+    },
+    {
+      "company_name": "액스비스",
+      "market_type": "코스닥",
+      "offer_price": "11,500",
+      "industry": "기타 전기장비 제조업",
+      "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "공모청약",
+      "subscription_period": "26.02.23 ~ 02.24",
+      "listing_date": "26.03.09"
     },
     {
       "company_name": "카나프테라퓨틱스",
