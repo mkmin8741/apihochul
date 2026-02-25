@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 02월 25일 07시 32분 (한국시간 기준)",
+  "update_time": "2026년 02월 25일 11시 05분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -143,6 +143,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.03.23 ~ 03.24",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "하나오피스위탁관리부동산투자회사",
+      "market_type": "코스피",
+      "offer_price": "5,000",
+      "industry": "부동산 임대 및 공급업",
+      "underwriters": "하나증권, 한국투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.03.31 ~ 04.01",
       "listing_date": "미정"
     },
     {
