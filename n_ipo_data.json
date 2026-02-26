@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 02월 26일 15시 59분 (한국시간 기준)",
+  "update_time": "2026년 02월 26일 17시 48분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -228,6 +228,17 @@
       "offer_price": "미정",
       "industry": "특수 목적용 기계 제조업",
       "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "딜리셔스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "무점포 소매업",
+      "underwriters": "한국투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
