@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 02월 27일 15시 53분 (한국시간 기준)",
+  "update_time": "2026년 02월 27일 17시 39분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -44,7 +44,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.03.05 ~ 03.06",
-      "listing_date": "미정"
+      "listing_date": "26.03.17"
     },
     {
       "company_name": "아이엠바이오로직스",
@@ -426,6 +426,17 @@
       "offer_price": "미정",
       "industry": "봉제의복 제조업",
       "underwriters": "NH투자증권, 미래에셋증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "피지티",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "기타 화학제품 제조업",
+      "underwriters": "한국투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
