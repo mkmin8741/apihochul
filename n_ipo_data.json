@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 03월 04일 23시 37분 (한국시간 기준)",
+  "update_time": "2026년 03월 05일 01시 42분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "케이뱅크",
-      "market_type": "코스피",
-      "offer_price": "8,300",
-      "industry": "은행 및 저축기관",
-      "underwriters": "NH투자증권, 삼성증권, 신한투자증권",
-      "competition_rate": "136.62:1",
-      "status": "정보없음",
-      "subscription_period": "26.02.20 ~ 02.23",
-      "listing_date": "26.03.05"
-    },
     {
       "company_name": "에스팀",
       "market_type": "코스닥",
@@ -42,7 +31,7 @@
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "한국투자증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "26.03.05 ~ 03.06",
       "listing_date": "26.03.16"
     },
@@ -64,7 +53,7 @@
       "industry": "의료용 기기 제조업",
       "underwriters": "신한투자증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.03.16 ~ 03.17",
       "listing_date": "미정"
     },
