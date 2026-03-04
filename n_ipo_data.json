@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 03월 04일 15시 46분 (한국시간 기준)",
+  "update_time": "2026년 03월 04일 17시 38분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -38,13 +38,13 @@
     {
       "company_name": "카나프테라퓨틱스",
       "market_type": "코스닥",
-      "offer_price": "16,000 ~ 20,000",
+      "offer_price": "20,000",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "한국투자증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.03.05 ~ 03.06",
-      "listing_date": "26.03.17"
+      "listing_date": "26.03.16"
     },
     {
       "company_name": "아이엠바이오로직스",
@@ -157,6 +157,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "채비",
+      "market_type": "코스닥",
+      "offer_price": "12,300 ~ 15,300",
+      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
+      "underwriters": "KB증권, 삼성증권, 대신증권, 하나증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.04.01 ~ 04.02",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "마키나락스",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -173,17 +184,6 @@
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "신한투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "채비",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
-      "underwriters": "KB증권, 삼성증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
