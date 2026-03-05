@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 03월 05일 23시 43분 (한국시간 기준)",
+  "update_time": "2026년 03월 06일 03시 03분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "에스팀",
-      "market_type": "코스닥",
-      "offer_price": "8,500",
-      "industry": "창작 및 예술관련 서비스업",
-      "underwriters": "한국투자증권",
-      "competition_rate": "1,960.87:1",
-      "status": "정보없음",
-      "subscription_period": "26.02.23 ~ 02.24",
-      "listing_date": "26.03.06"
-    },
     {
       "company_name": "액스비스",
       "market_type": "코스닥",
@@ -64,7 +53,7 @@
       "industry": "금융 지원 서비스업",
       "underwriters": "한국투자증권, 대신증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.03.16 ~ 03.17",
       "listing_date": "미정"
     },
