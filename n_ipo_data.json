@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 03월 06일 23시 36분 (한국시간 기준)",
+  "update_time": "2026년 03월 07일 01시 40분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -19,8 +19,8 @@
       "offer_price": "20,000",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "한국투자증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "1,899.29:1",
+      "status": "정보없음",
       "subscription_period": "26.03.05 ~ 03.06",
       "listing_date": "26.03.16"
     },
