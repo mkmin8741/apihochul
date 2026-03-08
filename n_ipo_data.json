@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 03월 08일 23시 24분 (한국시간 기준)",
+  "update_time": "2026년 03월 09일 01시 27분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "액스비스",
-      "market_type": "코스닥",
-      "offer_price": "11,500",
-      "industry": "기타 전기장비 제조업",
-      "underwriters": "미래에셋증권",
-      "competition_rate": "2,711.06:1",
-      "status": "정보없음",
-      "subscription_period": "26.02.23 ~ 02.24",
-      "listing_date": "26.03.09"
-    },
     {
       "company_name": "카나프테라퓨틱스",
       "market_type": "코스닥",
@@ -58,24 +47,13 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "엔에이치스팩33호",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "NH투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.03.17 ~ 03.18",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "코스모로보틱스",
       "market_type": "코스닥",
       "offer_price": "5,300 ~ 6,000",
       "industry": "의료용 기기 제조업",
       "underwriters": "NH투자증권, 유진투자증권, 유안타증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.03.18 ~ 03.19",
       "listing_date": "미정"
     },
@@ -86,8 +64,19 @@
       "industry": "의료용 기기 제조업",
       "underwriters": "KB증권, 한국투자증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.03.19 ~ 03.20",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "엔에이치스팩33호",
+      "market_type": "코스닥",
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "NH투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.03.17 ~ 03.18",
       "listing_date": "미정"
     },
     {
