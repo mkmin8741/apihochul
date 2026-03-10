@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 03월 10일 17시 40분 (한국시간 기준)",
+  "update_time": "2026년 03월 10일 19시 38분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -44,17 +44,6 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.03.16 ~ 03.17",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "코스모로보틱스",
-      "market_type": "코스닥",
-      "offer_price": "5,300 ~ 6,000",
-      "industry": "의료용 기기 제조업",
-      "underwriters": "NH투자증권, 유진투자증권, 유안타증권",
-      "competition_rate": "-",
-      "status": "수요예측",
-      "subscription_period": "26.03.18 ~ 03.19",
       "listing_date": "미정"
     },
     {
@@ -143,6 +132,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.04.06 ~ 04.07",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "코스모로보틱스",
+      "market_type": "코스닥",
+      "offer_price": "5,300 ~ 6,000",
+      "industry": "의료용 기기 제조업",
+      "underwriters": "NH투자증권, 유진투자증권, 유안타증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.04.09 ~ 04.10",
       "listing_date": "미정"
     },
     {
