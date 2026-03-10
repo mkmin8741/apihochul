@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 03월 10일 23시 46분 (한국시간 기준)",
+  "update_time": "2026년 03월 11일 01시 55분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -20,7 +20,7 @@
       "industry": "기초 의약물질 제조업",
       "underwriters": "한국투자증권, 신한투자증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "26.03.11 ~ 03.12",
       "listing_date": "26.03.20"
     },
@@ -47,6 +47,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "엔에이치스팩33호",
+      "market_type": "코스닥",
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "NH투자증권",
+      "competition_rate": "-",
+      "status": "수요예측",
+      "subscription_period": "26.03.17 ~ 03.18",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "리센스메디컬",
       "market_type": "코스닥",
       "offer_price": "9,000 ~ 11,000",
@@ -58,14 +69,14 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "엔에이치스팩33호",
+      "company_name": "인벤테라",
       "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "NH투자증권",
+      "offer_price": "12,100 ~ 16,600",
+      "industry": "자연과학 및 공학 연구개발업",
+      "underwriters": "NH투자증권, 유진투자증권",
       "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.03.17 ~ 03.18",
+      "status": "수요예측",
+      "subscription_period": "26.03.23 ~ 03.24",
       "listing_date": "미정"
     },
     {
@@ -85,17 +96,6 @@
       "offer_price": "2,000",
       "industry": "기타 금융업",
       "underwriters": "교보증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.03.23 ~ 03.24",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "인벤테라",
-      "market_type": "코스닥",
-      "offer_price": "12,100 ~ 16,600",
-      "industry": "자연과학 및 공학 연구개발업",
-      "underwriters": "NH투자증권, 유진투자증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.03.23 ~ 03.24",
