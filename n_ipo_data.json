@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 03월 10일 13시 13분 (한국시간 기준)",
+  "update_time": "2026년 03월 10일 15시 49분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -16,7 +16,7 @@
     {
       "company_name": "아이엠바이오로직스",
       "market_type": "코스닥",
-      "offer_price": "19,000 ~ 26,000",
+      "offer_price": "26,000",
       "industry": "기초 의약물질 제조업",
       "underwriters": "한국투자증권, 신한투자증권",
       "competition_rate": "-",
@@ -135,6 +135,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "키움히어로제2호스팩",
+      "market_type": "코스닥",
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "키움증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.04.06 ~ 04.07",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "마키나락스",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -151,17 +162,6 @@
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "신한투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "키움히어로제2호스팩",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "키움증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
