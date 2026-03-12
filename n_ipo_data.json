@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 03월 12일 23시 47분 (한국시간 기준)",
+  "update_time": "2026년 03월 13일 01시 57분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -19,8 +19,8 @@
       "offer_price": "26,000",
       "industry": "기초 의약물질 제조업",
       "underwriters": "한국투자증권, 신한투자증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "1,805.3:1",
+      "status": "정보없음",
       "subscription_period": "26.03.11 ~ 03.12",
       "listing_date": "26.03.20"
     },
@@ -69,6 +69,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "신한제17호스팩",
+      "market_type": "코스닥",
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "신한투자증권",
+      "competition_rate": "-",
+      "status": "수요예측",
+      "subscription_period": "26.03.19 ~ 03.20",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "인벤테라",
       "market_type": "코스닥",
       "offer_price": "12,100 ~ 16,600",
@@ -77,17 +88,6 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.03.23 ~ 03.24",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "신한제17호스팩",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "신한투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.03.19 ~ 03.20",
       "listing_date": "미정"
     },
     {
