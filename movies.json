@@ -1,5 +1,5 @@
 {
-  "updateTime": "2026년 03월 13일 13시 34분",
+  "updateTime": "2026년 03월 13일 19시 01분",
   "targetDate": "20260312",
   "totalMovies": 10,
   "dataSource": "KOBIS + 네이버 완전자동크롤링",
@@ -162,11 +162,11 @@
       "audiAcc": "37603",
       "scrnCnt": "248",
       "showCnt": "299",
-      "poster_url": "https://search.pstatic.net/common?type=f&size=140x210&quality=65&direct=true&src=https%3A%2F%2Fssl.pstatic.net%2Fimgmovie%2Fmultimedia%2FMOVIECLIP%2FTRAILER%2F60759_cover_20260209014542.jpg",
-      "plot": "",
-      "genre": "",
-      "runtime": "",
-      "grade": "",
+      "poster_url": "https://search.pstatic.net/common?type=o&size=140x210&quality=65&direct=true&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20260206_252%2F1770353656730I8tO6_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2",
+      "plot": "24시간 빈틈없이 살아온 구청의 갓생 과장 '국희'. 승진은 코앞이고, 딸의 취업까지! 모든 것이 그녀의 계획대로 완벽하게 진행될 줄 알았다. 그런데 완벽했던 스텝이 꼬여버리기 시작한다! 도둑맞은 승진, 연락 두절된 딸, 그리고 텅 빈 마음... 엉망진창이 된 인생 박자를 수습하기 위해 찾아간 곳은 플라멩코 연습실? 완벽하지 않아도 괜찮은, 인생 리듬 되찾기 프로젝트!",
+      "genre": "코미디, 드라마",
+      "runtime": "106분",
+      "grade": "전체 관람가",
       "english_title": "Mad Dance Office",
       "formatted_open_date": "2026년 03월 04일"
     },
