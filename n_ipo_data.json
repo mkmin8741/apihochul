@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 03월 17일 14시 20분 (한국시간 기준)",
+  "update_time": "2026년 03월 17일 16시 03분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -14,17 +14,6 @@
       "listing_date": "26.03.20"
     },
     {
-      "company_name": "메쥬",
-      "market_type": "코스닥",
-      "offer_price": "21,600",
-      "industry": "의료용 기기 제조업",
-      "underwriters": "신한투자증권",
-      "competition_rate": "-",
-      "status": "공모청약",
-      "subscription_period": "26.03.16 ~ 03.17",
-      "listing_date": "26.03.26"
-    },
-    {
       "company_name": "한패스",
       "market_type": "코스닥",
       "offer_price": "19,000",
@@ -34,6 +23,17 @@
       "status": "공모청약",
       "subscription_period": "26.03.16 ~ 03.17",
       "listing_date": "26.03.25"
+    },
+    {
+      "company_name": "메쥬",
+      "market_type": "코스닥",
+      "offer_price": "21,600",
+      "industry": "의료용 기기 제조업",
+      "underwriters": "신한투자증권",
+      "competition_rate": "-",
+      "status": "공모청약",
+      "subscription_period": "26.03.16 ~ 03.17",
+      "listing_date": "26.03.26"
     },
     {
       "company_name": "엔에이치스팩33호",
