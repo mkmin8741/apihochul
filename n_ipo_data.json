@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 03월 18일 22시 10분 (한국시간 기준)",
+  "update_time": "2026년 03월 19일 00시 01분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -41,8 +41,8 @@
       "offer_price": "2,000",
       "industry": "금융 지원 서비스업",
       "underwriters": "NH투자증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "569.27:1",
+      "status": "정보없음",
       "subscription_period": "26.03.17 ~ 03.18",
       "listing_date": "26.03.27"
     },
