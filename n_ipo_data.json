@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 03월 19일 14시 21분 (한국시간 기준)",
+  "update_time": "2026년 03월 19일 15시 57분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -82,13 +82,13 @@
     {
       "company_name": "인벤테라",
       "market_type": "코스닥",
-      "offer_price": "12,100 ~ 16,600",
+      "offer_price": "16,600",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "NH투자증권, 유진투자증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.03.23 ~ 03.24",
-      "listing_date": "미정"
+      "listing_date": "26.04.02"
     },
     {
       "company_name": "하나오피스위탁관리부동산투자회사",
