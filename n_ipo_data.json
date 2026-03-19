@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 03월 19일 23시 46분 (한국시간 기준)",
+  "update_time": "2026년 03월 20일 01시 57분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "아이엠바이오로직스",
-      "market_type": "코스닥",
-      "offer_price": "26,000",
-      "industry": "기초 의약물질 제조업",
-      "underwriters": "한국투자증권, 신한투자증권",
-      "competition_rate": "1,805.3:1",
-      "status": "정보없음",
-      "subscription_period": "26.03.11 ~ 03.12",
-      "listing_date": "26.03.20"
-    },
     {
       "company_name": "한패스",
       "market_type": "코스닥",
