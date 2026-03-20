@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 03월 20일 15시 54분 (한국시간 기준)",
+  "update_time": "2026년 03월 20일 17시 39분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -66,7 +66,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.03.23 ~ 03.24",
-      "listing_date": "미정"
+      "listing_date": "26.04.02"
     },
     {
       "company_name": "인벤테라",
@@ -91,17 +91,6 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "채비",
-      "market_type": "코스닥",
-      "offer_price": "12,300 ~ 15,300",
-      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
-      "underwriters": "KB증권, 삼성증권, 대신증권, 하나증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.04.01 ~ 04.02",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "코스모로보틱스",
       "market_type": "코스닥",
       "offer_price": "5,300 ~ 6,000",
@@ -121,6 +110,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.04.14 ~ 04.15",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "채비",
+      "market_type": "코스닥",
+      "offer_price": "12,300 ~ 15,300",
+      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
+      "underwriters": "KB증권, 삼성증권, 대신증권, 하나증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.04.20 ~ 04.21",
       "listing_date": "미정"
     },
     {
@@ -370,6 +370,17 @@
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "기타 화학제품 제조업",
+      "underwriters": "한국투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "한국제16호스팩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
       "underwriters": "한국투자증권",
       "competition_rate": "-",
       "status": "예심청구",
