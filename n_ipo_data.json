@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 03월 22일 23시 27분 (한국시간 기준)",
+  "update_time": "2026년 03월 23일 01시 29분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -64,7 +64,7 @@
       "industry": "기타 금융업",
       "underwriters": "교보증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "26.03.23 ~ 03.24",
       "listing_date": "26.04.02"
     },
@@ -75,7 +75,7 @@
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "NH투자증권, 유진투자증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "26.03.23 ~ 03.24",
       "listing_date": "26.04.02"
     },
@@ -86,7 +86,7 @@
       "industry": "부동산 임대 및 공급업",
       "underwriters": "하나증권, 한국투자증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.03.31 ~ 04.01",
       "listing_date": "미정"
     },
