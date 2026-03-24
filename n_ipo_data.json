@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 03월 24일 23시 57분 (한국시간 기준)",
+  "update_time": "2026년 03월 25일 01시 58분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "한패스",
-      "market_type": "코스닥",
-      "offer_price": "19,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "한국투자증권, 대신증권",
-      "competition_rate": "1,672.64:1",
-      "status": "정보없음",
-      "subscription_period": "26.03.16 ~ 03.17",
-      "listing_date": "26.03.25"
-    },
     {
       "company_name": "메쥬",
       "market_type": "코스닥",
@@ -63,8 +52,8 @@
       "offer_price": "2,000",
       "industry": "기타 금융업",
       "underwriters": "교보증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "747.35:1",
+      "status": "정보없음",
       "subscription_period": "26.03.23 ~ 03.24",
       "listing_date": "26.04.02"
     },
@@ -74,8 +63,8 @@
       "offer_price": "16,600",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "NH투자증권, 유진투자증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "1,913.29:1",
+      "status": "정보없음",
       "subscription_period": "26.03.23 ~ 03.24",
       "listing_date": "26.04.02"
     },
