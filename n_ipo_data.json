@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 03월 25일 23시 58분 (한국시간 기준)",
+  "update_time": "2026년 03월 26일 02시 01분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "메쥬",
-      "market_type": "코스닥",
-      "offer_price": "21,600",
-      "industry": "의료용 기기 제조업",
-      "underwriters": "신한투자증권",
-      "competition_rate": "2,428.25:1",
-      "status": "정보없음",
-      "subscription_period": "26.03.16 ~ 03.17",
-      "listing_date": "26.03.26"
-    },
     {
       "company_name": "엔에이치스팩33호",
       "market_type": "코스닥",
