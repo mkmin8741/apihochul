@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 03월 27일 17시 52분 (한국시간 기준)",
+  "update_time": "2026년 03월 27일 19시 49분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -102,6 +102,39 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "레몬헬스케어",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "KB증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "폴레드",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "자동차 신품 부품 제조업",
+      "underwriters": "NH투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "피스피스스튜디오",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "봉제의복 제조업",
+      "underwriters": "NH투자증권, 미래에셋증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "넥스트젠바이오",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -183,17 +216,6 @@
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "의료용 기기 제조업",
-      "underwriters": "KB증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "레몬헬스케어",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "KB증권",
       "competition_rate": "-",
       "status": "예심청구",
@@ -327,28 +349,6 @@
       "offer_price": "미정",
       "industry": "반도체 제조업",
       "underwriters": "BNK투자증권, 하나증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "폴레드",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "자동차 신품 부품 제조업",
-      "underwriters": "NH투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "피스피스스튜디오",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "봉제의복 제조업",
-      "underwriters": "NH투자증권, 미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
