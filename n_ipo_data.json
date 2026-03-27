@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 03월 27일 16시 06분 (한국시간 기준)",
+  "update_time": "2026년 03월 27일 17시 52분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -47,17 +47,6 @@
       "listing_date": "26.04.02"
     },
     {
-      "company_name": "코스모로보틱스",
-      "market_type": "코스닥",
-      "offer_price": "5,300 ~ 6,000",
-      "industry": "의료용 기기 제조업",
-      "underwriters": "NH투자증권, 유진투자증권, 유안타증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.04.09 ~ 04.10",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "키움히어로제2호스팩",
       "market_type": "코스닥",
       "offer_price": "2,000",
@@ -88,6 +77,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.04.20 ~ 04.21",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "코스모로보틱스",
+      "market_type": "코스닥",
+      "offer_price": "5,300 ~ 6,000",
+      "industry": "의료용 기기 제조업",
+      "underwriters": "NH투자증권, 유진투자증권, 유안타증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.04.27 ~ 04.28",
       "listing_date": "미정"
     },
     {
