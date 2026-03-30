@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 03월 31일 00시 02분 (한국시간 기준)",
+  "update_time": "2026년 03월 31일 01시 55분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "리센스메디컬",
-      "market_type": "코스닥",
-      "offer_price": "11,000",
-      "industry": "의료용 기기 제조업",
-      "underwriters": "KB증권, 한국투자증권",
-      "competition_rate": "2,097.18:1",
-      "status": "정보없음",
-      "subscription_period": "26.03.19 ~ 03.20",
-      "listing_date": "26.03.31"
-    },
     {
       "company_name": "신한제17호스팩",
       "market_type": "코스닥",
