@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 04월 01일 00시 00분 (한국시간 기준)",
+  "update_time": "2026년 04월 01일 01시 56분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "신한제17호스팩",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "신한투자증권",
-      "competition_rate": "1,403.74:1",
-      "status": "정보없음",
-      "subscription_period": "26.03.19 ~ 03.20",
-      "listing_date": "26.04.01"
-    },
     {
       "company_name": "교보20호스팩",
       "market_type": "코스닥",
