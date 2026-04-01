@@ -1,29 +1,7 @@
 {
-  "update_time": "2026년 04월 02일 00시 02분 (한국시간 기준)",
+  "update_time": "2026년 04월 02일 01시 54분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "교보20호스팩",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "기타 금융업",
-      "underwriters": "교보증권",
-      "competition_rate": "747.35:1",
-      "status": "정보없음",
-      "subscription_period": "26.03.23 ~ 03.24",
-      "listing_date": "26.04.02"
-    },
-    {
-      "company_name": "인벤테라",
-      "market_type": "코스닥",
-      "offer_price": "16,600",
-      "industry": "자연과학 및 공학 연구개발업",
-      "underwriters": "NH투자증권, 유진투자증권",
-      "competition_rate": "1,913.29:1",
-      "status": "정보없음",
-      "subscription_period": "26.03.23 ~ 03.24",
-      "listing_date": "26.04.02"
-    },
     {
       "company_name": "키움히어로제2호스팩",
       "market_type": "코스닥",
