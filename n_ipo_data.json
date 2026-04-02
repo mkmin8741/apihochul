@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 04월 02일 16시 11분 (한국시간 기준)",
+  "update_time": "2026년 04월 02일 17시 56분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -47,6 +47,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "폴레드",
+      "market_type": "코스닥",
+      "offer_price": "4,100 ~ 5,000",
+      "industry": "자동차 신품 부품 제조업",
+      "underwriters": "NH투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.05.04 ~ 05.06",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "마키나락스",
       "market_type": "코스닥",
       "offer_price": "12,500 ~ 15,000",
@@ -74,17 +85,6 @@
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "KB증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "폴레드",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "자동차 신품 부품 제조업",
-      "underwriters": "NH투자증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
