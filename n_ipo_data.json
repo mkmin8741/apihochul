@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 04월 15일 22시 23분 (한국시간 기준)",
+  "update_time": "2026년 04월 16일 00시 04분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -8,8 +8,8 @@
       "offer_price": "2,000",
       "industry": "금융 지원 서비스업",
       "underwriters": "키움증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "1,727.59:1",
+      "status": "정보없음",
       "subscription_period": "26.04.14 ~ 04.15",
       "listing_date": "26.04.23"
     },
