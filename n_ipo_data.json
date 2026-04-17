@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 04월 17일 15시 02분 (한국시간 기준)",
+  "update_time": "2026년 04월 17일 18시 16분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -27,13 +27,13 @@
     {
       "company_name": "채비",
       "market_type": "코스닥",
-      "offer_price": "12,300 ~ 15,300",
+      "offer_price": "12,300",
       "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
       "underwriters": "KB증권, 삼성증권, 대신증권, 하나증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.04.20 ~ 04.21",
-      "listing_date": "미정"
+      "listing_date": "26.04.29"
     },
     {
       "company_name": "코스모로보틱스",
@@ -113,6 +113,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "레몬헬스케어",
+      "market_type": "코스닥",
+      "offer_price": "7,500 ~ 10,000",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "KB증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.06.01 ~ 06.02",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "매드업",
       "market_type": "코스닥",
       "offer_price": "7,000 ~ 8,000",
@@ -121,17 +132,6 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.06.01 ~ 06.02",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "레몬헬스케어",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "KB증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
       "listing_date": "미정"
     },
     {
