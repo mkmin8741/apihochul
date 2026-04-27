@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 04월 27일 15시 26분 (한국시간 기준)",
+  "update_time": "2026년 04월 27일 19시 13분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -135,6 +135,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "빅웨이브로보틱스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "유진투자증권, 미래에셋증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "글로벌테크놀로지",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -250,17 +261,6 @@
       "offer_price": "미정",
       "industry": "특수 목적용 기계 제조업",
       "underwriters": "IBK투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "빅웨이브로보틱스",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "유진투자증권, 미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
