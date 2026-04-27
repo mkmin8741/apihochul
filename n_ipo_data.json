@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 04월 27일 22시 51분 (한국시간 기준)",
+  "update_time": "2026년 04월 28일 00시 47분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -53,7 +53,7 @@
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "미래에셋증권, 현대차증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.05.11 ~ 05.12",
       "listing_date": "미정"
     },
@@ -64,7 +64,7 @@
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "KB증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.05.11 ~ 05.12",
       "listing_date": "미정"
     },
