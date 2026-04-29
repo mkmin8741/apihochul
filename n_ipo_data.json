@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 04월 29일 22시 54분 (한국시간 기준)",
+  "update_time": "2026년 04월 30일 00시 55분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "신한제18호스팩",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "신한투자증권",
-      "competition_rate": "1,601.36:1",
-      "status": "정보없음",
-      "subscription_period": "26.04.20 ~ 04.21",
-      "listing_date": "26.04.30"
-    },
     {
       "company_name": "코스모로보틱스",
       "market_type": "코스닥",
