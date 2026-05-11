@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 05월 11일 16시 39분 (한국시간 기준)",
+  "update_time": "2026년 05월 11일 20시 18분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -113,6 +113,28 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "레메디",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "의료용 기기 제조업",
+      "underwriters": "KB증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "케이앤에스아이앤씨",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "통신 및 방송 장비 제조업",
+      "underwriters": "IBK투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "글로벌테크놀로지",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -195,17 +217,6 @@
       "offer_price": "미정",
       "industry": "무점포 소매업",
       "underwriters": "한국투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "레메디",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "의료용 기기 제조업",
-      "underwriters": "KB증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -360,17 +371,6 @@
       "offer_price": "미정",
       "industry": "특수 목적용 기계 제조업",
       "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "케이앤에스아이앤씨",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "통신 및 방송 장비 제조업",
-      "underwriters": "IBK투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
