@@ -1,17 +1,17 @@
 {
-  "update_time": "2026년 05월 21일 16시 51분 (한국시간 기준)",
+  "update_time": "2026년 05월 21일 20시 22분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
-      "company_name": "마키나락스",
+      "company_name": "대신밸런스제20호스팩",
       "market_type": "코스닥",
-      "offer_price": "15,000",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "미래에셋증권, 현대차증권",
-      "competition_rate": "2,807.79:1",
-      "status": "정보없음",
-      "subscription_period": "26.05.11 ~ 05.12",
-      "listing_date": "26.05.20"
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "수요예측",
+      "subscription_period": "26.05.22 ~ 05.26",
+      "listing_date": "26.06.05"
     },
     {
       "company_name": "피스피스스튜디오",
@@ -22,28 +22,6 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.05.26 ~ 05.27",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "대신밸런스제20호스팩",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "대신증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.05.22 ~ 05.26",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "매드업",
-      "market_type": "코스닥",
-      "offer_price": "7,000 ~ 8,000",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.06.01 ~ 06.02",
       "listing_date": "미정"
     },
     {
@@ -80,14 +58,25 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "빅웨이브로보틱스",
+      "company_name": "져스텍",
       "market_type": "코스닥",
-      "offer_price": "22,000 ~ 27,000",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "유진투자증권, 미래에셋증권",
+      "offer_price": "10,500 ~ 12,500",
+      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
+      "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.06.18 ~ 06.19",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "매드업",
+      "market_type": "코스닥",
+      "offer_price": "7,000 ~ 8,000",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.06.23 ~ 06.24",
       "listing_date": "미정"
     },
     {
@@ -102,11 +91,11 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "져스텍",
+      "company_name": "빅웨이브로보틱스",
       "market_type": "코스닥",
-      "offer_price": "10,500 ~ 12,500",
-      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
-      "underwriters": "삼성증권",
+      "offer_price": "22,000 ~ 27,000",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "유진투자증권, 미래에셋증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
@@ -278,11 +267,33 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "에이엔에이치스트럭쳐",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
+      "underwriters": "NH투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "에이치엘지노믹스",
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "기초 의약물질 제조업",
       "underwriters": "IBK투자증권, KB증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "엘리스그룹",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "삼성증권, 미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
