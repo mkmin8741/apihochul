@@ -1,5 +1,5 @@
 {
-  "updateTime": "2026년 05월 21일 10시 02분",
+  "updateTime": "2026년 05월 21일 15시 51분",
   "targetDate": "20260520",
   "totalMovies": 10,
   "dataSource": "KOBIS + 네이버 완전자동크롤링",
@@ -216,7 +216,7 @@
       "audiAcc": "5154",
       "scrnCnt": "155",
       "showCnt": "273",
-      "poster_url": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fwww.kmdb.or.kr%2Fresources%2Fimages%2Ffavicon%2Ffavicon-16x16.png&type=f30_30_png_expire24",
+      "poster_url": "https://search.pstatic.net/common/?src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20260520_270%2Fk13SS_1779240534573yLNUr_JPEG%2FbLnhoiG5Pt_03.jpg&type=f292_487_clip&size=140x210&quality=65",
       "plot": "",
       "genre": "",
       "runtime": "",
