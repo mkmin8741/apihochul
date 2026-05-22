@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 05월 22일 16시 43분 (한국시간 기준)",
+  "update_time": "2026년 05월 22일 19시 49분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -16,13 +16,13 @@
     {
       "company_name": "피스피스스튜디오",
       "market_type": "코스닥",
-      "offer_price": "19,000 ~ 21,500",
+      "offer_price": "21,500",
       "industry": "봉제의복 제조업",
       "underwriters": "NH투자증권, 미래에셋증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.05.26 ~ 05.27",
-      "listing_date": "미정"
+      "listing_date": "26.06.08"
     },
     {
       "company_name": "레몬헬스케어",
@@ -69,6 +69,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "빅웨이브로보틱스",
+      "market_type": "코스닥",
+      "offer_price": "22,000 ~ 27,000",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "유진투자증권, 미래에셋증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.06.19 ~ 06.22",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "매드업",
       "market_type": "코스닥",
       "offer_price": "7,000 ~ 8,000",
@@ -91,11 +102,11 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "빅웨이브로보틱스",
+      "company_name": "인제니아테라퓨틱스",
       "market_type": "코스닥",
-      "offer_price": "22,000 ~ 27,000",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "유진투자증권, 미래에셋증권",
+      "offer_price": "미정",
+      "industry": "자연과학 및 공학 연구개발업",
+      "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
@@ -107,6 +118,17 @@
       "offer_price": "미정",
       "industry": "통신 및 방송 장비 제조업",
       "underwriters": "IBK투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "한국제16호스팩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "한국투자증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
@@ -366,17 +388,6 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "인제니아테라퓨틱스",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "자연과학 및 공학 연구개발업",
-      "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "인텔리빅스",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -436,17 +447,6 @@
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "기타 화학제품 제조업",
-      "underwriters": "한국투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "한국제16호스팩",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
       "underwriters": "한국투자증권",
       "competition_rate": "-",
       "status": "예심청구",
