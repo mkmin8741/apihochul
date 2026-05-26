@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 05월 26일 12시 28분 (한국시간 기준)",
+  "update_time": "2026년 05월 26일 16시 42분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -23,17 +23,6 @@
       "status": "공모청약",
       "subscription_period": "26.05.26 ~ 05.27",
       "listing_date": "26.06.08"
-    },
-    {
-      "company_name": "레몬헬스케어",
-      "market_type": "코스닥",
-      "offer_price": "7,500 ~ 10,000",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "KB증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.06.09 ~ 06.10",
-      "listing_date": "미정"
     },
     {
       "company_name": "메리츠제2호스팩",
@@ -88,6 +77,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.06.23 ~ 06.24",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "레몬헬스케어",
+      "market_type": "코스닥",
+      "offer_price": "7,500 ~ 10,000",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "KB증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.06.24 ~ 06.25",
       "listing_date": "미정"
     },
     {
@@ -162,6 +162,17 @@
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "넥스트에어로스페이스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "항공기,우주선 및 부품 제조업",
+      "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -316,6 +327,17 @@
       "offer_price": "미정",
       "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
       "underwriters": "NH투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "에이엘로봇",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "특수 목적용 기계 제조업",
+      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
