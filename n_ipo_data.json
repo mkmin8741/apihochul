@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 05월 29일 08시 15분 (한국시간 기준)",
+  "update_time": "2026년 05월 29일 12시 32분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -294,6 +294,17 @@
       "offer_price": "미정",
       "industry": "기타 화학제품 제조업",
       "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "삼홍아크튜리온",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "구조용 금속제품, 탱크 및 증기발생기 제조업",
+      "underwriters": "삼성증권, 미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
