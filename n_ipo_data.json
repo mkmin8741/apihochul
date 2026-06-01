@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 06월 01일 07시 58분 (한국시간 기준)",
+  "update_time": "2026년 06월 01일 12시 58분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -195,6 +195,17 @@
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "삼성증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "다비오",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -443,6 +454,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "케이엠에프",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "기타 식품 제조업",
+      "underwriters": "IBK투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "크리에이츠",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -481,6 +503,17 @@
       "offer_price": "미정",
       "industry": "기타 화학제품 제조업",
       "underwriters": "한국투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "하나에어로다이내믹스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "항공기,우주선 및 부품 제조업",
+      "underwriters": "IBK투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
