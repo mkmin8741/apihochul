@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 06월 08일 00시 23분 (한국시간 기준)",
+  "update_time": "2026년 06월 08일 02시 14분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "피스피스스튜디오",
-      "market_type": "코스닥",
-      "offer_price": "21,500",
-      "industry": "봉제의복 제조업",
-      "underwriters": "NH투자증권, 미래에셋증권",
-      "competition_rate": "1,191.94:1",
-      "status": "정보없음",
-      "subscription_period": "26.05.26 ~ 05.27",
-      "listing_date": "26.06.08"
-    },
     {
       "company_name": "메리츠제2호스팩",
       "market_type": "코스닥",
@@ -31,7 +20,7 @@
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "KB증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.06.17 ~ 06.18",
       "listing_date": "미정"
     },
@@ -42,7 +31,7 @@
       "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.06.18 ~ 06.19",
       "listing_date": "미정"
     },
