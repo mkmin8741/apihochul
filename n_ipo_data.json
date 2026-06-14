@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 06월 14일 23시 09분 (한국시간 기준)",
+  "update_time": "2026년 06월 15일 02시 19분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -14,22 +14,22 @@
       "listing_date": "26.06.19"
     },
     {
-      "company_name": "스트라드비젼",
+      "company_name": "져스텍",
       "market_type": "코스닥",
-      "offer_price": "12,000 ~ 14,000",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "KB증권",
+      "offer_price": "10,500 ~ 12,500",
+      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
+      "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.06.18 ~ 06.19",
       "listing_date": "미정"
     },
     {
-      "company_name": "져스텍",
+      "company_name": "스트라드비젼",
       "market_type": "코스닥",
-      "offer_price": "10,500 ~ 12,500",
-      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
-      "underwriters": "삼성증권",
+      "offer_price": "12,000 ~ 14,000",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "KB증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.06.18 ~ 06.19",
@@ -58,6 +58,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "레몬헬스케어",
+      "market_type": "코스닥",
+      "offer_price": "7,500 ~ 10,000",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "KB증권",
+      "competition_rate": "-",
+      "status": "수요예측",
+      "subscription_period": "26.06.24 ~ 06.25",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "한국제16호스팩",
       "market_type": "코스닥",
       "offer_price": "2,000",
@@ -66,17 +77,6 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.06.22 ~ 06.23",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "레몬헬스케어",
-      "market_type": "코스닥",
-      "offer_price": "7,500 ~ 10,000",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "KB증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.06.24 ~ 06.25",
       "listing_date": "미정"
     },
     {
