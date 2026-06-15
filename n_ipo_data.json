@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 06월 15일 21시 11분 (한국시간 기준)",
+  "update_time": "2026년 06월 16일 03시 24분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -14,17 +14,6 @@
       "listing_date": "26.06.19"
     },
     {
-      "company_name": "져스텍",
-      "market_type": "코스닥",
-      "offer_price": "10,500 ~ 12,500",
-      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
-      "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "수요예측",
-      "subscription_period": "26.06.18 ~ 06.19",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "스트라드비젼",
       "market_type": "코스닥",
       "offer_price": "12,000 ~ 14,000",
@@ -34,6 +23,17 @@
       "status": "수요예측",
       "subscription_period": "26.06.18 ~ 06.19",
       "listing_date": "26.06.30"
+    },
+    {
+      "company_name": "져스텍",
+      "market_type": "코스닥",
+      "offer_price": "10,500 ~ 12,500",
+      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
+      "underwriters": "삼성증권",
+      "competition_rate": "-",
+      "status": "수요예측",
+      "subscription_period": "26.06.18 ~ 06.19",
+      "listing_date": "미정"
     },
     {
       "company_name": "빅웨이브로보틱스",
