@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 06월 16일 07시 17분 (한국시간 기준)",
+  "update_time": "2026년 06월 16일 13시 01분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -33,7 +33,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.06.18 ~ 06.19",
-      "listing_date": "미정"
+      "listing_date": "26.06.29"
     },
     {
       "company_name": "빅웨이브로보틱스",
@@ -44,7 +44,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.06.19 ~ 06.22",
-      "listing_date": "미정"
+      "listing_date": "26.06.30"
     },
     {
       "company_name": "매드업",
@@ -77,7 +77,7 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.06.22 ~ 06.23",
-      "listing_date": "미정"
+      "listing_date": "26.06.30"
     },
     {
       "company_name": "레메디",
