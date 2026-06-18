@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 06월 18일 21시 51분 (한국시간 기준)",
+  "update_time": "2026년 06월 19일 01시 55분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "메리츠제2호스팩",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "메리츠증권",
-      "competition_rate": "1,338.65:1",
-      "status": "정보없음",
-      "subscription_period": "26.06.09 ~ 06.10",
-      "listing_date": "26.06.19"
-    },
     {
       "company_name": "스트라드비젼",
       "market_type": "코스닥",
