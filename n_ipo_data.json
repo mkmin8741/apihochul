@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 06월 19일 19시 24분 (한국시간 기준)",
+  "update_time": "2026년 06월 20일 00시 13분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -8,8 +8,8 @@
       "offer_price": "12,500",
       "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
       "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "2,783.89:1",
+      "status": "정보없음",
       "subscription_period": "26.06.18 ~ 06.19",
       "listing_date": "26.06.29"
     },
@@ -19,8 +19,8 @@
       "offer_price": "12,000",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "KB증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "45.83:1",
+      "status": "정보없음",
       "subscription_period": "26.06.18 ~ 06.19",
       "listing_date": "26.06.30"
     },
