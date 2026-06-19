@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 06월 19일 13시 13분 (한국시간 기준)",
+  "update_time": "2026년 06월 19일 19시 24분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "스트라드비젼",
-      "market_type": "코스닥",
-      "offer_price": "12,000",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "KB증권",
-      "competition_rate": "-",
-      "status": "공모청약",
-      "subscription_period": "26.06.18 ~ 06.19",
-      "listing_date": "26.06.30"
-    },
     {
       "company_name": "져스텍",
       "market_type": "코스닥",
@@ -23,6 +12,17 @@
       "status": "공모청약",
       "subscription_period": "26.06.18 ~ 06.19",
       "listing_date": "26.06.29"
+    },
+    {
+      "company_name": "스트라드비젼",
+      "market_type": "코스닥",
+      "offer_price": "12,000",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "KB증권",
+      "competition_rate": "-",
+      "status": "공모청약",
+      "subscription_period": "26.06.18 ~ 06.19",
+      "listing_date": "26.06.30"
     },
     {
       "company_name": "한국제16호스팩",
@@ -322,6 +322,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "아이알큐더스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "DB증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "에스케이증권제14호기업인수목적",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -437,6 +448,17 @@
       "offer_price": "미정",
       "industry": "통신 및 방송 장비 제조업",
       "underwriters": "유진투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "이에스티",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "특수 목적용 기계 제조업",
+      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
