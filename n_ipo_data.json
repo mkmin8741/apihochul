@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 06월 19일 08시 43분 (한국시간 기준)",
+  "update_time": "2026년 06월 19일 13시 13분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -44,7 +44,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.06.23 ~ 06.24",
-      "listing_date": "미정"
+      "listing_date": "26.07.01"
     },
     {
       "company_name": "레몬헬스케어",
@@ -55,7 +55,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.06.24 ~ 06.25",
-      "listing_date": "미정"
+      "listing_date": "26.07.06"
     },
     {
       "company_name": "레메디",
@@ -399,6 +399,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "영광",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "구조용 금속제품, 탱크 및 증기발생기 제조업",
+      "underwriters": "한국투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "옵토닉스",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -503,6 +514,17 @@
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "티앤이코리아",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "일반 목적용 기계 제조업",
+      "underwriters": "신한투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
