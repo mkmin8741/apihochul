@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 06월 25일 08시 02분 (한국시간 기준)",
+  "update_time": "2026년 06월 25일 12시 29분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -113,6 +113,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "니어스랩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "빅웨이브로보틱스",
       "market_type": "코스닥",
       "offer_price": "22,000 ~ 27,000",
@@ -122,6 +133,28 @@
       "status": "심사승인",
       "subscription_period": "미정",
       "listing_date": "26.06.30"
+    },
+    {
+      "company_name": "스카이랩스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "의료용 기기 제조업",
+      "underwriters": "한국투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "해치텍",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "반도체 제조업",
+      "underwriters": "DB증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
     },
     {
       "company_name": "글로벌테크놀로지",
@@ -161,17 +194,6 @@
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "항공기,우주선 및 부품 제조업",
-      "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "니어스랩",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "예심청구",
@@ -283,17 +305,6 @@
       "offer_price": "미정",
       "industry": "구조용 금속제품, 탱크 및 증기발생기 제조업",
       "underwriters": "삼성증권, 미래에셋증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "스카이랩스",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "의료용 기기 제조업",
-      "underwriters": "한국투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -591,17 +602,6 @@
       "offer_price": "미정",
       "industry": "기타 금융업",
       "underwriters": "한화투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "해치텍",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "반도체 제조업",
-      "underwriters": "DB증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
