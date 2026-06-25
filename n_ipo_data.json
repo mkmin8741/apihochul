@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 06월 25일 12시 29분 (한국시간 기준)",
+  "update_time": "2026년 06월 25일 16시 40분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -272,6 +272,17 @@
       "offer_price": "미정",
       "industry": "상품 중개업",
       "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "바이다",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "전자부품 제조업",
+      "underwriters": "NH투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
