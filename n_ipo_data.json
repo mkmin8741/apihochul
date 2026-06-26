@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 06월 26일 16시 51분 (한국시간 기준)",
+  "update_time": "2026년 06월 26일 19시 50분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -124,6 +124,28 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "해치텍",
+      "market_type": "코스닥",
+      "offer_price": "23,000 ~ 28,000",
+      "industry": "반도체 제조업",
+      "underwriters": "DB증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.08.06 ~ 08.07",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "기도산업",
+      "market_type": "코스닥",
+      "offer_price": "24,800 ~ 28,400",
+      "industry": "봉제의복 제조업",
+      "underwriters": "미래에셋증권, 삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.08.11 ~ 08.12",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "빅웨이브로보틱스",
       "market_type": "코스닥",
       "offer_price": "22,000 ~ 27,000",
@@ -146,11 +168,11 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "해치텍",
+      "company_name": "와이즈플래닛컴퍼니",
       "market_type": "코스닥",
       "offer_price": "미정",
-      "industry": "반도체 제조업",
-      "underwriters": "DB증권",
+      "industry": "기타 생활용품 소매업",
+      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
@@ -162,17 +184,6 @@
       "offer_price": "미정",
       "industry": "반도체 제조업",
       "underwriters": "한국투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "기도산업",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "봉제의복 제조업",
-      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -448,17 +459,6 @@
       "offer_price": "미정",
       "industry": "측정, 시험, 항해, 제어 및 기타 정밀기기 제조업; 광학기기 제외",
       "underwriters": "한국투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "와이즈플래닛컴퍼니",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "기타 생활용품 소매업",
-      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
