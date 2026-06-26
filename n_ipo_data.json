@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 06월 26일 12시 36분 (한국시간 기준)",
+  "update_time": "2026년 06월 26일 16시 51분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -60,13 +60,13 @@
     {
       "company_name": "레메디",
       "market_type": "코스닥",
-      "offer_price": "17,800 ~ 20,700",
+      "offer_price": "20,700",
       "industry": "의료용 기기 제조업",
       "underwriters": "KB증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.07.01 ~ 07.02",
-      "listing_date": "미정"
+      "listing_date": "26.07.13"
     },
     {
       "company_name": "에이치엘지노믹스",
