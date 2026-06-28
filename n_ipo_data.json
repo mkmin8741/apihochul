@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 06월 29일 00시 16분 (한국시간 기준)",
+  "update_time": "2026년 06월 29일 02시 10분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "져스텍",
-      "market_type": "코스닥",
-      "offer_price": "12,500",
-      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
-      "underwriters": "삼성증권",
-      "competition_rate": "2,783.89:1",
-      "status": "정보없음",
-      "subscription_period": "26.06.18 ~ 06.19",
-      "listing_date": "26.06.29"
-    },
     {
       "company_name": "스트라드비젼",
       "market_type": "코스닥",
