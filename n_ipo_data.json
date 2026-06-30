@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 06월 30일 12시 34분 (한국시간 기준)",
+  "update_time": "2026년 06월 30일 16시 52분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -110,6 +110,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.08.11 ~ 08.12",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "브릴스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "특수 목적용 기계 제조업",
+      "underwriters": "IBK투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
       "listing_date": "미정"
     },
     {
@@ -261,17 +272,6 @@
       "offer_price": "미정",
       "industry": "전자부품 제조업",
       "underwriters": "NH투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "브릴스",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "특수 목적용 기계 제조업",
-      "underwriters": "IBK투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
