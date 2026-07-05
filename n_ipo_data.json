@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 07월 06일 00시 11분 (한국시간 기준)",
+  "update_time": "2026년 07월 06일 02시 08분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "레몬헬스케어",
-      "market_type": "코스닥",
-      "offer_price": "10,000",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "KB증권",
-      "competition_rate": "1,510.57:1",
-      "status": "정보없음",
-      "subscription_period": "26.06.24 ~ 06.25",
-      "listing_date": "26.07.06"
-    },
     {
       "company_name": "레메디",
       "market_type": "코스닥",
