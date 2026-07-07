@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 07월 07일 08시 05분 (한국시간 기준)",
+  "update_time": "2026년 07월 07일 12시 17분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -503,6 +503,17 @@
       "offer_price": "미정",
       "industry": "전자부품 제조업",
       "underwriters": "NH투자증권, 대신증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "진코스텍",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "기타 화학제품 제조업",
+      "underwriters": "하나증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
