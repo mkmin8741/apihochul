@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 07월 10일 11시 56분 (한국시간 기준)",
+  "update_time": "2026년 07월 10일 16시 33분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -16,13 +16,13 @@
     {
       "company_name": "에이치엘지노믹스",
       "market_type": "코스닥",
-      "offer_price": "18,500 ~ 21,500",
+      "offer_price": "21,500",
       "industry": "기초 의약물질 제조업",
       "underwriters": "KB증권, IBK투자증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.07.13 ~ 07.14",
-      "listing_date": "미정"
+      "listing_date": "26.07.24"
     },
     {
       "company_name": "인제니아테라퓨틱스",
