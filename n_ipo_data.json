@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 07월 14일 11시 24분 (한국시간 기준)",
+  "update_time": "2026년 07월 14일 15시 09분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -113,6 +113,28 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "네오사피엔스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "엠에스바이오",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "의료용 기기 제조업",
+      "underwriters": "KB증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "와이즈플래닛컴퍼니",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -129,17 +151,6 @@
       "offer_price": "미정",
       "industry": "반도체 제조업",
       "underwriters": "한국투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "네오사피엔스",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -448,17 +459,6 @@
       "offer_price": "미정",
       "industry": "그외 기타 전문, 과학 및 기술 서비스업",
       "underwriters": "하나증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "엠에스바이오",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "의료용 기기 제조업",
-      "underwriters": "KB증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
