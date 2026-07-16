@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 07월 16일 15시 16분 (한국시간 기준)",
+  "update_time": "2026년 07월 16일 19시 07분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -58,17 +58,6 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "해치텍",
-      "market_type": "코스닥",
-      "offer_price": "23,000 ~ 28,000",
-      "industry": "반도체 제조업",
-      "underwriters": "DB증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.08.06 ~ 08.07",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "기도산업",
       "market_type": "코스닥",
       "offer_price": "24,800 ~ 28,400",
@@ -85,6 +74,17 @@
       "offer_price": "30,000 ~ 41,200",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.08.12 ~ 08.13",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "해치텍",
+      "market_type": "코스닥",
+      "offer_price": "23,000 ~ 28,000",
+      "industry": "반도체 제조업",
+      "underwriters": "DB증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.08.12 ~ 08.13",
