@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 07월 23일 15시 29분 (한국시간 기준)",
+  "update_time": "2026년 07월 23일 19시 21분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -157,6 +157,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "엔에이치스팩34호",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "NH투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "엠에스바이오",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -239,17 +250,6 @@
       "offer_price": "미정",
       "industry": "특수 목적용 기계 제조업",
       "underwriters": "대신증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "모비어스",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "컴퓨터 프로그래밍, 시스템 통합 및 관리업",
-      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -426,17 +426,6 @@
       "offer_price": "미정",
       "industry": "특수 목적용 기계 제조업",
       "underwriters": "대신증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "엔에이치스팩34호",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "NH투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
