@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 07월 24일 15시 24분 (한국시간 기준)",
+  "update_time": "2026년 07월 24일 19시 14분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -113,22 +113,22 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "덕산넵코어스",
+      "market_type": "코스닥",
+      "offer_price": "12,400 ~ 14,600",
+      "industry": "항공기,우주선 및 부품 제조업",
+      "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.09.16 ~ 09.17",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "글로벌테크놀로지",
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "반도체 제조업",
       "underwriters": "한국투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "덕산넵코어스",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "항공기,우주선 및 부품 제조업",
-      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
