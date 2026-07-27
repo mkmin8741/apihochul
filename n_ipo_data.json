@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 07월 27일 11시 48분 (한국시간 기준)",
+  "update_time": "2026년 07월 27일 16시 28분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -382,6 +382,17 @@
       "offer_price": "미정",
       "industry": "전기업",
       "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "에스에프씨",
+      "market_type": "코스피",
+      "offer_price": "미정",
+      "industry": "기타 화학제품 제조업",
+      "underwriters": "미래에셋증권, 한국투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
