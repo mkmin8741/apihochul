@@ -1,11 +1,11 @@
 {
-  "update_time": "2026년 07월 28일 15시 25분 (한국시간 기준)",
+  "update_time": "2026년 07월 28일 19시 33분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
       "company_name": "인제니아테라퓨틱스",
       "market_type": "코스닥",
-      "offer_price": "12,000 ~ 14,500",
+      "offer_price": "12,000",
       "industry": "자연과학 및 공학 연구개발업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
@@ -113,6 +113,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "글로벌테크놀로지",
+      "market_type": "코스닥",
+      "offer_price": "13,000 ~ 15,000",
+      "industry": "반도체 제조업",
+      "underwriters": "한국투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.09.16 ~ 09.17",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "덕산넵코어스",
       "market_type": "코스닥",
       "offer_price": "12,400 ~ 14,600",
@@ -121,17 +132,6 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.09.16 ~ 09.17",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "글로벌테크놀로지",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "반도체 제조업",
-      "underwriters": "한국투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
       "listing_date": "미정"
     },
     {
