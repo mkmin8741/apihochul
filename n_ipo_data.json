@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 07월 29일 15시 29분 (한국시간 기준)",
+  "update_time": "2026년 07월 29일 19시 37분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -80,17 +80,6 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "스카이랩스",
-      "market_type": "코스닥",
-      "offer_price": "13,000 ~ 16,000",
-      "industry": "의료용 기기 제조업",
-      "underwriters": "한국투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.08.13 ~ 08.14",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "브릴스",
       "market_type": "코스닥",
       "offer_price": "16,500 ~ 19,500",
@@ -102,6 +91,28 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "스카이랩스",
+      "market_type": "코스닥",
+      "offer_price": "13,000 ~ 16,000",
+      "industry": "의료용 기기 제조업",
+      "underwriters": "한국투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.08.26 ~ 08.27",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "엔에이치스팩34호",
+      "market_type": "코스닥",
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "NH투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.09.01 ~ 09.02",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "네오사피엔스",
       "market_type": "코스닥",
       "offer_price": "13,800 ~ 15,800",
@@ -110,6 +121,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.09.08 ~ 09.09",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "와이즈플래닛컴퍼니",
+      "market_type": "코스닥",
+      "offer_price": "10,000 ~ 12,000",
+      "industry": "기타 생활용품 소매업",
+      "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.09.14 ~ 09.15",
       "listing_date": "미정"
     },
     {
@@ -146,33 +168,11 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "엔에이치스팩34호",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "NH투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "엠에스바이오",
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "의료용 기기 제조업",
       "underwriters": "KB증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "와이즈플래닛컴퍼니",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "기타 생활용품 소매업",
-      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
