@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 03일 00시 00분 (한국시간 기준)",
+  "update_time": "2026년 08월 03일 01시 56분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -20,7 +20,7 @@
       "industry": "무점포 소매업",
       "underwriters": "한국투자증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "26.08.03 ~ 08.04",
       "listing_date": "26.08.12"
     },
@@ -53,7 +53,7 @@
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.08.12 ~ 08.13",
       "listing_date": "미정"
     },
@@ -64,7 +64,7 @@
       "industry": "반도체 제조업",
       "underwriters": "DB증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.08.12 ~ 08.13",
       "listing_date": "미정"
     },
