@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 03일 07시 55분 (한국시간 기준)",
+  "update_time": "2026년 08월 03일 11시 41분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -168,11 +168,66 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "래블업",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "NH투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "에스케이증권제14호기업인수목적",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "SK증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "엠에스바이오",
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "의료용 기기 제조업",
       "underwriters": "KB증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "케이비제34호스팩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "KB증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "한국제17호스팩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "한국투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "한화플러스제6호스팩",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "기타 금융업",
+      "underwriters": "한화투자증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
@@ -212,21 +267,21 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "동승",
+      "company_name": "데스틴파워",
       "market_type": "코스닥",
       "offer_price": "미정",
-      "industry": "부동산 임대 및 공급업",
-      "underwriters": "NH투자증권",
+      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
+      "underwriters": "한국투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
     {
-      "company_name": "래블업",
+      "company_name": "동승",
       "market_type": "코스닥",
       "offer_price": "미정",
-      "industry": "소프트웨어 개발 및 공급업",
+      "industry": "부동산 임대 및 공급업",
       "underwriters": "NH투자증권",
       "competition_rate": "-",
       "status": "예심청구",
@@ -261,6 +316,17 @@
       "offer_price": "미정",
       "industry": "전자부품 제조업",
       "underwriters": "NH투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "범한메카텍",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "구조용 금속제품, 탱크 및 증기발생기 제조업",
+      "underwriters": "NH투자증권, 유진투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -399,17 +465,6 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "에스케이증권제14호기업인수목적",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "SK증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "에이엔에이치스트럭쳐",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -487,11 +542,33 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "영광와이케이엠씨",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "기타 금속 가공제품 제조업",
+      "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "옵토닉스",
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "측정, 시험, 항해, 제어 및 기타 정밀기기 제조업; 광학기기 제외",
       "underwriters": "한국투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "유림테크",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "자동차 신품 부품 제조업",
+      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -586,22 +663,22 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "케이비제34호스팩",
+      "company_name": "케이엠에프",
       "market_type": "코스닥",
       "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "KB증권",
+      "industry": "기타 식품 제조업",
+      "underwriters": "IBK투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
       "listing_date": "미정"
     },
     {
-      "company_name": "케이엠에프",
+      "company_name": "케이티이",
       "market_type": "코스닥",
       "offer_price": "미정",
-      "industry": "기타 식품 제조업",
-      "underwriters": "IBK투자증권",
+      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
+      "underwriters": "NH투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -657,28 +734,6 @@
       "offer_price": "미정",
       "industry": "항공기,우주선 및 부품 제조업",
       "underwriters": "IBK투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "한국제17호스팩",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "한국투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "한화플러스제6호스팩",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "기타 금융업",
-      "underwriters": "한화투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
