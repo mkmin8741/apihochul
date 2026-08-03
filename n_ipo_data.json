@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 03일 11시 41분 (한국시간 기준)",
+  "update_time": "2026년 08월 03일 15시 58분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -27,7 +27,7 @@
     {
       "company_name": "케이앤에스아이앤씨",
       "market_type": "코스닥",
-      "offer_price": "9,000 ~ 11,000",
+      "offer_price": "11,000",
       "industry": "통신 및 방송 장비 제조업",
       "underwriters": "IBK투자증권",
       "competition_rate": "-",
@@ -179,11 +179,33 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "멜콘",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "특수 목적용 기계 제조업",
+      "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "에스케이증권제14호기업인수목적",
       "market_type": "코스닥",
       "offer_price": "미정",
       "industry": "금융 지원 서비스업",
       "underwriters": "SK증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "엠비디",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "그외 기타 전문, 과학 및 기술 서비스업",
+      "underwriters": "하나증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
@@ -283,17 +305,6 @@
       "offer_price": "미정",
       "industry": "부동산 임대 및 공급업",
       "underwriters": "NH투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "멜콘",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "특수 목적용 기계 제조업",
-      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -514,17 +525,6 @@
       "offer_price": "미정",
       "industry": "기타 식품 제조업",
       "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "엠비디",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "그외 기타 전문, 과학 및 기술 서비스업",
-      "underwriters": "하나증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
