@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 03일 15시 58분 (한국시간 기준)",
+  "update_time": "2026년 08월 03일 20시 20분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -66,17 +66,6 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.08.12 ~ 08.13",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "빅웨이브로보틱스",
-      "market_type": "코스닥",
-      "offer_price": "20,000 ~ 24,000",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "유진투자증권, 미래에셋증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.08.13 ~ 08.14",
       "listing_date": "미정"
     },
     {
@@ -151,6 +140,17 @@
       "offer_price": "12,400 ~ 14,600",
       "industry": "항공기,우주선 및 부품 제조업",
       "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.09.16 ~ 09.17",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "빅웨이브로보틱스",
+      "market_type": "코스닥",
+      "offer_price": "20,000 ~ 24,000",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "유진투자증권, 미래에셋증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.09.16 ~ 09.17",
