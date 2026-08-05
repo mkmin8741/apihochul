@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 05일 15시 26분 (한국시간 기준)",
+  "update_time": "2026년 08월 05일 19시 32분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -14,17 +14,6 @@
       "listing_date": "26.08.12"
     },
     {
-      "company_name": "인제니아테라퓨틱스",
-      "market_type": "코스닥",
-      "offer_price": "12,000",
-      "industry": "자연과학 및 공학 연구개발업",
-      "underwriters": "삼성증권",
-      "competition_rate": "3.09:1",
-      "status": "정보없음",
-      "subscription_period": "26.07.30 ~ 07.31",
-      "listing_date": "26.08.18"
-    },
-    {
       "company_name": "케이앤에스아이앤씨",
       "market_type": "코스닥",
       "offer_price": "11,000",
@@ -34,6 +23,17 @@
       "status": "공모청약",
       "subscription_period": "26.08.04 ~ 08.05",
       "listing_date": "26.08.13"
+    },
+    {
+      "company_name": "인제니아테라퓨틱스",
+      "market_type": "코스닥",
+      "offer_price": "12,000",
+      "industry": "자연과학 및 공학 연구개발업",
+      "underwriters": "삼성증권",
+      "competition_rate": "3.09:1",
+      "status": "정보없음",
+      "subscription_period": "26.07.30 ~ 07.31",
+      "listing_date": "26.08.18"
     },
     {
       "company_name": "기도산업",
