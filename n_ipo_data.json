@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 05일 08시 01분 (한국시간 기준)",
+  "update_time": "2026년 08월 05일 11시 25분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -470,6 +470,17 @@
       "offer_price": "미정",
       "industry": "기타 화학제품 제조업",
       "underwriters": "미래에셋증권, 한국투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "에스텍시스템",
+      "market_type": "코스피",
+      "offer_price": "미정",
+      "industry": "경비, 경호 및 탐정업",
+      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
