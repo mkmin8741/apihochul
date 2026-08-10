@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 10일 16시 37분 (한국시간 기준)",
+  "update_time": "2026년 08월 10일 18시 18분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -38,13 +38,13 @@
     {
       "company_name": "기도산업",
       "market_type": "코스닥",
-      "offer_price": "24,800 ~ 28,400",
+      "offer_price": "28,400",
       "industry": "봉제의복 제조업",
       "underwriters": "미래에셋증권, 삼성증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.08.11 ~ 08.12",
-      "listing_date": "미정"
+      "listing_date": "26.08.21"
     },
     {
       "company_name": "니어스랩",
@@ -55,18 +55,18 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.08.12 ~ 08.13",
-      "listing_date": "미정"
+      "listing_date": "26.08.24"
     },
     {
       "company_name": "해치텍",
       "market_type": "코스닥",
-      "offer_price": "23,000 ~ 28,000",
+      "offer_price": "23,000",
       "industry": "반도체 제조업",
       "underwriters": "DB증권",
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.08.12 ~ 08.13",
-      "listing_date": "미정"
+      "listing_date": "26.08.25"
     },
     {
       "company_name": "스카이랩스",
