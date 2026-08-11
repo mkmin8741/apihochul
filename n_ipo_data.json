@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 08월 11일 23시 55분 (한국시간 기준)",
+  "update_time": "2026년 08월 12일 01시 55분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "딜리셔스",
-      "market_type": "코스닥",
-      "offer_price": "7,000",
-      "industry": "무점포 소매업",
-      "underwriters": "한국투자증권",
-      "competition_rate": "10.29:1",
-      "status": "정보없음",
-      "subscription_period": "26.08.03 ~ 08.04",
-      "listing_date": "26.08.12"
-    },
     {
       "company_name": "케이앤에스아이앤씨",
       "market_type": "코스닥",
@@ -53,7 +42,7 @@
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "삼성증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "26.08.12 ~ 08.13",
       "listing_date": "26.08.24"
     },
@@ -64,7 +53,7 @@
       "industry": "반도체 제조업",
       "underwriters": "DB증권",
       "competition_rate": "-",
-      "status": "수요예측",
+      "status": "공모청약",
       "subscription_period": "26.08.12 ~ 08.13",
       "listing_date": "26.08.25"
     },
