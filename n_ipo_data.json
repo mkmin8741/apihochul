@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 08월 12일 23시 55분 (한국시간 기준)",
+  "update_time": "2026년 08월 13일 01시 55분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "케이앤에스아이앤씨",
-      "market_type": "코스닥",
-      "offer_price": "11,000",
-      "industry": "통신 및 방송 장비 제조업",
-      "underwriters": "IBK투자증권",
-      "competition_rate": "1,079.55:1",
-      "status": "정보없음",
-      "subscription_period": "26.08.04 ~ 08.05",
-      "listing_date": "26.08.13"
-    },
     {
       "company_name": "인제니아테라퓨틱스",
       "market_type": "코스닥",
@@ -30,8 +19,8 @@
       "offer_price": "28,400",
       "industry": "봉제의복 제조업",
       "underwriters": "미래에셋증권, 삼성증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "5.63:1",
+      "status": "정보없음",
       "subscription_period": "26.08.11 ~ 08.12",
       "listing_date": "26.08.21"
     },
