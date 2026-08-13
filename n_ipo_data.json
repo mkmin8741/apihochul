@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 13일 23시 55분 (한국시간 기준)",
+  "update_time": "2026년 08월 14일 01시 54분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -30,8 +30,8 @@
       "offer_price": "41,200",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "529.99:1",
+      "status": "정보없음",
       "subscription_period": "26.08.12 ~ 08.13",
       "listing_date": "26.08.24"
     },
@@ -41,8 +41,8 @@
       "offer_price": "23,000",
       "industry": "반도체 제조업",
       "underwriters": "DB증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "25.73:1",
+      "status": "정보없음",
       "subscription_period": "26.08.12 ~ 08.13",
       "listing_date": "26.08.25"
     },
@@ -53,7 +53,7 @@
       "industry": "의료용 기기 제조업",
       "underwriters": "한국투자증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.08.26 ~ 08.27",
       "listing_date": "미정"
     },
