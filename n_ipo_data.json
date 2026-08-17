@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 08월 17일 23시 25분 (한국시간 기준)",
+  "update_time": "2026년 08월 18일 01시 24분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "인제니아테라퓨틱스",
-      "market_type": "코스닥",
-      "offer_price": "12,000",
-      "industry": "자연과학 및 공학 연구개발업",
-      "underwriters": "삼성증권",
-      "competition_rate": "3.09:1",
-      "status": "정보없음",
-      "subscription_period": "26.07.30 ~ 07.31",
-      "listing_date": "26.08.18"
-    },
     {
       "company_name": "기도산업",
       "market_type": "코스닥",
