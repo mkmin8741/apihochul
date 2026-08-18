@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 18일 10시 07분 (한국시간 기준)",
+  "update_time": "2026년 08월 18일 11시 53분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -179,6 +179,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "바로팜",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "상품 중개업",
+      "underwriters": "미래에셋증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "에스케이증권제14호기업인수목적",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -206,6 +217,28 @@
       "offer_price": "미정",
       "industry": "의료용 기기 제조업",
       "underwriters": "KB증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "진코스텍",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "기타 화학제품 제조업",
+      "underwriters": "하나증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "크리에이츠",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "그외 기타 제품 제조업",
+      "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
@@ -283,17 +316,6 @@
       "offer_price": "미정",
       "industry": "특수 목적용 기계 제조업",
       "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "바로팜",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "상품 중개업",
-      "underwriters": "미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -663,17 +685,6 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "진코스텍",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "기타 화학제품 제조업",
-      "underwriters": "하나증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "케이엠에프",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -690,17 +701,6 @@
       "offer_price": "미정",
       "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
       "underwriters": "NH투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "크리에이츠",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "그외 기타 제품 제조업",
-      "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
