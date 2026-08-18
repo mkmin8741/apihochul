@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 18일 17시 34분 (한국시간 기준)",
+  "update_time": "2026년 08월 18일 19시 26분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -316,6 +316,17 @@
       "offer_price": "미정",
       "industry": "특수 목적용 기계 제조업",
       "underwriters": "삼성증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "라이드플럭스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "우리투자증권, 한국투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
