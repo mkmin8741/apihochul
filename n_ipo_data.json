@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 08월 20일 23시 33분 (한국시간 기준)",
+  "update_time": "2026년 08월 21일 01시 32분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "기도산업",
-      "market_type": "코스닥",
-      "offer_price": "28,400",
-      "industry": "봉제의복 제조업",
-      "underwriters": "미래에셋증권, 삼성증권",
-      "competition_rate": "5.63:1",
-      "status": "정보없음",
-      "subscription_period": "26.08.11 ~ 08.12",
-      "listing_date": "26.08.21"
-    },
     {
       "company_name": "니어스랩",
       "market_type": "코스닥",
