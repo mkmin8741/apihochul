@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 21일 15시 42분 (한국시간 기준)",
+  "update_time": "2026년 08월 21일 17시 38분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -102,6 +102,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "빅웨이브로보틱스",
+      "market_type": "코스닥",
+      "offer_price": "15,000 ~ 18,000",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "유진투자증권, 미래에셋증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.09.15 ~ 09.16",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "글로벌테크놀로지",
       "market_type": "코스닥",
       "offer_price": "13,000 ~ 15,000",
@@ -124,14 +135,14 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "빅웨이브로보틱스",
+      "company_name": "멜콘",
       "market_type": "코스닥",
-      "offer_price": "20,000 ~ 24,000",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "유진투자증권, 미래에셋증권",
+      "offer_price": "10,700 ~ 12,300",
+      "industry": "특수 목적용 기계 제조업",
+      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "심사승인",
-      "subscription_period": "26.09.16 ~ 09.17",
+      "subscription_period": "26.10.01 ~ 10.02",
       "listing_date": "미정"
     },
     {
@@ -151,17 +162,6 @@
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "NH투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "멜콘",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "특수 목적용 기계 제조업",
-      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
