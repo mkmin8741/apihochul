@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 21일 17시 38분 (한국시간 기준)",
+  "update_time": "2026년 08월 21일 19시 28분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -132,6 +132,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.09.16 ~ 09.17",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "엘리스그룹",
+      "market_type": "코스닥",
+      "offer_price": "70,400 ~ 90,500",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "미래에셋증권, 삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.09.18 ~ 09.21",
       "listing_date": "미정"
     },
     {
@@ -536,17 +547,6 @@
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "신영증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "엘리스그룹",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "삼성증권, 미래에셋증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
