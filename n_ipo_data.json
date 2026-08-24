@@ -1,18 +1,7 @@
 {
-  "update_time": "2026년 08월 24일 23시 39분 (한국시간 기준)",
+  "update_time": "2026년 08월 25일 01시 34분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
-    {
-      "company_name": "해치텍",
-      "market_type": "코스닥",
-      "offer_price": "23,000",
-      "industry": "반도체 제조업",
-      "underwriters": "DB증권",
-      "competition_rate": "25.73:1",
-      "status": "정보없음",
-      "subscription_period": "26.08.12 ~ 08.13",
-      "listing_date": "26.08.25"
-    },
     {
       "company_name": "스카이랩스",
       "market_type": "코스닥",
