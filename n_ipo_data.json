@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 24일 12시 01분 (한국시간 기준)",
+  "update_time": "2026년 08월 24일 13시 41분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -212,6 +212,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "유캐스트",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "통신 및 방송 장비 제조업",
+      "underwriters": "유진투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "진코스텍",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -228,6 +239,17 @@
       "offer_price": "미정",
       "industry": "그외 기타 제품 제조업",
       "underwriters": "삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "티앤이코리아",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "일반 목적용 기계 제조업",
+      "underwriters": "신한투자증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
@@ -608,17 +630,6 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "유캐스트",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "통신 및 방송 장비 제조업",
-      "underwriters": "유진투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "이노보테라퓨틱스",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -712,17 +723,6 @@
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "티앤이코리아",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "일반 목적용 기계 제조업",
-      "underwriters": "신한투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
