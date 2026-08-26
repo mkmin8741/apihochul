@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 26일 07시 24분 (한국시간 기준)",
+  "update_time": "2026년 08월 26일 10시 12분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -333,6 +333,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "마더스제약",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "의약품 제조업",
+      "underwriters": "KB증권, NH투자증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "바이다",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -613,6 +624,17 @@
       "offer_price": "미정",
       "industry": "자동차 신품 부품 제조업",
       "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "예심청구",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "이나인페이",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "한국투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
