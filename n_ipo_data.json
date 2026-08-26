@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 26일 15시 45분 (한국시간 기준)",
+  "update_time": "2026년 08월 26일 17시 40분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -146,6 +146,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "에스케이증권제14호기업인수목적",
+      "market_type": "코스닥",
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "SK증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.10.15 ~ 10.16",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "디티에스",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -162,17 +173,6 @@
       "offer_price": "미정",
       "industry": "상품 중개업",
       "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "에스케이증권제14호기업인수목적",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "SK증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
