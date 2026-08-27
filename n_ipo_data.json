@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 27일 16시 26분 (한국시간 기준)",
+  "update_time": "2026년 08월 28일 03시 51분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -8,8 +8,8 @@
       "offer_price": "10,000",
       "industry": "의료용 기기 제조업",
       "underwriters": "한국투자증권",
-      "competition_rate": "-",
-      "status": "공모청약",
+      "competition_rate": "2.85:1",
+      "status": "정보없음",
       "subscription_period": "26.08.26 ~ 08.27",
       "listing_date": "26.09.04"
     },
