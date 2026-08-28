@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 28일 13시 02분 (한국시간 기준)",
+  "update_time": "2026년 08월 29일 03시 13분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -22,7 +22,7 @@
       "competition_rate": "-",
       "status": "수요예측",
       "subscription_period": "26.09.01 ~ 09.02",
-      "listing_date": "미정"
+      "listing_date": "26.09.10"
     },
     {
       "company_name": "네오사피엔스",
@@ -146,6 +146,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "엠비디",
+      "market_type": "코스닥",
+      "offer_price": "9,400 ~ 11,500",
+      "industry": "그외 기타 전문, 과학 및 기술 서비스업",
+      "underwriters": "하나증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.10.06 ~ 10.07",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "래블업",
       "market_type": "코스닥",
       "offer_price": "20,000 ~ 23,000",
@@ -184,17 +195,6 @@
       "offer_price": "미정",
       "industry": "상품 중개업",
       "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "엠비디",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "그외 기타 전문, 과학 및 기술 서비스업",
-      "underwriters": "하나증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
