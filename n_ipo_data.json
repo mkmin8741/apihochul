@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 28일 03시 51분 (한국시간 기준)",
+  "update_time": "2026년 08월 28일 13시 02분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -135,6 +135,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "진코스텍",
+      "market_type": "코스닥",
+      "offer_price": "19,500 ~ 23,500",
+      "industry": "기타 화학제품 제조업",
+      "underwriters": "하나증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.10.02 ~ 10.06",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "래블업",
       "market_type": "코스닥",
       "offer_price": "20,000 ~ 23,000",
@@ -206,17 +217,6 @@
       "offer_price": "미정",
       "industry": "통신 및 방송 장비 제조업",
       "underwriters": "유진투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "진코스텍",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "기타 화학제품 제조업",
-      "underwriters": "하나증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
