@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 08월 31일 07시 24분 (한국시간 기준)",
+  "update_time": "2026년 08월 31일 12시 49분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -179,6 +179,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "다비오",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "대신증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "디티에스",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -245,6 +256,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "하나에어로다이내믹스",
+      "market_type": "코스닥",
+      "offer_price": "미정",
+      "industry": "항공기,우주선 및 부품 제조업",
+      "underwriters": "IBK투자증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "미정",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "한화플러스제6호스팩",
       "market_type": "코스닥",
       "offer_price": "미정",
@@ -272,17 +294,6 @@
       "offer_price": "미정",
       "industry": "항공기,우주선 및 부품 제조업",
       "underwriters": "삼성증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "다비오",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "대신증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
@@ -745,17 +756,6 @@
       "offer_price": "미정",
       "industry": "기타 화학제품 제조업",
       "underwriters": "한국투자증권",
-      "competition_rate": "-",
-      "status": "예심청구",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "하나에어로다이내믹스",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "항공기,우주선 및 부품 제조업",
-      "underwriters": "IBK투자증권",
       "competition_rate": "-",
       "status": "예심청구",
       "subscription_period": "미정",
