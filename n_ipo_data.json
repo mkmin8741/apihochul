@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 09월 04일 17시 29분 (한국시간 기준)",
+  "update_time": "2026년 09월 04일 23시 00분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -102,17 +102,6 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "엘리스그룹",
-      "market_type": "코스닥",
-      "offer_price": "70,400 ~ 90,500",
-      "industry": "소프트웨어 개발 및 공급업",
-      "underwriters": "미래에셋증권, 삼성증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.09.18 ~ 09.21",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "멜콘",
       "market_type": "코스닥",
       "offer_price": "10,700 ~ 12,300",
@@ -143,6 +132,17 @@
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "26.10.06 ~ 10.07",
+      "listing_date": "미정"
+    },
+    {
+      "company_name": "엘리스그룹",
+      "market_type": "코스닥",
+      "offer_price": "70,400 ~ 90,500",
+      "industry": "소프트웨어 개발 및 공급업",
+      "underwriters": "미래에셋증권, 삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.10.07 ~ 10.08",
       "listing_date": "미정"
     },
     {
