@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 09월 04일 12시 02분 (한국시간 기준)",
+  "update_time": "2026년 09월 04일 17시 29분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -168,6 +168,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "크리에이츠",
+      "market_type": "코스닥",
+      "offer_price": "15,000 ~ 18,000",
+      "industry": "그외 기타 제품 제조업",
+      "underwriters": "삼성증권",
+      "competition_rate": "-",
+      "status": "심사승인",
+      "subscription_period": "26.10.20 ~ 10.21",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "티앤이코리아",
       "market_type": "코스닥",
       "offer_price": "12,600 ~ 15,300",
@@ -250,17 +261,6 @@
       "offer_price": "미정",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "미래에셋증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "미정",
-      "listing_date": "미정"
-    },
-    {
-      "company_name": "크리에이츠",
-      "market_type": "코스닥",
-      "offer_price": "미정",
-      "industry": "그외 기타 제품 제조업",
-      "underwriters": "삼성증권",
       "competition_rate": "-",
       "status": "심사승인",
       "subscription_period": "미정",
