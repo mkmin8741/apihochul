@@ -1,5 +1,5 @@
 {
-  "update_time": "2026년 09월 06일 22시 24분 (한국시간 기준)",
+  "update_time": "2026년 09월 07일 01시 42분 (한국시간 기준)",
   "data_source": "실시간 정보",
   "ipo_list": [
     {
@@ -36,6 +36,17 @@
       "listing_date": "미정"
     },
     {
+      "company_name": "한국제17호스팩",
+      "market_type": "코스닥",
+      "offer_price": "2,000",
+      "industry": "금융 지원 서비스업",
+      "underwriters": "한국투자증권",
+      "competition_rate": "-",
+      "status": "수요예측",
+      "subscription_period": "26.09.10 ~ 09.11",
+      "listing_date": "미정"
+    },
+    {
       "company_name": "와이즈플래닛컴퍼니",
       "market_type": "코스닥",
       "offer_price": "10,000 ~ 12,000",
@@ -47,24 +58,13 @@
       "listing_date": "미정"
     },
     {
-      "company_name": "한국제17호스팩",
-      "market_type": "코스닥",
-      "offer_price": "2,000",
-      "industry": "금융 지원 서비스업",
-      "underwriters": "한국투자증권",
-      "competition_rate": "-",
-      "status": "심사승인",
-      "subscription_period": "26.09.10 ~ 09.11",
-      "listing_date": "미정"
-    },
-    {
       "company_name": "빅웨이브로보틱스",
       "market_type": "코스닥",
       "offer_price": "15,000 ~ 18,000",
       "industry": "소프트웨어 개발 및 공급업",
       "underwriters": "유진투자증권, 미래에셋증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.09.15 ~ 09.16",
       "listing_date": "미정"
     },
@@ -75,7 +75,7 @@
       "industry": "반도체 제조업",
       "underwriters": "한국투자증권",
       "competition_rate": "-",
-      "status": "심사승인",
+      "status": "수요예측",
       "subscription_period": "26.09.16 ~ 09.17",
       "listing_date": "미정"
     },
