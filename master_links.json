@@ -2,132 +2,132 @@
   "groups": [
     [
       {
-        "url": "https://eumseong.go.kr",
-        "text": "보험비교"
-      },
-      {
-        "url": "https://weddingheal.com",
-        "text": "꼭알아두세요"
-      },
-      {
-        "url": "https://jindo.go.kr",
-        "text": "궁금한이야기"
-      },
-      {
-        "url": "https://airport.kr",
-        "text": "추천포스트"
-      },
-      {
-        "url": "https://lawstery.com",
-        "text": "완전정복"
-      },
-      {
-        "url": "https://kiat.or.kr",
-        "text": "이슈분석"
-      }
-    ],
-    [
-      {
-        "url": "https://motie.go.kr",
-        "text": "최신업데이트"
-      },
-      {
-        "url": "https://bokjiro.go.kr",
-        "text": "정보센터"
-      },
-      {
-        "url": "https://flowrapid.com",
-        "text": "문화소식"
-      },
-      {
-        "url": "https://blog.naver.com/greenjeonnam",
-        "text": "비용절약팁"
-      },
-      {
-        "url": "https://blog.naver.com/ulsan_nuri",
-        "text": "현명한선택"
-      },
-      {
-        "url": "https://bundang.lulucast.com",
-        "text": "공식홈페이지"
-      }
-    ],
-    [
-      {
-        "url": "https://nhis.or.kr",
-        "text": "IT소식"
-      },
-      {
-        "url": "https://kari.re.kr",
-        "text": "알아두면좋은것"
-      },
-      {
-        "url": "https://kcg.go.kr",
-        "text": "완벽가이드"
-      },
-      {
-        "url": "https://yangsan.go.kr",
-        "text": "신청하기"
-      },
-      {
-        "url": "https://kiost.ac.kr",
+        "url": "https://naju.go.kr",
         "text": "최신뉴스"
       },
       {
-        "url": "https://suwon.lulucast.com",
-        "text": "총정리"
-      }
-    ],
-    [
-      {
-        "url": "https://gimje.go.kr",
-        "text": "이슈분석"
+        "url": "https://daejeon.go.kr",
+        "text": "교육정보"
       },
       {
-        "url": "https://bundang.lulucast.com",
-        "text": "알아두면좋은것"
+        "url": "https://flowrapid.com",
+        "text": "정보센터"
       },
       {
-        "url": "https://chilgok.go.kr",
-        "text": "꿀팁모음"
-      },
-      {
-        "url": "https://blog.naver.com/daegu_news",
-        "text": "추천포스트"
-      },
-      {
-        "url": "https://yongin.lulucast.com",
-        "text": "종합정보"
-      },
-      {
-        "url": "https://hanyang.ac.kr",
-        "text": "지원금확인"
-      }
-    ],
-    [
-      {
-        "url": "https://msit.go.kr",
-        "text": "필수정보"
-      },
-      {
-        "url": "https://sancheong.go.kr",
-        "text": "일상노하우"
-      },
-      {
-        "url": "https://gh.or.kr",
-        "text": "최신트렌드"
-      },
-      {
-        "url": "https://kwater.or.kr",
-        "text": "건강정보"
-      },
-      {
-        "url": "https://centertopia.com",
-        "text": "이슈분석"
+        "url": "https://energy.or.kr",
+        "text": "바로확인"
       },
       {
         "url": "https://ilsan.lulucast.com",
+        "text": "꼭알아두세요"
+      },
+      {
+        "url": "https://yongin.lulucast.com",
+        "text": "신청하기"
+      }
+    ],
+    [
+      {
+        "url": "https://molit.go.kr",
+        "text": "흥미로운사실"
+      },
+      {
+        "url": "https://gg.go.kr",
+        "text": "최신뉴스"
+      },
+      {
+        "url": "https://vehicleinfo.kr",
+        "text": "최신업데이트"
+      },
+      {
+        "url": "https://kigam.re.kr",
+        "text": "살림정보"
+      },
+      {
+        "url": "https://yongin.lulucast.com",
+        "text": "지원금확인"
+      },
+      {
+        "url": "https://skku.edu",
+        "text": "정보모음"
+      }
+    ],
+    [
+      {
+        "url": "https://vehicleinfo.kr",
+        "text": "최신트렌드"
+      },
+      {
+        "url": "https://ewha.ac.kr",
+        "text": "숨겨진팁"
+      },
+      {
+        "url": "https://buan.go.kr",
+        "text": "고수의비법"
+      },
+      {
+        "url": "https://boryeong.go.kr",
+        "text": "세상의모든것"
+      },
+      {
+        "url": "https://ansan.lulucast.com",
+        "text": "생활꿀팁"
+      },
+      {
+        "url": "https://yonsei.ac.kr",
+        "text": "IT소식"
+      }
+    ],
+    [
+      {
+        "url": "https://fortune.lulucast.com",
+        "text": "여행정보"
+      },
+      {
+        "url": "https://pyeongchang.go.kr",
+        "text": "내용확인"
+      },
+      {
+        "url": "https://data.go.kr",
+        "text": "종합정보"
+      },
+      {
+        "url": "https://living.benefitview.co.kr",
+        "text": "원스톱정보"
+      },
+      {
+        "url": "https://uos.ac.kr",
+        "text": "재테크비법"
+      },
+      {
+        "url": "https://klac.or.kr",
+        "text": "꿀팁모음"
+      }
+    ],
+    [
+      {
+        "url": "https://muju.go.kr",
         "text": "핫이슈"
+      },
+      {
+        "url": "https://kamco.or.kr",
+        "text": "종합정보"
+      },
+      {
+        "url": "https://hampyeong.go.kr",
+        "text": "흥미로운사실"
+      },
+      {
+        "url": "https://blog.naver.com/greenjeonnam",
+        "text": "총정리"
+      },
+      {
+        "url": "https://koroad.or.kr",
+        "text": "가이드북"
+      },
+      {
+        "url": "https://lulucast.com",
+        "text": "교육정보"
       }
     ]
   ]
