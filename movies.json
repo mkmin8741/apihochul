@@ -1,5 +1,5 @@
 {
-  "updateTime": "2026년 10월 11일 05시 44분",
+  "updateTime": "2026년 10월 11일 12시 47분",
   "targetDate": "20261010",
   "totalMovies": 10,
   "dataSource": "KOBIS + 네이버 완전자동크롤링",
@@ -101,7 +101,7 @@
       "salesShare": "9.5",
       "salesInten": "-55941690",
       "salesChange": "-11",
-      "salesAcc": "138352302350",
+      "salesAcc": "138352294350",
       "audiCnt": "32616",
       "audiInten": "-4716",
       "audiChange": "-12.6",
