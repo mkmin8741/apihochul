@@ -1,5 +1,5 @@
 {
-  "updateTime": "2026년 10월 23일 11시 36분",
+  "updateTime": "2026년 10월 23일 17시 05분",
   "targetDate": "20261022",
   "totalMovies": 10,
   "dataSource": "KOBIS + 네이버 완전자동크롤링",
@@ -27,12 +27,12 @@
       "audiAcc": "1927845",
       "scrnCnt": "768",
       "showCnt": "2474",
-      "poster_url": "",
-      "plot": "줄거리 정보를 수집 중입니다.",
-      "genre": "정보 수집 중",
-      "runtime": "정보 수집 중",
-      "grade": "정보 수집 중",
-      "english_title": "",
+      "poster_url": "https://search.pstatic.net/common?type=f208_312&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20260930_220%2F1790759565719kuNpx_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2&size=140x210&quality=65",
+      "plot": "",
+      "genre": "애니메이션",
+      "runtime": "99분",
+      "grade": "전체 관람가",
+      "english_title": "Chiikawa the Movie: The Secret of the Mermaid Island",
       "formatted_open_date": "2026년 09월 30일"
     },
     {
