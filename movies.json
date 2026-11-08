@@ -1,5 +1,5 @@
 {
-  "updateTime": "2026년 11월 08일 13시 21분",
+  "updateTime": "2026년 11월 08일 22시 01분",
   "targetDate": "20261107",
   "totalMovies": 10,
   "dataSource": "KOBIS + 네이버 완전자동크롤링",
@@ -108,12 +108,12 @@
       "audiAcc": "80778",
       "scrnCnt": "391",
       "showCnt": "1153",
-      "poster_url": "https://search.pstatic.net/common?type=f208_312&src=https%3A%2F%2Fs.pstatic.net%2Fmovie.phinf%2F20261105_198%2F1793864440942qLMeO_JPEG%2Fmovie_image.jpg%3Ftype%3Dw640_2&size=140x210&quality=65",
+      "poster_url": "https://search.pstatic.net/sunny?src=https%3A%2F%2Fnamu.wiki%2Ffavicon.svg&type=f30_30_png_expire24",
       "plot": "",
-      "genre": "애니메이션,액션,미스터리",
-      "runtime": "94분",
-      "grade": "12세 이상 관람가",
-      "english_title": "Detective Conan: The Counterfeit Case of Ultra 30",
+      "genre": "",
+      "runtime": "",
+      "grade": "",
+      "english_title": "",
       "formatted_open_date": "2026년 11월 05일"
     },
     {
